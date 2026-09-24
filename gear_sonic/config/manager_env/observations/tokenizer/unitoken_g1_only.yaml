@@ -1,0 +1,17 @@
+# G1 encoder only — no teleop/VR, no SMPL
+
+defaults:
+  - ../terms/encoder_index@_here_
+  - ../terms/command_multi_future_nonflat@_here_
+  - ../terms/command_z_multi_future_nonflat@_here_
+  - ../terms/motion_anchor_ori_b_mf_nonflat@_here_
+
+_target_: gear_sonic.envs.manager_env.mdp.observations.TokenizerCfg
+enable_corruption: true
+concatenate_terms: false
+
+motion_anchor_ori_b_mf_nonflat:
+  noise:
+    _target_: isaaclab.utils.noise.AdditiveUniformNoiseCfg
+    n_min: -0.05
+    n_max: 0.05

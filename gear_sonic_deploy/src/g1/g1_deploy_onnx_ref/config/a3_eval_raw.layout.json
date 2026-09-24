@@ -1,0 +1,5698 @@
+{
+  "configById": {
+    "Plot!eval-key-pos-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[19]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[17]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[23]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[25]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[29]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[19]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[17]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-20": {
+      "foxglovePanelTitle": "left_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[20]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[18]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-21": {
+      "foxglovePanelTitle": "left_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[21]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[19]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[23]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-24": {
+      "foxglovePanelTitle": "left_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[24]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[25]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-26": {
+      "foxglovePanelTitle": "right_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[26]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[24]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-27": {
+      "foxglovePanelTitle": "right_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[27]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[25]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[29]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-30": {
+      "foxglovePanelTitle": "right_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[30]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-vel-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[19]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[17]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-20": {
+      "foxglovePanelTitle": "left_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[20]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[18]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-21": {
+      "foxglovePanelTitle": "left_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[21]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[19]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[23]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-24": {
+      "foxglovePanelTitle": "left_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[24]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[25]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-26": {
+      "foxglovePanelTitle": "right_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[26]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[24]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-27": {
+      "foxglovePanelTitle": "right_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[27]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[25]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[29]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-30": {
+      "foxglovePanelTitle": "right_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[30]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-tau-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[19]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-20": {
+      "foxglovePanelTitle": "left_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-21": {
+      "foxglovePanelTitle": "left_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-24": {
+      "foxglovePanelTitle": "left_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[24]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[25]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-26": {
+      "foxglovePanelTitle": "right_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-27": {
+      "foxglovePanelTitle": "right_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[29]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-30": {
+      "foxglovePanelTitle": "right_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[30]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-knee-left-pos": {
+      "foxglovePanelTitle": "left knee position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-knee-left-vel": {
+      "foxglovePanelTitle": "left knee velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-knee-left-tau": {
+      "foxglovePanelTitle": "left knee torque",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee torque",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-knee-left-action": {
+      "foxglovePanelTitle": "left knee raw action",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#B07AA1",
+          "enabled": true,
+          "label": "raw_action",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/policy.raw_action[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee raw action",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "normalized action"
+    },
+    "Plot!eval-knee-right-pos": {
+      "foxglovePanelTitle": "right knee position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-knee-right-vel": {
+      "foxglovePanelTitle": "right knee velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-knee-right-tau": {
+      "foxglovePanelTitle": "right knee torque",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee torque",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-knee-right-action": {
+      "foxglovePanelTitle": "right knee raw action",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#B07AA1",
+          "enabled": true,
+          "label": "raw_action",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/policy.raw_action[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee raw action",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "normalized action"
+    },
+    "Plot!eval-waist-pos-0": {
+      "foxglovePanelTitle": "waist_yaw_joint position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[0]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_yaw_joint position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-waist-vel-0": {
+      "foxglovePanelTitle": "waist_yaw_joint velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[0]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_yaw_joint velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-waist-pos-1": {
+      "foxglovePanelTitle": "waist_roll_joint position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[1]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_roll_joint position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-waist-vel-1": {
+      "foxglovePanelTitle": "waist_roll_joint velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[1]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_roll_joint velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-waist-pos-2": {
+      "foxglovePanelTitle": "waist_pitch_joint position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[2]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_pitch_joint position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-waist-vel-2": {
+      "foxglovePanelTitle": "waist_pitch_joint velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[2]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_pitch_joint velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-upper-pos-5": {
+      "foxglovePanelTitle": "left_shoulder_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[5]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[3]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_shoulder_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-6": {
+      "foxglovePanelTitle": "left_shoulder_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[6]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[4]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_shoulder_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-7": {
+      "foxglovePanelTitle": "left_shoulder_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[7]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[5]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_shoulder_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-8": {
+      "foxglovePanelTitle": "left_elbow_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[8]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[6]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_elbow_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-9": {
+      "foxglovePanelTitle": "left_wrist_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[9]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[7]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_wrist_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-10": {
+      "foxglovePanelTitle": "left_wrist_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[10]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[8]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_wrist_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-11": {
+      "foxglovePanelTitle": "left_wrist_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[11]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[9]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_wrist_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-12": {
+      "foxglovePanelTitle": "right_shoulder_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[12]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[10]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_shoulder_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-13": {
+      "foxglovePanelTitle": "right_shoulder_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[13]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[11]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_shoulder_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-14": {
+      "foxglovePanelTitle": "right_shoulder_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[14]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[12]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_shoulder_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-15": {
+      "foxglovePanelTitle": "right_elbow_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[15]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[13]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_elbow_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-16": {
+      "foxglovePanelTitle": "right_wrist_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[16]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[14]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_wrist_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-17": {
+      "foxglovePanelTitle": "right_wrist_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[17]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[15]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_wrist_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-18": {
+      "foxglovePanelTitle": "right_wrist_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[18]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[16]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_wrist_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-pelvis-quat": {
+      "foxglovePanelTitle": "pelvis quaternion WXYZ",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "w",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[0]"
+        },
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[2]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[3]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "pelvis quaternion WXYZ",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "quaternion"
+    },
+    "Plot!eval-pelvis-gyro": {
+      "foxglovePanelTitle": "pelvis gyro",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.gyro[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.gyro[1]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.gyro[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "pelvis gyro",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "angular velocity [rad/s]"
+    },
+    "Plot!eval-torso-quat": {
+      "foxglovePanelTitle": "torso quaternion WXYZ",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "w",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[0]"
+        },
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[2]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[3]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "torso quaternion WXYZ",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "quaternion"
+    },
+    "Plot!eval-torso-gyro": {
+      "foxglovePanelTitle": "torso gyro",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.gyro[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.gyro[1]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.gyro[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "torso gyro",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "angular velocity [rad/s]"
+    },
+    "Plot!eval-timing-inference": {
+      "foxglovePanelTitle": "Inference latency",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "inference",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/timing.inference_ms"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Inference latency",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "time [ms]"
+    },
+    "Plot!eval-timing-send": {
+      "foxglovePanelTitle": "Command send latency",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "send",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/timing.send_ms"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Command send latency",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "time [ms]"
+    },
+    "Plot!eval-timing-control": {
+      "foxglovePanelTitle": "Control-loop latency",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "control",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/timing.control_ms"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Control-loop latency",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "time [ms]"
+    },
+    "Plot!eval-reference-tick": {
+      "foxglovePanelTitle": "Episode progress",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference_tick",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/status.reference_tick"
+        },
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "policy_tick",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/status.policy_tick"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Episode progress",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "tick"
+    },
+    "Tab!a3-eval-raw": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "关键下肢位置",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-key-pos-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-key-pos-22",
+                "second": "Plot!eval-key-pos-23",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-key-pos-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-key-pos-28",
+                "second": "Plot!eval-key-pos-29",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "下肢位置",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-leg-pos-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-pos-20",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-pos-21",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-pos-22",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-pos-23",
+                      "second": "Plot!eval-leg-pos-24",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-leg-pos-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-pos-26",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-pos-27",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-pos-28",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-pos-29",
+                      "second": "Plot!eval-leg-pos-30",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "下肢速度",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-leg-vel-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-vel-20",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-vel-21",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-vel-22",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-vel-23",
+                      "second": "Plot!eval-leg-vel-24",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-leg-vel-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-vel-26",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-vel-27",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-vel-28",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-vel-29",
+                      "second": "Plot!eval-leg-vel-30",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "下肢力矩",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-leg-tau-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-tau-20",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-tau-21",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-tau-22",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-tau-23",
+                      "second": "Plot!eval-leg-tau-24",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-leg-tau-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-tau-26",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-tau-27",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-tau-28",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-tau-29",
+                      "second": "Plot!eval-leg-tau-30",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "膝关节诊断",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-knee-left-pos",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-knee-left-vel",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-knee-left-tau",
+                  "second": "Plot!eval-knee-left-action",
+                  "splitPercentage": 50.0
+                },
+                "splitPercentage": 33.333
+              },
+              "splitPercentage": 25.0
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-knee-right-pos",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-knee-right-vel",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-knee-right-tau",
+                  "second": "Plot!eval-knee-right-action",
+                  "splitPercentage": 50.0
+                },
+                "splitPercentage": 33.333
+              },
+              "splitPercentage": 25.0
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "腰部跟踪",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-waist-pos-0",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-waist-vel-0",
+                "second": "Plot!eval-waist-pos-1",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-waist-vel-1",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-waist-pos-2",
+                "second": "Plot!eval-waist-vel-2",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "上肢位置",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-upper-pos-5",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-upper-pos-6",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-upper-pos-7",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-upper-pos-8",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-upper-pos-9",
+                      "second": {
+                        "direction": "column",
+                        "first": "Plot!eval-upper-pos-10",
+                        "second": "Plot!eval-upper-pos-11",
+                        "splitPercentage": 50.0
+                      },
+                      "splitPercentage": 33.333
+                    },
+                    "splitPercentage": 25.0
+                  },
+                  "splitPercentage": 20.0
+                },
+                "splitPercentage": 16.667
+              },
+              "splitPercentage": 14.286
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-upper-pos-12",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-upper-pos-13",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-upper-pos-14",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-upper-pos-15",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-upper-pos-16",
+                      "second": {
+                        "direction": "column",
+                        "first": "Plot!eval-upper-pos-17",
+                        "second": "Plot!eval-upper-pos-18",
+                        "splitPercentage": 50.0
+                      },
+                      "splitPercentage": 33.333
+                    },
+                    "splitPercentage": 25.0
+                  },
+                  "splitPercentage": 20.0
+                },
+                "splitPercentage": 16.667
+              },
+              "splitPercentage": 14.286
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "IMU",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-pelvis-quat",
+              "second": "Plot!eval-pelvis-gyro",
+              "splitPercentage": 50.0
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-torso-quat",
+              "second": "Plot!eval-torso-gyro",
+              "splitPercentage": 50.0
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "时序与进度",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-timing-inference",
+              "second": "Plot!eval-timing-send",
+              "splitPercentage": 50.0
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-timing-control",
+              "second": "Plot!eval-reference-tick",
+              "splitPercentage": 50.0
+            },
+            "splitPercentage": 50
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "layout": "Tab!a3-eval-raw",
+  "playbackConfig": {
+    "speed": 1
+  },
+  "savedProps": {
+    "Plot!eval-key-pos-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[19]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[17]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[23]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[25]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-key-pos-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[29]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[19]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[17]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-20": {
+      "foxglovePanelTitle": "left_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[20]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[18]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-21": {
+      "foxglovePanelTitle": "left_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[21]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[19]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[23]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-24": {
+      "foxglovePanelTitle": "left_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[24]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[25]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-26": {
+      "foxglovePanelTitle": "right_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[26]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[24]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-27": {
+      "foxglovePanelTitle": "right_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[27]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[25]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[29]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-pos-30": {
+      "foxglovePanelTitle": "right_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[30]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-leg-vel-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[19]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[17]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-20": {
+      "foxglovePanelTitle": "left_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[20]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[18]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-21": {
+      "foxglovePanelTitle": "left_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[21]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[19]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[23]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-24": {
+      "foxglovePanelTitle": "left_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[24]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[25]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-26": {
+      "foxglovePanelTitle": "right_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[26]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[24]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-27": {
+      "foxglovePanelTitle": "right_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[27]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[25]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[29]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-vel-30": {
+      "foxglovePanelTitle": "right_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[30]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-leg-tau-19": {
+      "foxglovePanelTitle": "left_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[19]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-20": {
+      "foxglovePanelTitle": "left_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-21": {
+      "foxglovePanelTitle": "left_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[21]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-22": {
+      "foxglovePanelTitle": "left_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-23": {
+      "foxglovePanelTitle": "left_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[23]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-24": {
+      "foxglovePanelTitle": "left_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[24]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-25": {
+      "foxglovePanelTitle": "right_hip_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[25]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-26": {
+      "foxglovePanelTitle": "right_hip_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-27": {
+      "foxglovePanelTitle": "right_hip_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[27]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_hip_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-28": {
+      "foxglovePanelTitle": "right_knee_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_knee_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-29": {
+      "foxglovePanelTitle": "right_ankle_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[29]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-leg-tau-30": {
+      "foxglovePanelTitle": "right_ankle_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[30]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_ankle_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-knee-left-pos": {
+      "foxglovePanelTitle": "left knee position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-knee-left-vel": {
+      "foxglovePanelTitle": "left knee velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[22]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-knee-left-tau": {
+      "foxglovePanelTitle": "left knee torque",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[22]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee torque",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-knee-left-action": {
+      "foxglovePanelTitle": "left knee raw action",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#B07AA1",
+          "enabled": true,
+          "label": "raw_action",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/policy.raw_action[20]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left knee raw action",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "normalized action"
+    },
+    "Plot!eval-knee-right-pos": {
+      "foxglovePanelTitle": "right knee position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-knee-right-vel": {
+      "foxglovePanelTitle": "right knee velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[28]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-knee-right-tau": {
+      "foxglovePanelTitle": "right knee torque",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual tau_est",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.tau_est[28]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee torque",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "torque [Nm]"
+    },
+    "Plot!eval-knee-right-action": {
+      "foxglovePanelTitle": "right knee raw action",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#B07AA1",
+          "enabled": true,
+          "label": "raw_action",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/policy.raw_action[26]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right knee raw action",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "normalized action"
+    },
+    "Plot!eval-waist-pos-0": {
+      "foxglovePanelTitle": "waist_yaw_joint position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[0]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_yaw_joint position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-waist-vel-0": {
+      "foxglovePanelTitle": "waist_yaw_joint velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[0]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_yaw_joint velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-waist-pos-1": {
+      "foxglovePanelTitle": "waist_roll_joint position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[1]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_roll_joint position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-waist-vel-1": {
+      "foxglovePanelTitle": "waist_roll_joint velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[1]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_roll_joint velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-waist-pos-2": {
+      "foxglovePanelTitle": "waist_pitch_joint position",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[2]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_pitch_joint position",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-waist-vel-2": {
+      "foxglovePanelTitle": "waist_pitch_joint velocity",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.dq[2]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference dq",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.dq_ref[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "waist_pitch_joint velocity",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "velocity [rad/s]"
+    },
+    "Plot!eval-upper-pos-5": {
+      "foxglovePanelTitle": "left_shoulder_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[5]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[3]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_shoulder_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-6": {
+      "foxglovePanelTitle": "left_shoulder_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[6]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[4]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_shoulder_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-7": {
+      "foxglovePanelTitle": "left_shoulder_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[7]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[5]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_shoulder_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-8": {
+      "foxglovePanelTitle": "left_elbow_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[8]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[6]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_elbow_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-9": {
+      "foxglovePanelTitle": "left_wrist_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[9]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[7]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_wrist_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-10": {
+      "foxglovePanelTitle": "left_wrist_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[10]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[8]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_wrist_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-11": {
+      "foxglovePanelTitle": "left_wrist_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[11]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[9]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "left_wrist_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-12": {
+      "foxglovePanelTitle": "right_shoulder_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[12]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[10]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_shoulder_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-13": {
+      "foxglovePanelTitle": "right_shoulder_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[13]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[11]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_shoulder_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-14": {
+      "foxglovePanelTitle": "right_shoulder_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[14]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[12]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_shoulder_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-15": {
+      "foxglovePanelTitle": "right_elbow_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[15]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[13]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_elbow_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-16": {
+      "foxglovePanelTitle": "right_wrist_roll_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[16]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[14]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_wrist_roll_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-17": {
+      "foxglovePanelTitle": "right_wrist_pitch_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[17]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[15]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_wrist_pitch_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-upper-pos-18": {
+      "foxglovePanelTitle": "right_wrist_yaw_joint",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "actual q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/state.q[18]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference q",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/reference.q_ref[16]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "right_wrist_yaw_joint",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "position [rad]"
+    },
+    "Plot!eval-pelvis-quat": {
+      "foxglovePanelTitle": "pelvis quaternion WXYZ",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "w",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[0]"
+        },
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[2]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.quat_wxyz[3]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "pelvis quaternion WXYZ",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "quaternion"
+    },
+    "Plot!eval-pelvis-gyro": {
+      "foxglovePanelTitle": "pelvis gyro",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.gyro[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.gyro[1]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/pelvis_imu.gyro[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "pelvis gyro",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "angular velocity [rad/s]"
+    },
+    "Plot!eval-torso-quat": {
+      "foxglovePanelTitle": "torso quaternion WXYZ",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "w",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[0]"
+        },
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[1]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[2]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.quat_wxyz[3]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "torso quaternion WXYZ",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "quaternion"
+    },
+    "Plot!eval-torso-gyro": {
+      "foxglovePanelTitle": "torso gyro",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "x",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.gyro[0]"
+        },
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "y",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.gyro[1]"
+        },
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "z",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/torso_imu.gyro[2]"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "torso gyro",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "angular velocity [rad/s]"
+    },
+    "Plot!eval-timing-inference": {
+      "foxglovePanelTitle": "Inference latency",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "inference",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/timing.inference_ms"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Inference latency",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "time [ms]"
+    },
+    "Plot!eval-timing-send": {
+      "foxglovePanelTitle": "Command send latency",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#59A14F",
+          "enabled": true,
+          "label": "send",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/timing.send_ms"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Command send latency",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "time [ms]"
+    },
+    "Plot!eval-timing-control": {
+      "foxglovePanelTitle": "Control-loop latency",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#4E79A7",
+          "enabled": true,
+          "label": "control",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/timing.control_ms"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Control-loop latency",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "time [ms]"
+    },
+    "Plot!eval-reference-tick": {
+      "foxglovePanelTitle": "Episode progress",
+      "isSynced": true,
+      "legendDisplay": "floating",
+      "paths": [
+        {
+          "color": "#F28E2B",
+          "enabled": true,
+          "label": "reference_tick",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/status.reference_tick"
+        },
+        {
+          "color": "#E15759",
+          "enabled": true,
+          "label": "policy_tick",
+          "lineSize": 1.5,
+          "showLine": true,
+          "timestampMethod": "receiveTime",
+          "value": "/a3/eval/status.policy_tick"
+        }
+      ],
+      "showLegend": true,
+      "showPlotValuesInLegend": true,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "sidebarDimension": 240,
+      "title": "Episode progress",
+      "xAxisVal": "timestamp",
+      "yAxisLabel": "tick"
+    },
+    "Tab!a3-eval-raw": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "关键下肢位置",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-key-pos-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-key-pos-22",
+                "second": "Plot!eval-key-pos-23",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-key-pos-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-key-pos-28",
+                "second": "Plot!eval-key-pos-29",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "下肢位置",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-leg-pos-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-pos-20",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-pos-21",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-pos-22",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-pos-23",
+                      "second": "Plot!eval-leg-pos-24",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-leg-pos-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-pos-26",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-pos-27",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-pos-28",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-pos-29",
+                      "second": "Plot!eval-leg-pos-30",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "下肢速度",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-leg-vel-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-vel-20",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-vel-21",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-vel-22",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-vel-23",
+                      "second": "Plot!eval-leg-vel-24",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-leg-vel-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-vel-26",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-vel-27",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-vel-28",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-vel-29",
+                      "second": "Plot!eval-leg-vel-30",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "下肢力矩",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-leg-tau-19",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-tau-20",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-tau-21",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-tau-22",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-tau-23",
+                      "second": "Plot!eval-leg-tau-24",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-leg-tau-25",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-leg-tau-26",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-leg-tau-27",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-leg-tau-28",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-leg-tau-29",
+                      "second": "Plot!eval-leg-tau-30",
+                      "splitPercentage": 50.0
+                    },
+                    "splitPercentage": 33.333
+                  },
+                  "splitPercentage": 25.0
+                },
+                "splitPercentage": 20.0
+              },
+              "splitPercentage": 16.667
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "膝关节诊断",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-knee-left-pos",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-knee-left-vel",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-knee-left-tau",
+                  "second": "Plot!eval-knee-left-action",
+                  "splitPercentage": 50.0
+                },
+                "splitPercentage": 33.333
+              },
+              "splitPercentage": 25.0
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-knee-right-pos",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-knee-right-vel",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-knee-right-tau",
+                  "second": "Plot!eval-knee-right-action",
+                  "splitPercentage": 50.0
+                },
+                "splitPercentage": 33.333
+              },
+              "splitPercentage": 25.0
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "腰部跟踪",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-waist-pos-0",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-waist-vel-0",
+                "second": "Plot!eval-waist-pos-1",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-waist-vel-1",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-waist-pos-2",
+                "second": "Plot!eval-waist-vel-2",
+                "splitPercentage": 50.0
+              },
+              "splitPercentage": 33.333
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "上肢位置",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-upper-pos-5",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-upper-pos-6",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-upper-pos-7",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-upper-pos-8",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-upper-pos-9",
+                      "second": {
+                        "direction": "column",
+                        "first": "Plot!eval-upper-pos-10",
+                        "second": "Plot!eval-upper-pos-11",
+                        "splitPercentage": 50.0
+                      },
+                      "splitPercentage": 33.333
+                    },
+                    "splitPercentage": 25.0
+                  },
+                  "splitPercentage": 20.0
+                },
+                "splitPercentage": 16.667
+              },
+              "splitPercentage": 14.286
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-upper-pos-12",
+              "second": {
+                "direction": "column",
+                "first": "Plot!eval-upper-pos-13",
+                "second": {
+                  "direction": "column",
+                  "first": "Plot!eval-upper-pos-14",
+                  "second": {
+                    "direction": "column",
+                    "first": "Plot!eval-upper-pos-15",
+                    "second": {
+                      "direction": "column",
+                      "first": "Plot!eval-upper-pos-16",
+                      "second": {
+                        "direction": "column",
+                        "first": "Plot!eval-upper-pos-17",
+                        "second": "Plot!eval-upper-pos-18",
+                        "splitPercentage": 50.0
+                      },
+                      "splitPercentage": 33.333
+                    },
+                    "splitPercentage": 25.0
+                  },
+                  "splitPercentage": 20.0
+                },
+                "splitPercentage": 16.667
+              },
+              "splitPercentage": 14.286
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "IMU",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-pelvis-quat",
+              "second": "Plot!eval-pelvis-gyro",
+              "splitPercentage": 50.0
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-torso-quat",
+              "second": "Plot!eval-torso-gyro",
+              "splitPercentage": 50.0
+            },
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "时序与进度",
+          "layout": {
+            "direction": "row",
+            "first": {
+              "direction": "column",
+              "first": "Plot!eval-timing-inference",
+              "second": "Plot!eval-timing-send",
+              "splitPercentage": 50.0
+            },
+            "second": {
+              "direction": "column",
+              "first": "Plot!eval-timing-control",
+              "second": "Plot!eval-reference-tick",
+              "splitPercentage": 50.0
+            },
+            "splitPercentage": 50
+          }
+        }
+      ]
+    }
+  },
+  "userNodes": {}
+}

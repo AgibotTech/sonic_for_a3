@@ -1,0 +1,12 @@
+# @package algo.config.actor.backbone
+
+defaults:
+  - terms/g1_recon@aux_loss_func
+  - terms/a3_fast_g1_latent@aux_loss_func
+  - terms/reencoded_a3_fast_g1_latent@aux_loss_func
+
+
+aux_loss_coef:
+  g1_recon: 0.01
+  a3_fast_g1_latent: 1.0
+  reencoded_a3_fast_g1_latent: 1.0

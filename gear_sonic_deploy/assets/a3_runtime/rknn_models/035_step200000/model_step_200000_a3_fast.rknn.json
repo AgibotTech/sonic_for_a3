@@ -1,0 +1,28 @@
+{
+  "label": "a3_fast",
+  "target_platform": "rk3588",
+  "do_quantization": false,
+  "source_onnx": "../onnx/model_step_200000_a3_fast.onnx",
+  "source_onnx_sha256": "66f967af0ebf791c31c3095bf1f0d38fc1bb1ca96f34a212161646e328aa804c",
+  "rknn": "model_step_200000_a3_fast.rknn",
+  "rknn_sha256": "3ca6da15f81d5270e3efdc876b49cd20d11ba5412c64a675c9b38a8ed6ceb3da",
+  "schema": {
+    "input_name": "obs_dict",
+    "input_shape": [
+      1,
+      1570
+    ],
+    "output_name": "action",
+    "output_shape": [
+      1,
+      29
+    ],
+    "opset": [
+      {
+        "domain": "ai.onnx",
+        "version": 13
+      }
+    ],
+    "ir_version": 7
+  }
+}

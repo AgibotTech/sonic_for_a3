@@ -1,0 +1,6 @@
+motor_family,plateau_end_rad_s,zero_torque_speed_rad_s,plateau_torque_nm,profile
+PFP41,20.943951,26.179939,5.8,reward_024
+PFP59,13.613568,17.000000,34.0,reward_024
+PFP78,16.755161,23.561945,58.0,reward_024
+PFP93,10.471976,18.500000,215.0,reward_024
+PFP110,9.424778,17.300000,300.0,reward_024

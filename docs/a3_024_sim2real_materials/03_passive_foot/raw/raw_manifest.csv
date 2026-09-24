@@ -1,0 +1,6 @@
+release_file,source_archive_member,location_label,source_label_position_mm,bytes,sha256
+a3_toe_cantilever_compression_A_X90mm.csv,"A3脚尖悬臂梁压缩ABCDE/A3金属鞋脚尖悬臂梁-C-2026.6.4-力-位移曲线.A X90mm_1.csv",A,90,488593,7d45ea85d2904e60f97abe188a73c1c7dcb3b6a61e42d2ec2a2ac6b01b8f7ebc
+a3_toe_cantilever_compression_B_X117mm.csv,"A3脚尖悬臂梁压缩ABCDE/A3金属鞋脚尖悬臂梁-C-2026.6.4-力-位移曲线.B X117mm_1.csv",B,117,524719,008dfacdc4c8ab9716102cee7c800add20a552333a2025bfc0aead4750bd0207
+a3_toe_cantilever_compression_C_X140mm.csv,"A3脚尖悬臂梁压缩ABCDE/A3金属鞋脚尖悬臂梁-C-2026.6.4-力-位移曲线.C X140mm_1.csv",C,140,548657,e0a896450674bf5de821a30b494ad4c2778034be70208c0f0f960e817c77e6b5
+a3_toe_cantilever_compression_D_X160mm.csv,"A3脚尖悬臂梁压缩ABCDE/A3金属鞋脚尖悬臂梁-C-2026.6.4-力-位移曲线.D X160mm_1.csv",D,160,519171,5d5e2d27f35249f7b8eb8c2b806d1e70b4b8c4bc4d088a04c5a5da66ff877130
+a3_toe_cantilever_compression_E_X182mm.csv,"A3脚尖悬臂梁压缩ABCDE/A3金属鞋脚尖悬臂梁-C-2026.6.4-力-位移曲线.E X182mm_1.csv",E,182,531023,0c40eaa49b33df7a614be63d01b07cfa9d16800af46a6054b5493bfe5132a665

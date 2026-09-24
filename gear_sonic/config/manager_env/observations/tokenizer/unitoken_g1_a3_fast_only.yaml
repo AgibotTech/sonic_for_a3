@@ -1,0 +1,26 @@
+# Tokenizer observations required by the active G1 and A3-fast encoders in
+# experiment 032.  Teleop/SMPL terms are intentionally excluded: their
+# encoders are inactive and none of the enabled auxiliary losses consume them.
+
+defaults:
+  - ../terms/encoder_index@_here_
+  - ../terms/command_multi_future_nonflat@_here_
+  - ../terms/motion_anchor_ori_b_mf_nonflat@_here_
+  - ../terms/command_multi_future_a3_fast_nonflat@_here_
+  - ../terms/motion_anchor_ori_a3_fast_b_mf_nonflat@_here_
+
+_target_: gear_sonic.envs.manager_env.mdp.observations.TokenizerCfg
+enable_corruption: true
+concatenate_terms: false
+
+motion_anchor_ori_b_mf_nonflat:
+  noise:
+    _target_: isaaclab.utils.noise.AdditiveUniformNoiseCfg
+    n_min: -0.05
+    n_max: 0.05
+
+motion_anchor_ori_a3_fast_b_mf_nonflat:
+  noise:
+    _target_: isaaclab.utils.noise.AdditiveUniformNoiseCfg
+    n_min: -0.05
+    n_max: 0.05

@@ -1,0 +1,47 @@
+runtime:
+  num_envs: 512
+  encoder: a3_fast
+  multi_thread_motion_loading: true
+  empty_cache_freq: 20
+  world_size: 1
+  headless: true
+
+persistence:
+  enabled: true
+  resume: true
+  snapshot_every_n_batches: 5
+
+dataset:
+  sorting:
+    mode: auto
+    order: ascending
+    materialization: symlink
+    auto_min_motions: 2048
+    auto_padding_ratio: 1.5
+    workers: 8
+  long_motion:
+    enabled: false
+    max_frames: 4000
+  bucketing:
+    enabled: true
+    buckets:
+      - name: short
+        max_frames: 3000
+        num_envs: 2048
+      - name: medium
+        max_frames: 6000
+        num_envs: 1024
+      - name: bulk_long
+        max_frames: 9000
+        num_envs: 800
+      - name: tail_long
+        max_frames: 12000
+        num_envs: 256
+      - name: ultra_long
+        max_frames: null
+        num_envs: 40
+
+evaluation:
+  allow_partial: false
+  termination_config: tracking/eval
+  smpl_motion_file: dummy

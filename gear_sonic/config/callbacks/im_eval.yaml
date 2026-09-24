@@ -1,0 +1,16 @@
+im_eval:
+  _target_: gear_sonic.trl.callbacks.im_eval_callback.ImEvalCallback
+  eval_frequency: 1
+  eval_only: true
+  output_dir: ${experiment_dir}/eval_metrics
+  max_render_steps: 0
+  reward_curve_enabled: false
+  reward_curve_output_dir: null
+  foot_force_dump_dir: null
+  # Scalable batch persistence is opt-in; legacy direct eval remains unchanged.
+  batch_results_dir: null
+  run_manifest_path: null
+  dataset_manifest_path: null
+  snapshot_dir: null
+  snapshot_every_n_batches: 5
+  allow_partial: false

@@ -1,0 +1,3 @@
+a3_fast_g1_latent:
+  _target_: gear_sonic.trl.losses.token_losses.A3FastG1LatentLoss
+  loss_type: "mse"  # Options: "mse", "l1", "huber", "cosine"

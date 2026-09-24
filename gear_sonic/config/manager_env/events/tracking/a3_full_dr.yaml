@@ -1,0 +1,190 @@
+# A3 domain randomization profile aligned with the full DR spec.
+
+_target_: gear_sonic.envs.manager_env.mdp.events.EventCfg
+
+physics_material:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_material
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      body_names: ".*"
+    static_friction_range: [0.15, 2.0]
+    dynamic_friction_range: [0.15, 1.8]
+    restitution_range: [0.0, 0.5]
+    num_buckets: 128
+
+physics_mass_other_links:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_mass
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      body_names: "^(?!torso_Link$).+"
+    mass_distribution_params: [0.9, 1.1]
+    operation: "scale"
+    recompute_inertia: true
+
+physics_mass_torso:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_mass
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      body_names: "torso_Link"
+    mass_distribution_params: [0.8, 1.3]
+    operation: "scale"
+    recompute_inertia: true
+
+hand_payload_mass:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_mass
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      # A3 fixed hand links are merged into the wrist-yaw bodies in IsaacLab.
+      body_names:
+        - "left_wrist_yaw_Link"
+        - "right_wrist_yaw_Link"
+    mass_distribution_params: [-0.2, 2.0]
+    operation: "add"
+    recompute_inertia: true
+    min_mass: 0.05
+
+add_joint_default_pos:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_joint_default_pos
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      joint_names: [".*"]
+    pos_distribution_params: [-0.05, 0.05]
+    operation: "add"
+
+base_com:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_com
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      body_names: "torso_Link"
+    com_range:
+      x: [-0.075, 0.075]
+      y: [-0.075, 0.075]
+      z: [-0.125, 0.125]
+
+robot_inertia_random_torso:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_inertia
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      body_names: "torso_Link"
+    inertia_distribution_params: [0.8, 1.2]
+    operation: "scale"
+
+robot_inertia_random_other_links:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_rigid_body_inertia
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      body_names: "^(?!torso_Link$).+"
+    inertia_distribution_params: [0.9, 1.1]
+    operation: "scale"
+
+joint_actuator_gains:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_actuator_gains
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      joint_names:
+        - "^(?!.*_foot_forefoot_joint$)(?!.*_foot_toe_joint$).+"
+    stiffness_distribution_params: [0.8, 1.3]
+    damping_distribution_params: [0.8, 1.3]
+    operation: "scale"
+    distribution: "uniform"
+
+passive_foot_actuator_gains:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_actuator_stiffness_with_damping_ratio
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      joint_names:
+        - ".*_foot_forefoot_joint"
+        - ".*_foot_toe_joint"
+    stiffness_distribution_params: [0.6, 1.6]
+    damping_ratio_distribution_params: [0.75, 1.25]
+    distribution: "uniform"
+
+joint_armature:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_joint_parameters
+  mode: "startup"
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      joint_names: [".*"]
+    armature_distribution_params: [0.3, 1.3]
+    operation: "scale"
+    distribution: "uniform"
+
+push_robot:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:push_by_setting_velocity_if_in_contact
+  mode: "interval"
+  interval_range_s: [1.0, 6.0]
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+    sensor_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "contact_forces"
+      body_names:
+        - "left_ankle_roll_Link"
+        - "right_ankle_roll_Link"
+    force_threshold: 1.0
+    velocity_range:
+      x: [-0.6, 0.6]
+      y: [-0.6, 0.6]
+      z: [-0.3, 0.3]
+      roll: [-0.785, 0.785]
+      pitch: [-0.785, 0.785]
+      yaw: [-0.78, 0.78]
+
+random_gravity:
+  _target_: isaaclab.managers.EventTermCfg
+  func: gear_sonic.envs.manager_env.mdp:randomize_physics_scene_gravity
+  mode: "interval"
+  interval_range_s: [5.0, 10.0]
+  is_global_time: true
+  params:
+    gravity_distribution_params:
+      - [0.0, 0.0, -0.1]
+      - [0.0, 0.0, 0.1]
+    operation: "add"
+    distribution: "uniform"

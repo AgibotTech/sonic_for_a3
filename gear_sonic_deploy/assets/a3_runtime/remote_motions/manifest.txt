@@ -1,0 +1,9 @@
+selection=limited-space arrow-key remote motions
+source_fps=120 raw rows; runtime uses csv_frame_stride=4 and source_fps=30
+release_scope=the four CSV files listed below are authorized by the project owner for distribution with this repository
+provenance_boundary=source labels are provenance only; no separate upstream license or authorization for a larger source dataset is asserted
+
+arrow_up    remote_forward_short.csv   Stop_forward_Walk_001__A018.csv rows 10980-11500 + settle
+arrow_down  remote_backward_short.csv  Stop_forward_Walk_001__A018.csv rows 11500-12000 + settle
+arrow_left  remote_turn_left_45.csv    BMD_0202_walk_slow_mirror_20260202_133140__youcezhuan-man_Skeleton1.csv rows 0-309 + settle
+arrow_right remote_turn_right_45.csv   mirrored counterpart BMD_0202_walk_slow__youcezhuan-man_Skeleton1.csv rows 0-309 + settle

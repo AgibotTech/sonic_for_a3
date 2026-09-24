@@ -1,0 +1,10 @@
+# Universal-token observations with a shared 11x11 terrain height map.
+
+defaults:
+  - unitoken_all_noz_a3_fast
+  - ../terms/height_map_z_flat@_here_
+  - _self_
+
+_target_: gear_sonic.envs.manager_env.mdp.observations.TokenizerCfg
+enable_corruption: true
+concatenate_terms: false

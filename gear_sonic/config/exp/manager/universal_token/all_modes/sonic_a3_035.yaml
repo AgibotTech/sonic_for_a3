@@ -1,0 +1,225 @@
+# @package _global_
+# Direct public configuration for A3 SONIC 035.  It is used both for fresh
+# training and for loading a release-provided or user-supplied 035 PT
+# checkpoint as a warm-start; launchers choose whether `checkpoint` is null.
+
+defaults:
+  - /exp/manager/universal_token/all_modes/sonic_a3
+  - /actor_critic/encoders/a3_fast_mf_mlp@algo.config.actor.backbone.encoders
+  - override /aux_losses: universal_token/g1_recon_and_a3_fast_latent
+  - override /manager_env/observations/tokenizer: unitoken_all_noz_a3_fast
+  - _self_
+
+exp_var: a3_035_vr3_no_ankleori_g1_a3fast_f10
+project_name: TRL_A3_035
+
+manager_env:
+  config:
+    # Fitted from A3 passive-foot F-x data; vertical sole/ground compression
+    # remains compliant while forefoot/toe bending is modeled by the two
+    # physics-only passive joints in the URDF.
+    terrain_compliant_contact_stiffness: 69050.0
+    terrain_compliant_contact_damping: 650.0
+    robot:
+      type: a3_024
+      asset_path: gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot_twostage_fit_optimized.urdf
+      use_fitted_passive_foot_gains: true
+
+  commands:
+    motion:
+      reward_point_body:
+        - torso_Link
+        - left_wrist_yaw_Link
+        - right_wrist_yaw_Link
+      reward_point_body_offset:
+        - [0.0507937, 0.00056856, 0.55502408]
+        - [0.0, 0.0, 0.0]
+        - [0.0, 0.0, 0.0]
+      a3_fast_num_future_frames: 10
+      a3_fast_dt_future_ref_frames: 0.02
+      a3_fast_valid_future_frames: null
+      a3_fast_zero_pad_invalid_frames: false
+      coactivate_g1_when_a3_fast: true
+      encoder_sample_probs:
+        g1: 1.0
+        teleop: 0.0
+        smpl: 0.0
+        a3_fast: 1.0
+      motion_lib_cfg:
+        adaptive_sampling:
+          # Keep checkpoints compact even when a user supplies a large corpus.
+          report_full_csv: false
+
+  events:
+    joint_soft_pos_limits:
+      _target_: isaaclab.managers.EventTermCfg
+      func: gear_sonic.envs.manager_env.mdp:set_joint_soft_pos_limit_factor
+      mode: startup
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+          joint_names:
+            - waist_yaw_joint
+            - waist_roll_joint
+            - waist_pitch_joint
+        factor: 0.8
+
+  rewards:
+    tracking_vr_5point_local:
+      weight: 3.0
+    tracking_relative_body_ori_weighted: null
+
+    motor_tn_serial:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3MotorTNPenalty
+      weight: -1.0
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: serial
+        component: combined
+        lambda_soft: 0.05
+        lambda_violation: 5.0
+        soft_exponent: 8.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+
+    motor_tn_parallel:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3MotorTNPenalty
+      weight: -1.0
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: parallel
+        component: combined
+        lambda_soft: 0.05
+        lambda_violation: 5.0
+        soft_exponent: 8.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+
+    ankle_motor_speed:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3AnkleMotorConstraintPenalty
+      weight: -2.0
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        constraint: speed
+        threshold_ratio: 0.8
+        lambda_soft: 1.0
+        lambda_violation: 5.0
+        soft_exponent: 2.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+        motor_speed_limit_rad_s: 23.561945
+
+    ankle_motor_power:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3AnkleMotorConstraintPenalty
+      weight: -2.0
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        constraint: power
+        threshold_ratio: 0.8
+        lambda_soft: 1.0
+        lambda_violation: 5.0
+        soft_exponent: 2.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+        motor_power_limit_w: 971.799338
+
+    ankle_motor_fixed_torque:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3AnkleMotorConstraintPenalty
+      weight: -1.0
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        constraint: fixed_torque
+        threshold_ratio: 1.0
+        lambda_soft: 0.0
+        lambda_violation: 5.0
+        soft_exponent: 2.0
+        violation_exponent: 1.0
+        utilization_cap: 2.0
+        motor_torque_limit_nm: 58.0
+
+    parallel_ankle_cross:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3ParallelJointCrossPenalty
+      weight: -0.1
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: ankle
+        threshold_ratio: 0.75
+        joint_effort_limits:
+          left_ankle_pitch_joint: 118.2
+          left_ankle_roll_joint: 54.75
+          right_ankle_pitch_joint: 118.2
+          right_ankle_roll_joint: 54.75
+
+    parallel_waist_cross:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3ParallelJointCrossPenalty
+      weight: -0.05
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: waist
+        threshold_ratio: 0.75
+        joint_effort_limits:
+          waist_pitch_joint: 115.0
+          waist_roll_joint: 46.0
+
+    ankle_position_85:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3AnklePositionPenalty
+      weight: -10.0
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        threshold_ratio: 0.85
+        exponent: 2.0
+
+algo:
+  config:
+    # Off by default: the benchmark wrapper enables CUDA/DDP-synchronized core
+    # phase timing without changing the actual 024 training contract.
+    benchmark_synchronized_timing: false
+    compute_aux_loss: true
+    actor:
+      has_aux_loss: true
+      backbone:
+        active_encoders: ["g1", "a3_fast"]
+        active_decoders: ["g1_dyn", "g1_kin"]
+        reencode_smpl_g1_recon: false
+        reencode_a3_fast_g1_recon: false
+        aux_loss_coef:
+          g1_recon: 0.01
+          a3_fast_g1_latent: 1.0
+          reencoded_a3_fast_g1_latent: 0.0
+        encoders:
+          g1:
+            freeze: false
+          a3_fast:
+            init_from_encoder:
+              source: g1
+              policy: missing_only
+        decoders:
+          g1_dyn:
+            freeze: false
+          g1_kin:
+            freeze: false

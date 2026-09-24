@@ -1,0 +1,272 @@
+ # Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+data/
+!gear_sonic/data/
+!gear_sonic/data/a3_motor_model/
+!gear_sonic/data/a3_motor_model/*.npz
+
+# Keep the small A3 actuator-model lookup tables versioned.  The generic
+# Python-template data/ rule above otherwise hides this package asset.
+!gear_sonic/data/
+gear_sonic/data/*
+!gear_sonic/data/a3_motor_model/
+!gear_sonic/data/a3_motor_model/**
+
+# The minimal PICO sender is intentionally torch-free on the target.  Keep its
+# tiny NumPy FK table (derived from the tracked torch PKL) in the release.
+!gear_sonic/data/human/
+!gear_sonic/data/human/human_joints_info.npz
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# UV
+.venv/
+#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#uv.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# IDE
+.idea/
+.vscode/
+
+# log
+outputs/
+
+# Ruff stuff:
+.ruff_cache/
+
+# PyPI configuration file
+.pypirc
+
+outputs/
+
+.DS_Store
+
+# Hugging Face upload/maintenance scripts (internal use only)
+huggingface/
+
+# Model checkpoints (download via download_from_hf.py)
+*.onnx
+*.pt
+# The one released 024 training checkpoint remains an LFS asset; all other
+# checkpoints stay ignored by default.
+!checkpoints/
+!checkpoints/024_step100000/
+!checkpoints/024_step100000/model_step_100000.pt
+*.pth
+*.ckpt
+*.safetensors
+*.engine
+*.rknn
+*.rknn.json
+# Mujoco
+MUJOCO_LOG.TXT
+
+# IsaacDeploy
+external_dependencies/isaac_teleop_app/isaac-deploy
+external_dependencies/doc/
+
+# XRoboToolkit pybind (cloned locally on aarch64 by install_pico.sh)
+external_dependencies/XRoboToolkit-PC-Service-Pybind/
+
+# UV
+uv.lock
+
+# Virtual environments (created by install_scripts/)
+.venv_sim/
+.venv_teleop/
+.venv_data_collection/
+.venv_camera/
+
+# XRoboToolkit-PC-Service-Pybind
+xrobotoolkit_sdk.cpython-*-*-*.so
+teleop_vids/
+*.code-workspace
+# Motion data (large local datasets, not tracked in git)
+data/motion_lib_bones_seed
+
+# Training output logs
+logs_rl/
+logs_eval/
+
+# Model checkpoints directory
+models/
+
+# Downloaded from HuggingFace (hf download)
+sample_data/
+sonic_release/
+
+# Local agent planning artifacts
+docs/superpowers/
+
+# Local development-only tests
+tests/local/
+
+# The public A3 024 release intentionally contains its default deployment
+# models.  Keep all other checkpoints and generated models ignored.
+!gear_sonic_deploy/assets/
+!gear_sonic_deploy/assets/a3_runtime/
+!gear_sonic_deploy/assets/a3_runtime/models/
+!gear_sonic_deploy/assets/a3_runtime/models/024_step100000/
+!gear_sonic_deploy/assets/a3_runtime/models/024_step100000/*.onnx
+!gear_sonic_deploy/assets/a3_runtime/rknn_models/
+!gear_sonic_deploy/assets/a3_runtime/rknn_models/024_step100000/
+!gear_sonic_deploy/assets/a3_runtime/rknn_models/024_step100000/*.rknn
+!gear_sonic_deploy/assets/a3_runtime/rknn_models/024_step100000/*.rknn.json
+
+# A3 release binaries are downloaded from Hugging Face.
+/checkpoints/035_step200000/model_step_200000.pt
+/gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_g1.onnx
+/gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/model_step_200000_g1.rknn
+/gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_a3_fast.onnx
+/gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/model_step_200000_a3_fast.rknn
+/gear_sonic_deploy/thirdparty/rockchip_sysroot/rockchip-1.0-aarch64-sysroot.tar.gz
+/gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_decoder.onnx
+/gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_encoder.onnx
+
+# License copies installed alongside downloaded inference models.
+/gear_sonic_deploy/assets/a3_runtime/models/035_step200000/LICENSE
+/gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/LICENSE
+
+# Separate RKNN conversion environment (Toolkit has different Torch constraints).
+.venv_rknn/

@@ -1,0 +1,32 @@
+foot_end_load:
+  _target_: isaaclab.managers.RewardTermCfg
+  func: gear_sonic.envs.manager_env.mdp:persistent_foot_end_load_penalty
+  weight: -3.0
+  params:
+    front_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "foot_end_contact"
+      body_names:
+        - "left_foot_front_Link"
+        - "right_foot_front_Link"
+      preserve_order: true
+    mid_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "foot_end_contact"
+      body_names:
+        - "left_foot_mid_Link"
+        - "right_foot_mid_Link"
+      preserve_order: true
+    rear_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "foot_end_contact"
+      body_names:
+        - "left_foot_rear_Link"
+        - "right_foot_rear_Link"
+      preserve_order: true
+    robot_mass: 57.98
+    front_ratio_limit: 0.30
+    front_force_limit: 0.22
+    min_foot_load_ratio: 0.07
+    persistence_ratio: 0.45
+    abs_force_weight: 0.25

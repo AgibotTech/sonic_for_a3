@@ -1,0 +1,1 @@
+add_subdirectory(g1_deploy_onnx_ref)

@@ -1,0 +1,6 @@
+height_map_z_flat:
+  _target_: isaaclab.managers.ObservationTermCfg
+  func: gear_sonic.envs.manager_env.mdp.observations:height_map_z_flat
+  params:
+    command_name: motion
+    random: false

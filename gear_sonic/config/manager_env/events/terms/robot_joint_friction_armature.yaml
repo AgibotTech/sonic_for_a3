@@ -1,0 +1,14 @@
+robot_joint_friction_armature:
+  _target_: isaaclab.managers.EventTermCfg
+  func: isaaclab.envs.mdp:randomize_joint_parameters
+  mode: "reset"
+  min_step_count_between_reset: 24000
+  params:
+    asset_cfg:
+      _target_: isaaclab.managers.SceneEntityCfg
+      name: "robot"
+      joint_names: ".*"
+    armature_distribution_params: [0.8, 1.2]
+    friction_distribution_params: [1.0, 3.0]
+    operation: "scale"
+    distribution: "uniform"

@@ -1,0 +1,40 @@
+checkpoint: null
+output: null
+
+dataset:
+  input_path: null
+  prepared_output_dir: null
+  sorting:
+    mode: auto
+    order: ascending
+    materialization: symlink
+    auto_min_motions: 2048
+    auto_padding_ratio: 1.5
+    workers: 8
+  long_motion:
+    enabled: false
+    max_frames: 4000
+  bucketing:
+    enabled: false
+    buckets:
+      - name: all
+        max_frames: null
+        num_envs: 512
+
+runtime:
+  num_envs: 512
+  encoder: a3_fast
+  multi_thread_motion_loading: false
+  empty_cache_freq: 20
+  world_size: 1
+  headless: true
+
+persistence:
+  enabled: true
+  resume: true
+  snapshot_every_n_batches: 5
+
+evaluation:
+  allow_partial: false
+  termination_config: tracking/eval
+  smpl_motion_file: dummy

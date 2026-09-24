@@ -1,0 +1,28 @@
+{
+  "label": "g1",
+  "target_platform": "rk3588",
+  "do_quantization": false,
+  "source_onnx": "../onnx/model_step_200000_g1.onnx",
+  "source_onnx_sha256": "e6bb536099e877d1b1b95e45cf6ec6a17affc3b521a40a9a3c8c3dee77bcadd4",
+  "rknn": "model_step_200000_g1.rknn",
+  "rknn_sha256": "82ef1d7cc5412836a58292bcec376d8a95b222e5ce0c1ac47375c11ab7dcfd9e",
+  "schema": {
+    "input_name": "obs_dict",
+    "input_shape": [
+      1,
+      1570
+    ],
+    "output_name": "action",
+    "output_shape": [
+      1,
+      29
+    ],
+    "opset": [
+      {
+        "domain": "ai.onnx",
+        "version": 13
+      }
+    ],
+    "ir_version": 7
+  }
+}

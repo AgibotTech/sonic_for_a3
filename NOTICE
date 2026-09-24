@@ -1,0 +1,12 @@
+SONIC for A3
+
+This project builds on GR00T-WholeBodyControl / SONIC.
+Upstream source-code attribution:
+Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+The A3 release modifies the upstream training, simulation and deployment
+workflow and provides the 035 step-200,000 A3 model artifacts.
+
+Source code and the released 035 model artifacts are provided under the
+Apache License, Version 2.0. Third-party components and data retain their
+respective licenses and notices; see docs/THIRD_PARTY_NOTICES.md and legal/.

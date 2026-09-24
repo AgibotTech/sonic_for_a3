@@ -1,0 +1,13 @@
+# Ignore GitHub workflows and CI/CD files
+.github/
+
+build/
+target/
+logs/
+*.trt
+
+# Host-specific cross-build input. Obtain this from the applicable public
+# vendor release or build it locally; do not commit or redistribute it with
+# this source tree.
+thirdparty/onnxruntime/*.tar.gz
+thirdparty/onnxruntime/*.tar.gz.sha256

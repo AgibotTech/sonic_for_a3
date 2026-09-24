@@ -1,0 +1,5 @@
+joint_output,k_speed_squared,omega_joint_max_rad_s,sqrt_k_times_omega_rad_s,isaac_armature_kg_m2,mujoco_armature_kg_m2,notes
+ankle_pitch,5.333,10.8,24.941,0.0644406,0.0628861,parallel output coordinate
+ankle_roll,1.66562,19.37,24.999,0.0201263,0.0196408,parallel output coordinate
+waist_pitch,7.3,9.24785,24.986,0.0882086,0.0860807,parallel output coordinate
+waist_roll,1.21,22.7,24.970,0.0146209,0.0142682,parallel output coordinate

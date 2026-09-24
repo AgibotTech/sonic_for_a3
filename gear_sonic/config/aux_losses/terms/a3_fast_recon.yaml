@@ -1,0 +1,4 @@
+a3_fast_recon:
+  _target_: gear_sonic.trl.losses.token_losses.A3FastReconLoss
+  loss_type: "mse"
+  valid_future_frames: ${manager_env.commands.motion.a3_fast_valid_future_frames}

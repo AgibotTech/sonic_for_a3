@@ -1,0 +1,7 @@
+# @package algo.config.actor.backbone
+
+defaults:
+  - terms/g1_recon@aux_loss_func
+
+aux_loss_coef:
+  g1_recon: 0.01

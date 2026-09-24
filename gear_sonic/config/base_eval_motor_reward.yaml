@@ -1,0 +1,82 @@
+# @package _global_
+
+# Reward-only calibration overlay for A3 implicit-PD checkpoints.  The four
+# diagnostic columns sum to the exact final penalty magnitude used by
+# notes/tn_torque_reward:
+#   serial   = 0.0025 * sum(min(r, 1)^8) + 0.25 * sum(relu(r - 1)^2)
+#   parallel = 0.0025 * sum(min(r, 1)^8) + 0.25 * sum(relu(r - 1)^2)
+# This is equivalent to an outer reward weight -0.05 around
+# 0.05 * soft + 5.0 * violation.
+# The policy actions and simulator actuator behavior are unchanged.
+defaults:
+  - base_eval
+  - _self_
+
+reward_curve_enabled: true
+reward_curve_output_dir: ${eval_output_dir}/reward_curves
+
+manager_env:
+  rewards:
+    motor_tn_serial_soft_diag:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3MotorTNPenalty
+      weight: -0.0025
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: serial
+        component: soft
+        lambda_soft: 0.05
+        lambda_violation: 5.0
+        soft_exponent: 8.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+
+    motor_tn_serial_hard_diag:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3MotorTNPenalty
+      weight: -0.25
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: serial
+        component: hard
+        lambda_soft: 0.05
+        lambda_violation: 5.0
+        soft_exponent: 8.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+
+    motor_tn_parallel_soft_diag:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3MotorTNPenalty
+      weight: -0.0025
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: parallel
+        component: soft
+        lambda_soft: 0.05
+        lambda_violation: 5.0
+        soft_exponent: 8.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0
+
+    motor_tn_parallel_hard_diag:
+      _target_: isaaclab.managers.RewardTermCfg
+      func: gear_sonic.envs.manager_env.mdp:A3MotorTNPenalty
+      weight: -0.25
+      params:
+        asset_cfg:
+          _target_: isaaclab.managers.SceneEntityCfg
+          name: robot
+        group: parallel
+        component: hard
+        lambda_soft: 0.05
+        lambda_violation: 5.0
+        soft_exponent: 8.0
+        violation_exponent: 2.0
+        utilization_cap: 2.0

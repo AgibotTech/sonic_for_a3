@@ -1,0 +1,118 @@
+{
+  "repo_id": "sonic-for-a3/sonic",
+  "revision": "db1f40787d580af6d1e53df0df72242904a1dae5",
+  "files": [
+    {
+      "remote": "035_step200000/model_step_200000.pt",
+      "destination": "checkpoints/035_step200000/model_step_200000.pt",
+      "group": "pt",
+      "size": 402050931,
+      "sha256": "9cf33be2f4e602858b68ce31d5824113ab1dda250acaab5842b6d3bf88b70f2d"
+    },
+    {
+      "remote": "035_step200000/onnx/model_step_200000_g1.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_g1.onnx",
+      "group": "onnx",
+      "size": 58120441,
+      "sha256": "e6bb536099e877d1b1b95e45cf6ec6a17affc3b521a40a9a3c8c3dee77bcadd4"
+    },
+    {
+      "remote": "035_step200000/rknn/model_step_200000_g1.rknn",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/model_step_200000_g1.rknn",
+      "group": "rknn",
+      "size": 31101293,
+      "sha256": "82ef1d7cc5412836a58292bcec376d8a95b222e5ce0c1ac47375c11ab7dcfd9e"
+    },
+    {
+      "remote": "035_step200000/onnx/model_step_200000_a3_fast.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_a3_fast.onnx",
+      "group": "onnx",
+      "size": 58120816,
+      "sha256": "66f967af0ebf791c31c3095bf1f0d38fc1bb1ca96f34a212161646e328aa804c"
+    },
+    {
+      "remote": "035_step200000/rknn/model_step_200000_a3_fast.rknn",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/model_step_200000_a3_fast.rknn",
+      "group": "rknn",
+      "size": 31101485,
+      "sha256": "3ca6da15f81d5270e3efdc876b49cd20d11ba5412c64a675c9b38a8ed6ceb3da"
+    },
+    {
+      "remote": "rockchip_sysroot/rockchip-1.0-aarch64-sysroot.tar.gz",
+      "destination": "gear_sonic_deploy/thirdparty/rockchip_sysroot/rockchip-1.0-aarch64-sysroot.tar.gz",
+      "group": "sysroot",
+      "size": 677015198,
+      "sha256": "af1d7d230b486f18f570e78c2c3b401ee977f206a616048e791ce487704df961"
+    },
+    {
+      "remote": "035_step200000/config.yaml",
+      "destination": "checkpoints/035_step200000/config.yaml",
+      "group": "pt",
+      "size": 37231,
+      "sha256": "1043717530839e8ef9408e0c8dc470e137708089b64ec13d05b377382868b897"
+    },
+    {
+      "remote": "035_step200000/meta.yaml",
+      "destination": "checkpoints/035_step200000/meta.yaml",
+      "group": "pt",
+      "size": 40,
+      "sha256": "c0dddddcaeec5211d0e996331540e08162e69ff1208b62be0c361d6310006bc5"
+    },
+    {
+      "remote": "035_step200000/model_config.yaml",
+      "destination": "checkpoints/035_step200000/model_config.yaml",
+      "group": "pt",
+      "size": 9529,
+      "sha256": "1365cc1b61a7f8d58beefac27a6f9bb959cd797d2fd8d5edc7f30398180dbe61"
+    },
+    {
+      "remote": "035_step200000/onnx/model_step_200000_decoder.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_decoder.onnx",
+      "group": "onnx",
+      "size": 40948102,
+      "sha256": "b6ccaa9ed31c5ffd028728a54ad3a42787b89b6ac58da3539dabd993763eb562"
+    },
+    {
+      "remote": "035_step200000/onnx/model_step_200000_encoder.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/035_step200000/model_step_200000_encoder.onnx",
+      "group": "onnx",
+      "size": 34509768,
+      "sha256": "b4c81c5dce8a0f482a5bb499d35cdb05e80ef5bfbc9b9b8aa12bf32ef8452ad2"
+    },
+    {
+      "remote": "035_step200000/rknn/model_step_200000_a3_fast.rknn.json",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/model_step_200000_a3_fast.rknn.json",
+      "group": "rknn",
+      "size": 646,
+      "sha256": "3a2e9989a028553caa377fc197fc35514e6746328f42bedfd60d0755f1a8c612"
+    },
+    {
+      "remote": "035_step200000/rknn/model_step_200000_g1.rknn.json",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/model_step_200000_g1.rknn.json",
+      "group": "rknn",
+      "size": 631,
+      "sha256": "a8dd2adb2c847c35ae89d4af3646979acceefb25c57f2ec9c718f3cb9284f0ea"
+    },
+    {
+      "remote": "035_step200000/LICENSE",
+      "destination": "checkpoints/035_step200000/LICENSE",
+      "group": "pt",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "remote": "035_step200000/LICENSE",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/035_step200000/LICENSE",
+      "group": "onnx",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "remote": "035_step200000/LICENSE",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/LICENSE",
+      "group": "rknn",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ]
+}

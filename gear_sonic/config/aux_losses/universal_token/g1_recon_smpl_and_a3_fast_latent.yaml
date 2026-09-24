@@ -1,0 +1,19 @@
+# @package algo.config.actor.backbone
+
+# Mixed A3 data training: keep G1 reconstruction, align A3-fast to G1,
+# and align SMPL/teleop latents on motions that have matched SMPL data.
+defaults:
+  - terms/g1_recon@aux_loss_func
+  - terms/g1_smpl_latent@aux_loss_func
+  - terms/teleop_smpl_latent@aux_loss_func
+  - terms/reencoded_smpl_g1_latent@aux_loss_func
+  - terms/a3_fast_g1_latent@aux_loss_func
+  - terms/reencoded_a3_fast_g1_latent@aux_loss_func
+
+aux_loss_coef:
+  g1_recon: 0.01
+  g1_smpl_latent: 1.0
+  teleop_smpl_latent: 1.0
+  reencoded_smpl_g1_latent: 1.0
+  a3_fast_g1_latent: 1.0
+  reencoded_a3_fast_g1_latent: 1.0

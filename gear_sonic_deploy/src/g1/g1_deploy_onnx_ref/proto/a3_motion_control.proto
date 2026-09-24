@@ -1,0 +1,42 @@
+// Copyright (c) 2026, AgiBot Inc. All rights reserved.
+syntax = "proto3";
+
+package a3.deploy.rpc;
+
+message PlayMotionRequest {
+  string motion_path = 1;
+}
+
+message MotionReply {
+  bool accepted = 1;
+  uint64 play_id = 2;
+  int32 motion_id = 3;
+  string motion_name = 4;
+  string motion_path = 5;
+  uint64 total_ticks = 6;
+  string state = 7;
+  string message = 8;
+}
+
+message PlaybackStatusRequest {}
+
+message PlaybackStatusReply {
+  uint64 play_id = 1;
+  int32 motion_id = 2;
+  string motion_name = 3;
+  string motion_path = 4;
+  uint64 tick = 5;
+  uint64 total_ticks = 6;
+  string deploy_mode = 7;
+  string state = 8;
+  bool playing = 9;
+  bool held = 10;
+}
+
+message StopMotionRequest {}
+
+service MotionControlService {
+  rpc PlayMotion(PlayMotionRequest) returns (MotionReply);
+  rpc GetPlaybackStatus(PlaybackStatusRequest) returns (PlaybackStatusReply);
+  rpc StopMotion(StopMotionRequest) returns (MotionReply);
+}

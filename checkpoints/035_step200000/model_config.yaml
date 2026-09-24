@@ -1,0 +1,349 @@
+algo_config:
+  actor:
+    _target_: gear_sonic.trl.modules.actor_critic_modules.Actor
+    backbone:
+      _target_: gear_sonic.trl.modules.universal_token_modules.UniversalTokenModule
+      active_decoders:
+      - g1_dyn
+      - g1_kin
+      active_encoders:
+      - g1
+      - a3_fast
+      aux_loss_coef:
+        a3_fast_g1_latent: 1.0
+        g1_recon: 0.01
+        reencoded_a3_fast_g1_latent: 0.0
+      aux_loss_func:
+        a3_fast_g1_latent:
+          _target_: gear_sonic.trl.losses.token_losses.A3FastG1LatentLoss
+          loss_type: mse
+        g1_recon:
+          _target_: gear_sonic.trl.losses.token_losses.G1ReconLoss
+          loss_type: mse
+        reencoded_a3_fast_g1_latent:
+          _target_: gear_sonic.trl.losses.token_losses.ReencodedA3FastG1LatentLoss
+          loss_type: mse
+      decoders:
+        g1_dyn:
+          freeze: false
+          has_temporal_dim: false
+          inputs:
+          - token_flattened
+          - proprioception
+          outputs:
+          - action
+          params:
+            _target_: gear_sonic.trl.modules.base_module.BaseModule
+            input_dim: null
+            module_config_dict:
+              layer_config:
+                activation: SiLU
+                hidden_dims:
+                - 2048
+                - 2048
+                - 1024
+                - 1024
+                - 512
+                - 512
+                type: MLP
+            num_input_temporal_dims: null
+            num_output_temporal_dims: null
+            output_dim: null
+        g1_kin:
+          freeze: false
+          has_temporal_dim: true
+          inputs:
+          - token
+          outputs:
+          - command_multi_future_nonflat
+          - motion_anchor_ori_b_mf_nonflat
+          params:
+            _target_: gear_sonic.trl.modules.base_module.BaseModule
+            input_dim: null
+            module_config_dict:
+              layer_config:
+                activation: SiLU
+                hidden_dims:
+                - 2048
+                - 1024
+                - 512
+                - 512
+                type: MLP
+            num_input_temporal_dims: 2
+            num_output_temporal_dims: 10
+            output_dim: null
+      encoder_sample_probs:
+        a3_fast: 1.0
+        g1: 1.0
+        smpl: 0.0
+        teleop: 0.0
+      encoders:
+        a3_fast:
+          init_from_encoder:
+            policy: missing_only
+            source: g1
+          inputs:
+          - command_multi_future_a3_fast_nonflat
+          - motion_anchor_ori_a3_fast_b_mf_nonflat
+          params:
+            _target_: gear_sonic.trl.modules.base_module.BaseModule
+            input_dim: null
+            module_config_dict:
+              layer_config:
+                activation: SiLU
+                hidden_dims:
+                - 2048
+                - 1024
+                - 512
+                - 512
+                type: MLP
+            num_input_temporal_dims: 10
+            num_output_temporal_dims: 2
+            output_dim: null
+        g1:
+          freeze: false
+          inputs:
+          - command_multi_future_nonflat
+          - motion_anchor_ori_b_mf_nonflat
+          params:
+            _target_: gear_sonic.trl.modules.base_module.BaseModule
+            input_dim: null
+            module_config_dict:
+              layer_config:
+                activation: SiLU
+                hidden_dims:
+                - 2048
+                - 1024
+                - 512
+                - 512
+                type: MLP
+            num_input_temporal_dims: 10
+            num_output_temporal_dims: 2
+            output_dim: null
+        smpl:
+          inputs:
+          - smpl_joints_multi_future_local_nonflat
+          - smpl_root_ori_b_multi_future
+          - joint_pos_multi_future_wrist_for_smpl
+          params:
+            _target_: gear_sonic.trl.modules.base_module.BaseModule
+            input_dim: null
+            module_config_dict:
+              layer_config:
+                activation: SiLU
+                hidden_dims:
+                - 2048
+                - 1024
+                - 512
+                - 512
+                type: MLP
+            num_input_temporal_dims: 10
+            num_output_temporal_dims: 2
+            output_dim: null
+        teleop:
+          inputs:
+          - command_multi_future_lower_body
+          - vr_3point_local_target
+          - vr_3point_local_orn_target
+          - motion_anchor_ori_b
+          params:
+            _target_: gear_sonic.trl.modules.base_module.BaseModule
+            input_dim: null
+            module_config_dict:
+              layer_config:
+                activation: SiLU
+                hidden_dims:
+                - 2048
+                - 1024
+                - 512
+                - 512
+                type: MLP
+            num_input_temporal_dims: null
+            num_output_temporal_dims: 2
+            output_dim: null
+      fsq_level_list: 32
+      max_num_tokens: 2
+      num_fsq_levels: 32
+      num_future_frames: 10
+      proprioception_features:
+      - actor_obs
+      quantizer:
+        _target_: vector_quantize_pytorch.FSQ
+      reencode_a3_fast_g1_recon: false
+      reencode_smpl_g1_recon: false
+    has_aux_loss: true
+    input_obs_dict: true
+    running_mean_std: false
+  actor_learning_rate: 2.0e-05
+  adaptive_empty_cache_cooldown_ppo_epochs: 5
+  adaptive_empty_cache_enabled: true
+  adaptive_empty_cache_free_frac: 0.1
+  adaptive_empty_cache_min_reclaimable_mb: 1024
+  adaptive_empty_cache_reserved_frac: 0.9
+  adaptive_lr_max: 0.0002
+  adaptive_lr_min: 1.0e-05
+  clip_param: 0.2
+  compute_aux_loss: true
+  critic:
+    _target_: gear_sonic.trl.modules.actor_critic_modules.Critic
+    backbone:
+      _target_: gear_sonic.trl.modules.base_module.BaseModule
+      module_config_dict:
+        input_dim:
+        - critic_obs
+        layer_config:
+          activation: SiLU
+          hidden_dims:
+          - 2048
+          - 2048
+          - 1024
+          - 1024
+          - 512
+          - 512
+          type: MLP
+        output_dim:
+        - 1
+        type: MLP
+      process_output_dim: true
+    running_mean_std: true
+  critic_learning_rate: 0.001
+  desired_kl: 0.01
+  empty_cache_every_n_ppo_epoch: -1
+  entropy_coef: 0.01
+  eval:
+    num_eval_episodes: 150
+    num_save_episodes: 200
+    save_goal_reached_only: true
+    save_trajectories: false
+    save_videos: false
+    video_save_prob: 1.0
+  eval_frequency: 500
+  gamma: 0.99
+  global_rank: 0
+  init_at_random_ep_len: true
+  init_noise_std: 0.05
+  lam: 0.95
+  load_optimizer: true
+  max_grad_norm: 0.1
+  num_learning_epochs: 5
+  num_learning_iterations: 200000
+  num_mini_batches: 4
+  num_steps_per_env: 24
+  ppo_shuffle_every_epoch: true
+  save_interval: 500
+  schedule: adaptive
+  std_clamp_max: 0.5
+  std_clamp_min: 0.001
+  sync_advantage_normalization: true
+  use_clampped_std: true
+  use_clipped_value_loss: true
+  use_new_actor_critic: true
+  use_padding_mask: false
+  value_loss_coef: 1.0
+  world_size: 32
+env_config:
+  action_clip_value: 20.0
+  action_transform_module_cfg: null
+  action_transform_module_checkpoint: null
+  decimation: 4
+  env_spacing: 2.0
+  episode_length_s: 10.0
+  eval_camera_offset:
+  - 4.0
+  - 4.0
+  - 1.8
+  experiment_dir: checkpoints/035_step200000
+  headless: true
+  meta_action_dim: null
+  needs_policy_atm: true
+  num_envs: 1
+  object_mass: null
+  obs:
+    group_obs_dims:
+      tokenizer:
+        command_multi_future_a3_fast_nonflat:
+        - 10
+        - 58
+        command_multi_future_lower_body:
+        - 240
+        command_multi_future_nonflat:
+        - 10
+        - 58
+        command_z:
+        - 1
+        command_z_multi_future_nonflat:
+        - 10
+        - 1
+        encoder_index:
+        - 4
+        joint_pos_multi_future_wrist_for_smpl:
+        - 10
+        - 6
+        motion_anchor_ori_a3_fast_b_mf_nonflat:
+        - 10
+        - 6
+        motion_anchor_ori_b:
+        - 6
+        motion_anchor_ori_b_mf_nonflat:
+        - 10
+        - 6
+        smpl_joints_multi_future_local_nonflat:
+        - 10
+        - 72
+        smpl_root_ori_b_multi_future:
+        - 10
+        - 6
+        vr_3point_local_orn_target:
+        - 12
+        vr_3point_local_target:
+        - 9
+    group_obs_names:
+      tokenizer:
+      - encoder_index
+      - command_multi_future_nonflat
+      - command_multi_future_a3_fast_nonflat
+      - command_z_multi_future_nonflat
+      - command_z
+      - motion_anchor_ori_b
+      - motion_anchor_ori_b_mf_nonflat
+      - motion_anchor_ori_a3_fast_b_mf_nonflat
+      - command_multi_future_lower_body
+      - vr_3point_local_target
+      - vr_3point_local_orn_target
+      - smpl_joints_multi_future_local_nonflat
+      - smpl_root_ori_b_multi_future
+      - joint_pos_multi_future_wrist_for_smpl
+    obs_dict: {}
+    obs_dims:
+      actor_obs: 930
+      critic_obs: 1645
+      tokenizer: 2402
+  render_results: false
+  rewards:
+    num_critics: 1
+  robot:
+    actions_dim: 29
+    algo_obs_dim_dict:
+      actor_obs: 930
+      critic_obs: 1645
+      tokenizer: 2402
+    asset_path: gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot_twostage_fit_optimized.urdf
+    type: a3_exp023
+    use_fitted_passive_foot_gains: true
+  save_rendering_dir: checkpoints/035_step200000/renderings_training
+  sim_dt: 0.005
+  table_offset: null
+  terrain_compliant_contact_damping: 650.0
+  terrain_compliant_contact_stiffness: 69050.0
+  terrain_type: trimesh
+  train_only_events:
+  - push_robot
+  - compliance_force_push
+  viewer_eye:
+  - 4.5
+  - 0.0
+  - 6.0
+  viewer_lookat:
+  - 0.0
+  - 0.0
+  - 2.0
