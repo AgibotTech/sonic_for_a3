@@ -1,0 +1,19 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "7b0a4880addc3a199ecee48cba4be72e3024ff7a",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    }
+  ]
+}
