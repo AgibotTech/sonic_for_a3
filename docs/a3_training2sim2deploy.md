@@ -147,8 +147,8 @@ motors in both ankles and the waist; `motor_tn_serial` covers serial joints.
 The central T–N penalty is:
 
 $$
-p_{TN}=0.05[\min(\operatorname{clip}(u,0,2),1)]^8+
-5[\max(\operatorname{clip}(u,0,2)-1,0)]^2.
+p_{TN}=0.05[\min(\mathrm{clip}(u,0,2),1)]^8+
+5[\max(\mathrm{clip}(u,0,2)-1,0)]^2.
 $$
 
 035 also includes an 80%-threshold ankle motor speed/power term, a fixed 58 Nm
@@ -223,7 +223,7 @@ A more complete parallel-mechanism model would use the configuration-dependent
 closed-chain inertia matrix:
 
 $$
-\Gamma(q)=J(q)^{-1},\qquad M_{joint}(q)=\Gamma(q)^T\operatorname{diag}(I_m)\Gamma(q).
+\Gamma(q)=J(q)^{-1},\qquad M_{joint}(q)=\Gamma(q)^T\mathrm{diag}(I_m)\Gamma(q).
 $$
 
 However, PhysX `armature` can only express diagonal joint terms. The current
