@@ -1,8 +1,8 @@
 # SONIC adaption for A3
 
-[![A3 real-robot teleoperation with the 035 / 200k A3-fast RKNN policy](media/a3/035_200k_a3_fast_rknn_teleop.jpg)](media/a3/035_200k_a3_fast_rknn_teleop.mp4)
+[![A3 real-robot teleoperation with the 035 / 200k A3-fast RKNN policy](media/a3/035_200k_a3_fast_rknn_teleop.jpg)](https://agibottech.github.io/sonic_for_a3/)
 
-**035 / 200k · A3-fast RKNN · Real-robot teleoperation** — [Watch the video (3:32)](media/a3/035_200k_a3_fast_rknn_teleop.mp4).
+**035 / 200k · A3-fast RKNN · Real-robot teleoperation** — [Watch the video (3:32)](https://agibottech.github.io/sonic_for_a3/).
 
 > **Note — Real-robot safety:** We strongly recommend using a safety gantry / fall-arrest harness and appropriate protective measures during real-robot teleoperation. This checkpoint does **not** guarantee stable tracking of every motion; unexpected behavior, loss of balance, and falls can occur. **Before playing any motion or deploying your own teleoperation integration on the real robot, first validate it in MuJoCo.** MuJoCo simulation cannot fully represent real-robot behavior, and successful simulation does not guarantee safe hardware execution. Keep physical safety protection in place, maintain a safe distance from the robot, and prioritize the personal safety of operators and bystanders.
 
