@@ -1,0 +1,25 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "f30a7f5459d9ccd7b3870181c17e5fef75532ba6",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": ".github/workflows/pages.yml",
+      "additions": {
+        "human": 38
+      }
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    }
+  ]
+}
