@@ -1,0 +1,15 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "0426fcba5cd437548c6f57119883c4c9b479ebeb",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "site/index.html",
+      "additions": {
+        "human": 44
+      }
+    }
+  ]
+}
