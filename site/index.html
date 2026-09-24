@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="035 / 200k A3-fast RKNN policy: real-robot inference and teleoperation on AgiBot A3.">
+  <title>SONIC for A3 · Real-robot demo</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101419; color: #edf2f5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1100px; margin: auto; padding: 36px 20px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    h1 { font-size: clamp(25px, 5vw, 38px); margin: 0; letter-spacing: -.03em; }
+    a { color: #9edccc; text-underline-offset: 4px; }
+    a:focus-visible { outline: 2px solid #9edccc; outline-offset: 5px; }
+    .meta { color: #b7c4cc; margin: 12px 0 24px; line-height: 1.6; }
+    video { width: 100%; aspect-ratio: 16/9; display: block; background: #000; border-radius: 12px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 20px 0 28px; }
+    aside { border-left: 3px solid #d9b77b; padding: 2px 18px; color: #c6ced4; font-size: 14px; line-height: 1.7; }
+    aside strong { color: #f2d7ac; }
+    @media (max-width: 540px) { main { padding: 24px 14px; } header { align-items: flex-start; flex-direction: column; gap: 10px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>SONIC for A3</h1>
+    <a href="https://github.com/AgibotTech/sonic_for_a3">View on GitHub ↗</a>
+  </header>
+  <p class="meta">035 / 200k · A3-fast RKNN<br>Real-robot inference &amp; teleoperation · 3:32 · 720p / 30 fps</p>
+  <video controls playsinline preload="metadata" poster="media/035_200k_a3_fast_rknn_teleop.jpg" aria-label="A3 real-robot teleoperation demonstration">
+    <source src="media/035_200k_a3_fast_rknn_teleop.mp4" type="video/mp4">
+    Your browser does not support embedded video. <a href="media/035_200k_a3_fast_rknn_teleop.mp4">Download the video</a>.
+  </video>
+  <nav class="links" aria-label="Resources">
+    <a href="media/035_200k_a3_fast_rknn_teleop.mp4" download>Download video · 42 MB</a>
+    <a href="https://github.com/AgibotTech/sonic_for_a3/blob/main/docs/a3_training2sim2deploy.md">Training &amp; deployment guide</a>
+    <a href="https://huggingface.co/sonic-for-a3/sonic">Model weights</a>
+  </nav>
+  <aside><strong>Real-robot safety</strong><br>Use a safety gantry / fall-arrest harness and appropriate protection. This checkpoint does not guarantee stable tracking of every motion; unexpected behavior and falls can occur. Validate motions and teleoperation integrations in MuJoCo before hardware execution. Simulation cannot fully represent real-robot behavior. Keep protection in place and maintain a safe distance from the robot.</aside>
+</main>
+</body>
+</html>
