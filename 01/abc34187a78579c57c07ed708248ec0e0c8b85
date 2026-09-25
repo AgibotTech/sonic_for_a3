@@ -1,0 +1,75 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "01abc34187a78579c57c07ed708248ec0e0c8b85",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "scripts/export_public_training_curves.py",
+      "additions": {
+        "human": 61
+      }
+    },
+    {
+      "new_path": "site/training/index.html",
+      "additions": {
+        "human": 27
+      }
+    },
+    {
+      "new_path": "site/training/scalars.json",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "site/training/style.css",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "site/training/viewer.js",
+      "additions": {
+        "human": 58
+      }
+    },
+    {
+      "new_path": "site/vendor/plotly-LICENSE.txt",
+      "additions": {
+        "human": 21
+      }
+    },
+    {
+      "new_path": "site/vendor/plotly-basic-3.1.0.min.js",
+      "additions": {
+        "human": 47
+      }
+    },
+    {
+      "old_path": ".github/workflows/pages.yml",
+      "new_path": ".github/workflows/pages.yml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "site/index.html",
+      "new_path": "site/index.html",
+      "additions": {
+        "human": 1
+      }
+    }
+  ]
+}
