@@ -2,7 +2,7 @@
 const el=id=>document.getElementById(id), pageSize=8;
 let snapshot, tags=[], pageIndex=0, generation=0, activeGroup="Rewards";
 const groupDescriptions={Rewards:"Reward components",Loss:"Optimization losses",Train:"Training statistics",Policy:"Policy statistics",Value:"Value-function statistics",Terminations:"Episode termination signals",Env:"Environment statistics",Objective:"Training objectives",AdaptiveSampling:"Motion sampling statistics",Misc:"Other logged statistics"};
-const resizeObserver=new ResizeObserver(entries=>{for(const {target} of entries){if(target.isConnected&&target.data)Plotly.Plots.resize(target);}});
+const resizeObserver=new ResizeObserver(entries=>{for(const {target} of entries){if(target.isConnected&&target.data)Plotly.relayout(target,{width:target.clientWidth,height:target.clientHeight});}});
 const colors={'024':'#176bb0','035':'#c25a24'};
 function smooth(points,weight){
   if(weight===0)return points.map(p=>p[1]);
@@ -40,7 +40,7 @@ function render(){
       const points=snapshot.runs[r][tag];
       return {name:r,x:points.map(p=>p[0]),y:smooth(points,weight),customdata:points.map(p=>p[1]),type:'scatter',mode:'lines',connectgaps:false,line:{color:colors[r],width:1.5},hovertemplate:'Step %{x}<br>Value %{y:.5g}<br>Raw %{customdata:.5g}<extra>'+r+'</extra>'};
     });
-    Plotly.newPlot(plot,traces,{margin:{l:65,r:20,t:20,b:52},paper_bgcolor:'#fff',plot_bgcolor:'#fff',font:{family:'system-ui, sans-serif',size:11,color:'#526674'},xaxis:{title:{text:'Logged training step'},gridcolor:'#edf1f4',zeroline:false},yaxis:{gridcolor:'#edf1f4',zeroline:false,automargin:true},legend:{orientation:'h',x:0,y:1.12},hovermode:'x unified',dragmode:'zoom'},{responsive:true,displaylogo:false,scrollZoom:false,toImageButtonOptions:{format:'png',filename:tag.replaceAll('/','_'),scale:2}}).then(()=>{if(token===generation&&plot.isConnected)resizeObserver.observe(plot);}).catch(error=>{if(token===generation){el('error').hidden=false;el('error').textContent=error.message;}});
+    Plotly.newPlot(plot,traces,{width:plot.clientWidth,height:plot.clientHeight,margin:{l:65,r:20,t:20,b:52},paper_bgcolor:'#fff',plot_bgcolor:'#fff',font:{family:'system-ui, sans-serif',size:11,color:'#526674'},xaxis:{title:{text:'Logged training step'},gridcolor:'#edf1f4',zeroline:false},yaxis:{gridcolor:'#edf1f4',zeroline:false,automargin:true},legend:{orientation:'h',x:0,y:1.12},hovermode:'x unified',dragmode:'zoom'},{responsive:true,displaylogo:false,scrollZoom:false,toImageButtonOptions:{format:'png',filename:tag.replaceAll('/','_'),scale:2}}).then(()=>{if(token===generation&&plot.isConnected)resizeObserver.observe(plot);}).catch(error=>{if(token===generation){el('error').hidden=false;el('error').textContent=error.message;}});
   }
 }
 async function init(){
