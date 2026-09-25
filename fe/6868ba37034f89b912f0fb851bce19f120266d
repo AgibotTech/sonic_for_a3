@@ -1,0 +1,29 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "fe6868ba37034f89b912f0fb851bce19f120266d",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "site/training/index.html",
+      "new_path": "site/training/index.html",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "site/training/viewer.js",
+      "new_path": "site/training/viewer.js",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    }
+  ]
+}
