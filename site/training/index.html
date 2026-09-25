@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>024 &amp; 035 training curves · SONIC for A3</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="../vendor/plotly-basic-3.1.0.min.js"></script>
+<script defer src="viewer.js"></script>
+</head>
+<body><main>
+<header><a href="../">SONIC for A3</a><a href="https://github.com/AgibotTech/sonic_for_a3">GitHub ↗</a></header>
+<h1>Training curves <span>024 / 035</span></h1>
+<p class="intro">Explore the scalar training signals exported from TensorBoard. Search a metric, compare runs, and zoom into a training interval.</p>
+<div id="summary" role="status">Loading snapshot…</div>
+<section class="controls" aria-label="Chart controls">
+<label>Search metrics<input id="search" type="search" placeholder="e.g. tracking, loss, reward"></label>
+<label>Metric group<select id="group"><option value="">All groups</option></select></label>
+<fieldset><legend>Runs</legend><label class="run r024"><input id="run024" type="checkbox" checked>024</label><label class="run r035"><input id="run035" type="checkbox" checked>035</label></fieldset>
+<label class="smooth">Smoothing <output id="smoothValue">0.00 · raw</output><input id="smoothing" type="range" min="0" max="0.99" step="0.01" value="0"></label>
+</section>
+<p class="note">Horizontal axis: original logged training step, without offsets or stitching. Runs can differ in training settings and reward definitions; these curves are not a common evaluation benchmark. Smoothing uses a bias-corrected exponential moving average over the exported points.</p>
+<details><summary>Snapshot &amp; data coverage</summary><div id="coverage"></div><p>TensorBoard was configured to retain up to 5,000 display samples per series. This snapshot preserves all scalar metrics exposed for 024 and 035, not every event-log point. Non-finite values appear as gaps. No other runs or text logs are included.</p><a href="scalars.json" download>Download all displayed values (JSON)</a> · <a href="../vendor/plotly-LICENSE.txt">Plotly.js license</a></details>
+<div class="pager"><p id="count"></p><div><button id="prev" type="button">← Previous</button><span id="page"></span><button id="next" type="button">Next →</button></div></div>
+<section id="charts" aria-label="Training metric charts"></section>
+<p id="error" role="alert" hidden></p>
+<footer>Drag to zoom · double-click to reset · hover to inspect values · use the chart toolbar to save a PNG</footer>
+</main></body></html>

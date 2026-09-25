@@ -27,7 +27,7 @@ jobs:
       - name: Assemble demo page
         run: |
           mkdir -p _site/media
-          cp site/index.html _site/index.html
+          cp -R site/. _site/
           cp media/a3/035_200k_a3_fast_rknn_teleop.jpg _site/media/
           cp media/a3/035_200k_a3_fast_rknn_teleop.mp4 _site/media/
       - uses: actions/upload-pages-artifact@v3
