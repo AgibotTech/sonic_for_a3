@@ -3,18 +3,19 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>024 &amp; 035 training curves · SONIC for A3</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 <script defer src="../vendor/plotly-basic-3.1.0.min.js"></script>
-<script defer src="viewer.js"></script>
+<script defer src="viewer.js?v=2"></script>
 </head>
 <body><main>
 <header><a href="../">SONIC for A3</a><a href="https://github.com/AgibotTech/sonic_for_a3">GitHub ↗</a></header>
 <h1>Training curves <span>024 / 035</span></h1>
 <p class="intro">Explore the scalar training signals exported from TensorBoard. Search a metric, compare runs, and zoom into a training interval.</p>
 <div id="summary" role="status">Loading snapshot…</div>
+<nav id="groupTabs" aria-label="Metric categories"></nav>
+<p id="groupDescription"></p>
 <section class="controls" aria-label="Chart controls">
-<label>Search metrics<input id="search" type="search" placeholder="e.g. tracking, loss, reward"></label>
-<label>Metric group<select id="group"><option value="">All groups</option></select></label>
+<label>Search this group<input id="search" type="search" placeholder="Filter metrics in this group"></label>
 <fieldset><legend>Runs</legend><label class="run r024"><input id="run024" type="checkbox" checked>024</label><label class="run r035"><input id="run035" type="checkbox" checked>035</label></fieldset>
 <label class="smooth">Smoothing <output id="smoothValue">0.00 · raw</output><input id="smoothing" type="range" min="0" max="0.99" step="0.01" value="0"></label>
 </section>

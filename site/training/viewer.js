@@ -1,6 +1,7 @@
 'use strict';
 const el=id=>document.getElementById(id), pageSize=8;
-let snapshot, tags=[], pageIndex=0, generation=0;
+let snapshot, tags=[], pageIndex=0, generation=0, activeGroup="Rewards";
+const groupDescriptions={Rewards:"Reward components",Loss:"Optimization losses",Train:"Training statistics",Policy:"Policy statistics",Value:"Value-function statistics",Terminations:"Episode termination signals",Env:"Environment statistics",Objective:"Training objectives",AdaptiveSampling:"Motion sampling statistics",Misc:"Other logged statistics"};
 const resizeObserver=new ResizeObserver(entries=>{for(const {target} of entries){if(target.isConnected&&target.data)Plotly.Plots.resize(target);}});
 const colors={'024':'#176bb0','035':'#c25a24'};
 function smooth(points,weight){
@@ -14,11 +15,13 @@ function smooth(points,weight){
 }
 function render(){
   const token=++generation;
-  const query=el('search').value.trim().toLowerCase(),group=el('group').value;
+  const query=el('search').value.trim().toLowerCase(),group=activeGroup;
   const runs=['024','035'].filter(r=>el('run'+r).checked);
   const filtered=tags.filter(t=>(!group||t.split('/')[0]===group)&&t.toLowerCase().includes(query)&&runs.some(r=>snapshot.runs[r][t]));
   const pages=Math.ceil(filtered.length/pageSize);pageIndex=Math.min(pageIndex,Math.max(0,pages-1));
-  el('count').textContent=`${filtered.length} of ${tags.length} metrics · ${runs.length} runs selected`;
+  el('count').textContent=`${group} · ${filtered.length} of ${tags.filter(t=>t.split('/')[0]===group).length} metrics · ${runs.length} runs selected`;
+  el('groupDescription').textContent=groupDescriptions[group]||group;
+  for(const button of el('groupTabs').children)button.setAttribute('aria-pressed',String(button.dataset.group===group));
   el('page').textContent=pages?`${pageIndex+1} / ${pages}`:'0 / 0';
   el('prev').disabled=pageIndex===0;el('next').disabled=pageIndex+1>=pages;
   const weight=Number(el('smoothing').value);
@@ -45,10 +48,14 @@ async function init(){
   const response=await fetch('scalars.json');if(!response.ok)throw Error('Could not load scalar snapshot: '+response.status);
   snapshot=await response.json();if(Object.keys(snapshot.runs).sort().join(',')!=='024,035')throw Error('Unexpected run selection');
   tags=[...new Set(Object.values(snapshot.runs).flatMap(s=>Object.keys(s)))].sort();
-  for(const g of [...new Set(tags.map(t=>t.split('/')[0]))].sort()){const option=document.createElement('option');option.value=g;option.textContent=g;el('group').append(option);}
+  for(const g of Object.keys(groupDescriptions).filter(g=>tags.some(t=>t.split('/')[0]===g))){
+    const button=document.createElement('button');button.type='button';button.dataset.group=g;
+    button.textContent=`${g} (${tags.filter(t=>t.split('/')[0]===g).length})`;
+    button.addEventListener('click',()=>{activeGroup=g;pageIndex=0;el('search').value='';render();});el('groupTabs').append(button);
+  }
   el('summary').textContent=`${tags.length} metrics · 024: ${Object.keys(snapshot.runs['024']).length} · 035: ${Object.keys(snapshot.runs['035']).length} · Snapshot ${new Date(snapshot.exported_at).toISOString().slice(0,10)}`;
   for(const run of ['024','035']){let min=Infinity,max=-Infinity,count=0;for(const points of Object.values(snapshot.runs[run]))for(const [step] of points){min=Math.min(min,step);max=Math.max(max,step);count++;}const p=document.createElement('p');p.textContent=`${run}: steps ${min.toLocaleString()}–${max.toLocaleString()} · ${count.toLocaleString()} displayed points across all metrics`;el('coverage').append(p);}
-  for(const id of ['search','group','run024','run035'])el(id).addEventListener(id==='search'?'input':'change',()=>{pageIndex=0;render();});
+  for(const id of ['search','run024','run035'])el(id).addEventListener(id==='search'?'input':'change',()=>{pageIndex=0;render();});
   el('smoothing').addEventListener('input',()=>{const w=Number(el('smoothing').value);el('smoothValue').textContent=w.toFixed(2)+(w===0?' · raw':' · EMA');});
   el('smoothing').addEventListener('change',render);
   el('prev').addEventListener('click',()=>{pageIndex--;render();});el('next').addEventListener('click',()=>{pageIndex++;render();});
