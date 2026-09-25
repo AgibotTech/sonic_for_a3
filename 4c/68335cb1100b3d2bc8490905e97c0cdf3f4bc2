@@ -1,0 +1,36 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "4c68335cb1100b3d2bc8490905e97c0cdf3f4bc2",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "site/training/index.html",
+      "new_path": "site/training/index.html",
+      "additions": {
+        "human": 5
+      },
+      "deletions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "site/training/style.css",
+      "new_path": "site/training/style.css",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "site/training/viewer.js",
+      "new_path": "site/training/viewer.js",
+      "additions": {
+        "human": 12
+      },
+      "deletions": {
+        "human": 5
+      }
+    }
+  ]
+}
