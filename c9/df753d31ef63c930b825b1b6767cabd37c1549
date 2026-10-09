@@ -1,0 +1,53 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "c9df753d31ef63c930b825b1b6767cabd37c1549",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": ".gitignore",
+      "new_path": ".gitignore",
+      "additions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "a3_hf_manifest.json",
+      "new_path": "a3_hf_manifest.json",
+      "additions": {
+        "human": 8
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "human": 7
+      }
+    },
+    {
+      "old_path": "download_from_hf.py",
+      "new_path": "download_from_hf.py",
+      "additions": {
+        "human": 14
+      },
+      "deletions": {
+        "human": 6
+      }
+    },
+    {
+      "old_path": "tests/test_download_from_hf.py",
+      "new_path": "tests/test_download_from_hf.py",
+      "additions": {
+        "human": 11
+      },
+      "deletions": {
+        "human": 1
+      }
+    }
+  ]
+}
