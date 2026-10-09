@@ -1,0 +1,700 @@
+tests/test_exp090_contract.py
+  s_1071e05eefc772::t_5ea8557a87ad8c 1-119
+scripts/preflight_exp090.py
+  s_1071e05eefc772::t_dc3536ef06791e 66-67,69
+  s_1071e05eefc772::t_738bfc02535f50 68,70
+  s_1071e05eefc772::t_48871da362f8a0 1-11,13-65,71-109
+  s_1071e05eefc772::t_d2b988d1e627f7 12
+scripts/prepare_exp090_config.py
+  s_1071e05eefc772::t_123585fcd62826 1-102
+scripts/probe_exp090_loader.py
+  s_1071e05eefc772::t_f0ea0676cbd810 1-14,16-17,23-63,65-82,85-91
+  s_1071e05eefc772::t_738bfc02535f50 84
+  s_1071e05eefc772::t_d2b988d1e627f7 15
+  s_1071e05eefc772::t_dc3536ef06791e 18-22,64,83
+scripts/prepare_exp090_smpl.py
+  s_1071e05eefc772::t_664e33722c93b9 67-70
+  s_1071e05eefc772::t_16827d4b95ccdc 1-66,71-192
+config/exp090/README.md
+  s_1071e05eefc772::t_73f8718bfb0614 1-34
+  s_1071e05eefc772::t_88fae721ad68e3 35-37
+scripts/exp090_io.py
+  s_1071e05eefc772::t_d2b988d1e627f7 1-17
+scripts/verify_exp090_smoke.py
+  s_1071e05eefc772::t_1f25fd71c21a36 27-36,93-107,152
+  s_1071e05eefc772::t_d2b988d1e627f7 19
+  s_1071e05eefc772::t_979f11800e0784 1-18,21-26,60-68,70-92,108-151,154-160
+  s_1071e05eefc772::t_bc01907c6a063a 20,37-59,69,153
+gear_sonic/trl/callbacks/exp090_audit_callback.py
+  s_1071e05eefc772::t_85b16a05a8930f 56-57,108-109
+  s_1071e05eefc772::t_1f25fd71c21a36 3,76-90
+  s_1071e05eefc772::t_02ab0a4a0d0db1 99-100,102-107
+  s_1071e05eefc772::t_93a8d58ec65b64 1-2,4-55,58-65,91-98,101,110-126
+  s_1071e05eefc772::t_979f11800e0784 66-75
+gear_sonic/trl/utils/checkpoint_resume_policy.py
+  s_1071e05eefc772::t_bd3c9a11243be4 1-44
+scripts/prepare_exp090_qc.py
+  s_1071e05eefc772::t_c465b3dfec86a9 1-197
+scripts/materialize_exp090.py
+  s_1071e05eefc772::t_dc3536ef06791e 249-250
+  s_1071e05eefc772::t_ef7f8e844af9f8 1-52,98-227,229-236,238-248,251-256
+  s_1071e05eefc772::t_caf8d8d7547f26 53-97,228,237
+scripts/launch_exp090.py
+  s_1071e05eefc772::t_48871da362f8a0 1-14,16-117
+  s_1071e05eefc772::t_d2b988d1e627f7 15
+gear_sonic/trl/trainer/ppo_trainer.py
+  s_1071e05eefc772::t_664e33722c93b9 2554,2611-2614
+  s_1071e05eefc772::t_bd3c9a11243be4 64-66,68,862,864,866,869-870,1917,1921-1927,1929-1930,1957,1971,2022-2023,2027-2028,2187,2191-2201,2208,2216-2217,2555-2578,2608-2610,2615-2640,2643-2647,2660-2672
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.0",
+  "base_commit_sha": "d80319a2c2d1598e125d2ac1da14bbca54e726b0",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.output_tokens": "329434",
+        "tlab.session_started_at": "2026-10-09T14:02:35Z",
+        "tlab.token_usage.cache_read_tokens": "118445184",
+        "tlab.token_usage.input_tokens": "3172313",
+        "tlab.token_usage.cache_creation_tokens": "0"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "config/exp090/README.md",
+      "additions": {
+        "human": 13,
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 33
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "config/exp090/baseline089.yaml",
+      "additions": {
+        "human": 1312
+      }
+    },
+    {
+      "new_path": "config/exp090/baseline_source_hashes.json",
+      "additions": {
+        "human": 402
+      }
+    },
+    {
+      "new_path": "config/exp090/contract.json",
+      "additions": {
+        "human": 182
+      }
+    },
+    {
+      "new_path": "config/exp090/train.yaml",
+      "additions": {
+        "human": 1319
+      }
+    },
+    {
+      "new_path": "config/exp090/validation/formal_launch.json",
+      "additions": {
+        "human": 9
+      }
+    },
+    {
+      "new_path": "config/exp090/validation/formal_resolved_config.yaml",
+      "additions": {
+        "human": 1312
+      }
+    },
+    {
+      "new_path": "config/exp090/validation/formal_start_receipt.json",
+      "additions": {
+        "human": 79
+      }
+    },
+    {
+      "new_path": "config/exp090/validation/smoke_receipt.json",
+      "additions": {
+        "human": 70
+      }
+    },
+    {
+      "new_path": "gear_sonic/config/collision/a3_exp089_v13_rigid_foot_review.json",
+      "additions": {
+        "human": 29
+      }
+    },
+    {
+      "new_path": "gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf",
+      "additions": {
+        "human": 1305
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/a3_dynamic_articulation.py",
+      "additions": {
+        "human": 192
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_every_step_contact_sensor.py",
+      "additions": {
+        "human": 34
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_self_collision.py",
+      "additions": {
+        "human": 85
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_self_contact_reward.py",
+      "additions": {
+        "human": 75
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/h2.py",
+      "additions": {
+        "human": 387
+      }
+    },
+    {
+      "new_path": "gear_sonic/evaluation/joint_angle.py",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/callbacks/exp090_audit_callback.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 126
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/a3_model_fingerprint.py",
+      "additions": {
+        "human": 31
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/a3_startup_affinity.py",
+      "additions": {
+        "human": 75
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/checkpoint_resume_policy.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 44
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/cuda_memory_diagnostics.py",
+      "additions": {
+        "human": 32
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/ddp_cpu_reduce_hook_b2.py",
+      "additions": {
+        "human": 715
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/ddp_lossless_collective.py",
+      "additions": {
+        "human": 153
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/ddp_lossless_exchange.py",
+      "additions": {
+        "human": 149
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/optimizer_resume.py",
+      "additions": {
+        "human": 153
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/retained_shm.py",
+      "additions": {
+        "human": 30
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/shm_native_reduce.c",
+      "additions": {
+        "human": 35
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/shm_native_reduce.py",
+      "additions": {
+        "human": 52
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/README.md",
+      "additions": {
+        "human": 3
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/__init__.py",
+      "additions": {
+        "human": 5
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/body_model.py",
+      "additions": {
+        "human": 136
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/body_model_smplh.py",
+      "additions": {
+        "human": 110
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/body_model_smplx.py",
+      "additions": {
+        "human": 143
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/min_lbs.py",
+      "additions": {
+        "human": 126
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/rotation_conversions.py",
+      "additions": {
+        "human": 538
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/smpl_lite.py",
+      "additions": {
+        "human": 148
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/smpl_vert_segmentation.json",
+      "additions": {
+        "human": 7440
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/smplx_lite.py",
+      "additions": {
+        "human": 329
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/body_model/utils.py",
+      "additions": {
+        "human": 564
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/smplx/smplx_utils.py",
+      "additions": {
+        "human": 515
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/stripe_lossless_codec.c",
+      "additions": {
+        "human": 74
+      }
+    },
+    {
+      "new_path": "gear_sonic/trl/utils/stripe_lossless_nibble_codec.c",
+      "additions": {
+        "human": 186
+      }
+    },
+    {
+      "new_path": "gear_sonic/utils/a3_dynamic_armature.py",
+      "additions": {
+        "human": 89
+      }
+    },
+    {
+      "new_path": "gear_sonic/utils/cuda_visibility.py",
+      "additions": {
+        "human": 95
+      }
+    },
+    {
+      "new_path": "gear_sonic/utils/kit_cli.py",
+      "additions": {
+        "human": 18
+      }
+    },
+    {
+      "new_path": "scripts/a3_tcp_pacing.c",
+      "additions": {
+        "human": 82
+      }
+    },
+    {
+      "new_path": "scripts/build_a3_lossless.sh",
+      "additions": {
+        "human": 17
+      }
+    },
+    {
+      "new_path": "scripts/exp090_io.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 17
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/launch_a3_mainline.py",
+      "additions": {
+        "human": 176
+      }
+    },
+    {
+      "new_path": "scripts/launch_exp090.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 117
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/materialize_exp090.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 256
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/preflight_exp090.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 109
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/prepare_exp090_config.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 102
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/prepare_exp090_qc.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 197
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/prepare_exp090_smpl.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 192
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/probe_a3_lossless_collective.py",
+      "additions": {
+        "human": 176
+      }
+    },
+    {
+      "new_path": "scripts/probe_a3_lossless_shm.py",
+      "additions": {
+        "human": 140
+      }
+    },
+    {
+      "new_path": "scripts/probe_exp090_loader.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 91
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/verify_exp090_smoke.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 160
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "tests/test_exp090_contract.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 119
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/commands.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/commands.py",
+      "additions": {
+        "human": 622
+      },
+      "deletions": {
+        "human": 6
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/events.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/events.py",
+      "additions": {
+        "human": 286
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/observations.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/observations.py",
+      "additions": {
+        "human": 95
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/rewards.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/rewards.py",
+      "additions": {
+        "human": 43
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/modular_tracking_env_cfg.py",
+      "new_path": "gear_sonic/envs/manager_env/modular_tracking_env_cfg.py",
+      "additions": {
+        "human": 44
+      },
+      "deletions": {
+        "human": 15
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/__init__.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/__init__.py",
+      "additions": {
+        "human": 5
+      },
+      "deletions": {
+        "human": 6
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/a3.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/a3.py",
+      "additions": {
+        "human": 32
+      },
+      "deletions": {
+        "human": 40
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/a3_old.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_old.py",
+      "additions": {
+        "human": 6
+      },
+      "deletions": {
+        "human": 8
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/g1.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/g1.py",
+      "additions": {
+        "human": 199
+      },
+      "deletions": {
+        "human": 7
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/wrapper/manager_env_wrapper.py",
+      "new_path": "gear_sonic/envs/wrapper/manager_env_wrapper.py",
+      "additions": {
+        "human": 35
+      },
+      "deletions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "gear_sonic/evaluation/README.md",
+      "new_path": "gear_sonic/evaluation/README.md",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "gear_sonic/train_agent_trl.py",
+      "new_path": "gear_sonic/train_agent_trl.py",
+      "additions": {
+        "human": 87
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/callbacks/im_resample_callback.py",
+      "new_path": "gear_sonic/trl/callbacks/im_resample_callback.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/callbacks/model_save_callback.py",
+      "new_path": "gear_sonic/trl/callbacks/model_save_callback.py",
+      "additions": {
+        "human": 8
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/losses/token_losses.py",
+      "new_path": "gear_sonic/trl/losses/token_losses.py",
+      "additions": {
+        "human": 35
+      },
+      "deletions": {
+        "human": 18
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/modules/universal_token_modules.py",
+      "new_path": "gear_sonic/trl/modules/universal_token_modules.py",
+      "additions": {
+        "human": 213
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/trainer/ppo_trainer.py",
+      "new_path": "gear_sonic/trl/trainer/ppo_trainer.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 116
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/utils/order_converter.py",
+      "new_path": "gear_sonic/trl/utils/order_converter.py",
+      "additions": {
+        "human": 43
+      },
+      "deletions": {
+        "human": 46
+      }
+    },
+    {
+      "old_path": "gear_sonic/utils/adaptive_sampling_index.py",
+      "new_path": "gear_sonic/utils/adaptive_sampling_index.py",
+      "additions": {
+        "human": 90
+      }
+    },
+    {
+      "old_path": "gear_sonic/utils/motion_lib/motion_lib_base.py",
+      "new_path": "gear_sonic/utils/motion_lib/motion_lib_base.py",
+      "additions": {
+        "human": 797
+      },
+      "deletions": {
+        "human": 114
+      }
+    }
+  ]
+}
