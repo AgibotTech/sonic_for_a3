@@ -1,7 +1,14 @@
 {
   "repo_id": "sonic-for-a3/sonic",
-  "revision": "db1f40787d580af6d1e53df0df72242904a1dae5",
+  "revision": "9bbddf8730389c2a1980e69c8b410a8dbcc3e28e",
   "files": [
+    {
+      "remote": "config.json",
+      "destination": "checkpoints/035_step200000/hub_config.json",
+      "group": "model_metadata",
+      "size": 609,
+      "sha256": "7b8827b1859734d1060491f4f779e36bed8d467143c604fa353431e03b7bdb34"
+    },
     {
       "remote": "035_step200000/model_step_200000.pt",
       "destination": "checkpoints/035_step200000/model_step_200000.pt",

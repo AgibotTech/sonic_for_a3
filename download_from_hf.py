@@ -58,6 +58,19 @@ def install_file(entry, output_dir, download, repo_id, revision, token=None, for
     print(f"[downloaded] {entry['destination']}")
 
 
+def selected_entries(manifest, components):
+    groups = set(components)
+    if 'all' in groups:
+        groups.update(['pt', 'onnx', 'rknn', 'sysroot'])
+    if 'runtime' in groups:
+        groups.update(['onnx', 'rknn'])
+    # One shared release configuration for model downloads. This is an ordinary
+    # verified artifact; no tracking ping or forced cache bypass is performed.
+    if groups.intersection({'pt', 'onnx', 'rknn'}):
+        groups.add('model_metadata')
+    return [e for e in manifest['files'] if e['group'] in groups]
+
+
 def main(argv=None):
     manifest = json.loads((ROOT / 'a3_hf_manifest.json').read_text())
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -71,12 +84,7 @@ def main(argv=None):
     parser.add_argument('--force', action='store_true', help='redownload and replace even verified files')
     parser.add_argument('--list', action='store_true', help='show selected files without downloading')
     args = parser.parse_args(argv)
-    groups = set(args.component)
-    if 'all' in groups:
-        groups.update(['pt', 'onnx', 'rknn', 'sysroot'])
-    if 'runtime' in groups:
-        groups.update(['onnx', 'rknn'])
-    entries = [e for e in manifest['files'] if e['group'] in groups]
+    entries = selected_entries(manifest, args.component)
     print(f"Repository: {args.repo_id} @ {args.revision}")
     print(f"Selected: {len(entries)} files, {sum(e['size'] for e in entries) / 1e6:.1f} MB")
     if args.list:

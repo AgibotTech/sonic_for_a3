@@ -45,7 +45,17 @@ class DownloadTests(unittest.TestCase):
             with contextlib.redirect_stdout(out):
                 module.main(['--component', group, '--list'])
             for entry in manifest['files']:
-                self.assertEqual(entry['destination'] in out.getvalue(), entry['group'] == group)
+                expected = entry['group'] == group or (entry['group'] == 'model_metadata' and group != 'sysroot')
+                self.assertEqual(entry['destination'] in out.getvalue(), expected)
+
+    def test_shared_metadata_selected_once_and_not_for_sysroot(self):
+        manifest = json.loads((ROOT / 'a3_hf_manifest.json').read_text())
+        for groups in [['pt'], ['onnx'], ['rknn'], ['onnx', 'rknn'], ['runtime'], ['all']]:
+            entries = module.selected_entries(manifest, groups)
+            metadata = [e for e in entries if e['group'] == 'model_metadata']
+            self.assertEqual(len(metadata), 1)
+            self.assertEqual(metadata[0]['remote'], 'config.json')
+        self.assertTrue(all(e['group'] == 'sysroot' for e in module.selected_entries(manifest, ['sysroot'])))
 
     def test_manifest_has_safe_unique_destinations(self):
         entries = json.loads((ROOT / 'a3_hf_manifest.json').read_text())['files']

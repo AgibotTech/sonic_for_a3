@@ -42,6 +42,13 @@ python download_from_hf.py --component sysroot  # Rockchip cross-build input
 python download_from_hf.py --component all
 ```
 
+Model downloads also retrieve the shared root `config.json` release metadata
+as `checkpoints/035_step200000/hub_config.json`. Hugging Face uses requests to
+this configuration for its native download counter; sysroot-only downloads do
+not fetch it. This is a request count, not a count of unique users or completed
+weight transfers. Fully cached runs and direct binary-only downloads may not
+be counted. See [Hugging Face's counting rules](https://huggingface.co/docs/hub/models-download-stats).
+
 The A3 URDF/MJCF derives from the public
 [AgibotTech/A3-A3U-robot-model](https://github.com/AgibotTech/A3-A3U-robot-model).
 

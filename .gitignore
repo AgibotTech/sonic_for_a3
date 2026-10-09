@@ -270,3 +270,6 @@ tests/local/
 
 # Separate RKNN conversion environment (Toolkit has different Torch constraints).
 .venv_rknn/
+
+# Shared Hugging Face model release metadata (downloaded and checksum verified).
+/checkpoints/035_step200000/hub_config.json
