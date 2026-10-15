@@ -1,0 +1,19 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "a645bed01efafd7a82267c412d46b0bfaf6f9595",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 8
+      },
+      "deletions": {
+        "human": 8
+      }
+    }
+  ]
+}
