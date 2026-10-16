@@ -1,0 +1,69 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "56f774f5990c2e6778b739290859b57b61ab0d1f",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "artifacts/terrain_preview_20261016/README.md",
+      "new_path": "artifacts/terrain_preview_20261016/README.md",
+      "additions": {
+        "human": 12
+      },
+      "deletions": {
+        "human": 10
+      }
+    },
+    {
+      "old_path": "artifacts/terrain_preview_20261016/validation.json",
+      "new_path": "artifacts/terrain_preview_20261016/validation.json",
+      "additions": {
+        "human": 14
+      },
+      "deletions": {
+        "human": 16
+      }
+    },
+    {
+      "old_path": "config/terrain_stage2_preview.json",
+      "new_path": "config/terrain_stage2_preview.json",
+      "additions": {
+        "human": 65
+      },
+      "deletions": {
+        "human": 10
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 9
+      },
+      "deletions": {
+        "human": 9
+      }
+    },
+    {
+      "old_path": "scripts/generate_a3_terrain_preview.py",
+      "new_path": "scripts/generate_a3_terrain_preview.py",
+      "additions": {
+        "human": 15
+      },
+      "deletions": {
+        "human": 15
+      }
+    },
+    {
+      "old_path": "tests/test_a3_terrain_preview.py",
+      "new_path": "tests/test_a3_terrain_preview.py",
+      "additions": {
+        "human": 4
+      },
+      "deletions": {
+        "human": 4
+      }
+    }
+  ]
+}
