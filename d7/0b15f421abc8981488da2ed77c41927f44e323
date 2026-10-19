@@ -1,0 +1,175 @@
+gear_sonic/terrain_stage2/rewards.py
+  s_39dd0fdffafee0::t_768c61337d2520 1-197
+gear_sonic/envs/manager_env/mdp/observations.py
+  s_39dd0fdffafee0::t_d38ea9d55132f3 494
+gear_sonic/terrain_stage2/pairing.py
+  s_39dd0fdffafee0::t_768c61337d2520 1-152
+gear_sonic/envs/wrapper/manager_env_wrapper.py
+  s_39dd0fdffafee0::t_d38ea9d55132f3 956-962
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "d70b15f421abc8981488da2ed77c41927f44e323",
+  "prompts": {},
+  "sessions": {
+    "s_39dd0fdffafee0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a139a8-310d-7110-a6bf-93fa5bd9a5de",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>"
+    }
+  },
+  "changes": [
+    {
+      "new_path": "docs/a3_terrain_stage2_implementation.md",
+      "additions": {
+        "human": 41
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/__init__.py",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/bridge.py",
+      "additions": {
+        "human": 91
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/checkpoint.py",
+      "additions": {
+        "human": 65
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/core.py",
+      "additions": {
+        "human": 205
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/geometry.py",
+      "additions": {
+        "human": 80
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/isaac_provider.py",
+      "additions": {
+        "human": 134
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/manager_setup.py",
+      "additions": {
+        "human": 42
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/pairing.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 152
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/rewards.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 197
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "scripts/build_a3_terrain_admission.py",
+      "additions": {
+        "human": 85
+      }
+    },
+    {
+      "new_path": "tests/test_terrain_stage2_bridge.py",
+      "additions": {
+        "human": 91
+      }
+    },
+    {
+      "new_path": "tests/test_terrain_stage2_checkpoint.py",
+      "additions": {
+        "human": 96
+      }
+    },
+    {
+      "new_path": "tests/test_terrain_stage2_core.py",
+      "additions": {
+        "human": 175
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_launch_contract.md",
+      "new_path": "docs/a3_terrain_stage2_launch_contract.md",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/observations.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/observations.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 1
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/wrapper/manager_env_wrapper.py",
+      "new_path": "gear_sonic/envs/wrapper/manager_env_wrapper.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/trainer/ppo_trainer.py",
+      "new_path": "gear_sonic/trl/trainer/ppo_trainer.py",
+      "additions": {
+        "human": 58
+      },
+      "deletions": {
+        "human": 5
+      }
+    }
+  ]
+}
