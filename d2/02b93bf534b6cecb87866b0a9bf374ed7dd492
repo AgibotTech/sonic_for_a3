@@ -1,0 +1,145 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "d202b93bf534b6cecb87866b0a9bf374ed7dd492",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/README.md",
+      "additions": {
+        "human": 25
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/admission_summary.json",
+      "additions": {
+        "human": 28
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/flat_baseline_086000/archive_manifest.json",
+      "additions": {
+        "human": 12
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/flat_baseline_086000/quality_baselines.json",
+      "additions": {
+        "human": 1634
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/flat_baseline_086000/resume_001412.json",
+      "additions": {
+        "human": 5
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/flat_baseline_086000/summary.json",
+      "additions": {
+        "human": 44
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/launch_receipt.json",
+      "additions": {
+        "human": 35
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank0.json",
+      "additions": {
+        "human": 47
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank1.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank2.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank3.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank4.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank5.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank6.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/learning_rank7.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/lineage.json",
+      "additions": {
+        "human": 10
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/preflight_rank0.json",
+      "additions": {
+        "human": 47
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/prep_receipt.json",
+      "additions": {
+        "human": 6
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/recovery_pool_tione.json",
+      "additions": {
+        "human": 422
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/stage2_tione_1n8.yaml",
+      "additions": {
+        "human": 1389
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_20261019/stage2_tione_preflight.yaml",
+      "additions": {
+        "human": 1389
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    }
+  ]
+}
