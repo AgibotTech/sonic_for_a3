@@ -1,0 +1,29 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "d97475b6529889cadd459d48bafc623f3c769745",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "gear_sonic/terrain_stage2/runtime.py",
+      "new_path": "gear_sonic/terrain_stage2/runtime.py",
+      "additions": {
+        "human": 17
+      },
+      "deletions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "tests/test_terrain_stage2_runtime.py",
+      "new_path": "tests/test_terrain_stage2_runtime.py",
+      "additions": {
+        "human": 11
+      },
+      "deletions": {
+        "human": 1
+      }
+    }
+  ]
+}
