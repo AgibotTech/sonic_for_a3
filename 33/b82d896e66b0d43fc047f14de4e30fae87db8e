@@ -1,0 +1,25 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "33b82d896e66b0d43fc047f14de4e30fae87db8e",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "docs/a3_terrain_stage2_launch_contract.md",
+      "additions": {
+        "human": 60
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 6
+      }
+    }
+  ]
+}
