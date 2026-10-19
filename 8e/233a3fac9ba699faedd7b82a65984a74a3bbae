@@ -1,0 +1,52 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "8e233a3fac9ba699faedd7b82a65984a74a3bbae",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "gear_sonic/trl/callbacks/terrain_stage2_regression_callback.py",
+      "additions": {
+        "human": 87
+      }
+    },
+    {
+      "old_path": "gear_sonic/terrain_stage2/pairing.py",
+      "new_path": "gear_sonic/terrain_stage2/pairing.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/terrain_stage2/runtime.py",
+      "new_path": "gear_sonic/terrain_stage2/runtime.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "scripts/evaluate_a3_terrain_flat_baseline.py",
+      "new_path": "scripts/evaluate_a3_terrain_flat_baseline.py",
+      "additions": {
+        "human": 14
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "tests/test_terrain_stage2_audit.py",
+      "new_path": "tests/test_terrain_stage2_audit.py",
+      "additions": {
+        "human": 33
+      }
+    }
+  ]
+}
