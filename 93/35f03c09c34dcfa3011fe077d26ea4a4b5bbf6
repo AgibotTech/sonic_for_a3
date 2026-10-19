@@ -1,0 +1,19 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "9335f03c09c34dcfa3011fe077d26ea4a4b5bbf6",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "scripts/evaluate_a3_terrain_flat_baseline.py",
+      "new_path": "scripts/evaluate_a3_terrain_flat_baseline.py",
+      "additions": {
+        "human": 30
+      },
+      "deletions": {
+        "human": 6
+      }
+    }
+  ]
+}
