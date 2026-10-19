@@ -1,0 +1,23 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "1232582af5f37b8a72288437df9bf3ae985995a4",
+  "prompts": {},
+  "changes": [
+    {
+      "old_path": "gear_sonic/terrain_stage2/requirements.txt",
+      "new_path": "gear_sonic/terrain_stage2/requirements.txt",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "scripts/prepare_a3_terrain_auto_admission.py",
+      "new_path": "scripts/prepare_a3_terrain_auto_admission.py",
+      "additions": {
+        "human": 1
+      }
+    }
+  ]
+}
