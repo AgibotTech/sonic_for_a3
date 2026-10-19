@@ -1,0 +1,35 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "3bdd36580860e4b862151b313105521a8f7ecdf1",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "scripts/launch_tione_stage2_1n8.sh",
+      "additions": {
+        "human": 56
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/callbacks/terrain_stage2_audit_callback.py",
+      "new_path": "gear_sonic/trl/callbacks/terrain_stage2_audit_callback.py",
+      "additions": {
+        "human": 10
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "tests/test_terrain_stage2_audit.py",
+      "new_path": "tests/test_terrain_stage2_audit.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    }
+  ]
+}
