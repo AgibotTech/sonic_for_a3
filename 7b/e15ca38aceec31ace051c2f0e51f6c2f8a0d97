@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "7be15ca38aceec31ace051c2f0e51f6c2f8a0d97",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "gear_sonic/trl/callbacks/terrain_stage2_audit_callback.py",
+      "additions": {
+        "human": 168
+      }
+    },
+    {
+      "new_path": "tests/test_terrain_stage2_audit.py",
+      "additions": {
+        "human": 67
+      }
+    }
+  ]
+}
