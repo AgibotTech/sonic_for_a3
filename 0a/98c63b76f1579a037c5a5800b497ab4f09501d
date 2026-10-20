@@ -1,0 +1,122 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "0a98c63b76f1579a037c5a5800b497ab4f09501d",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_reference_fix_20261020/README.md",
+      "additions": {
+        "human": 13
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_reference_fix_20261020/final_g1_smoke.json",
+      "additions": {
+        "human": 23
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_reference_fix_20261020/final_protocol.json",
+      "additions": {
+        "human": 19
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_reference_fix_20261020/four_encoder_smoke.json",
+      "additions": {
+        "human": 44
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_reference_fix_20261020/reference_contract.json",
+      "additions": {
+        "human": 9
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_reference_fix_20261020/tests.txt",
+      "additions": {
+        "human": 7
+      }
+    },
+    {
+      "new_path": "gear_sonic/terrain_stage2/reference_contract.py",
+      "additions": {
+        "human": 164
+      }
+    },
+    {
+      "new_path": "tests/test_terrain_reference_contract.py",
+      "additions": {
+        "human": 62
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 6
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_launch_contract.md",
+      "new_path": "docs/a3_terrain_stage2_launch_contract.md",
+      "additions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/commands.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/commands.py",
+      "additions": {
+        "human": 33
+      },
+      "deletions": {
+        "human": 21
+      }
+    },
+    {
+      "old_path": "gear_sonic/terrain_stage2/integration.py",
+      "new_path": "gear_sonic/terrain_stage2/integration.py",
+      "additions": {
+        "human": 4
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/callbacks/terrain_stage2_audit_callback.py",
+      "new_path": "gear_sonic/trl/callbacks/terrain_stage2_audit_callback.py",
+      "additions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "scripts/launch_tione_stage2_1n8.sh",
+      "new_path": "scripts/launch_tione_stage2_1n8.sh",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "tests/test_terrain_a3_fast_heading.py",
+      "new_path": "tests/test_terrain_a3_fast_heading.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "tests/test_terrain_stage2_audit.py",
+      "new_path": "tests/test_terrain_stage2_audit.py",
+      "additions": {
+        "human": 9
+      },
+      "deletions": {
+        "human": 1
+      }
+    }
+  ]
+}
