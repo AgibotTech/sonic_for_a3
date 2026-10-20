@@ -1,0 +1,176 @@
+artifacts/terrain_stage2_tione_20261019/README.md
+  s_39dd0fdffafee0::t_a509f495af9918 3-4
+docs/a3_terrain_stage2_design.md
+  s_39dd0fdffafee0::t_4e19e2d2361e5f 3,131
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "51eae28dc42b5cb1c0326bd1b2a6a9ed5b2d9c64",
+  "prompts": {},
+  "sessions": {
+    "s_39dd0fdffafee0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a139a8-310d-7110-a6bf-93fa5bd9a5de",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.output_tokens": "523635",
+        "tlab.token_usage.cache_read_tokens": "190310656",
+        "tlab.token_usage.input_tokens": "3175006",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.session_started_at": "2026-10-20T04:08:42Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/README.md",
+      "additions": {
+        "human": 26
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/gate_000500.json",
+      "additions": {
+        "human": 40
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/launch_receipt.json",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/launch_tione_stage2_resume.sh",
+      "additions": {
+        "human": 38
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank0.json",
+      "additions": {
+        "human": 48
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank1.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank2.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank3.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank4.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank5.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank6.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/learning_rank7.json",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/platform_receipt.json",
+      "additions": {
+        "human": 60
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/prep_receipt.json",
+      "additions": {
+        "human": 6
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/regression_000500_summary.json",
+      "additions": {
+        "human": 44
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/resume_checkpoint_receipt.json",
+      "additions": {
+        "human": 23
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/resume_rank_receipt.json",
+      "additions": {
+        "human": 32
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/stage2_tione_resume.yaml",
+      "additions": {
+        "human": 1391
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_resume_20261020/verify_regression.py",
+      "additions": {
+        "human": 19
+      }
+    },
+    {
+      "old_path": "artifacts/terrain_stage2_tione_20261019/README.md",
+      "new_path": "artifacts/terrain_stage2_tione_20261019/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 2
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 2
+          }
+        ]
+      }
+    }
+  ]
+}
