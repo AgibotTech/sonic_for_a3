@@ -1,0 +1,229 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "ab28843522d67baa9e358753227ceea306021f4b",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/README.md",
+      "additions": {
+        "human": 25
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/cloud_status.json",
+      "additions": {
+        "human": 15
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/config/fixed_windows.json",
+      "additions": {
+        "human": 290
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/config/local_eval.yaml",
+      "additions": {
+        "human": 1364
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/environment.json",
+      "additions": {
+        "human": 29
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/geometry_portability.json",
+      "additions": {
+        "human": 14
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/grid_manifest.json",
+      "additions": {
+        "human": 54
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/heading_test_after.txt",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/heading_test_before.txt",
+      "additions": {
+        "human": 188
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/logs/README.md",
+      "additions": {
+        "human": 5
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/metadata.yaml",
+      "additions": {
+        "human": 49
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/provenance.json",
+      "additions": {
+        "human": 18
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/render_manifest.json",
+      "additions": {
+        "human": 233
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/report.html",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/compose_grids.py",
+      "additions": {
+        "human": 38
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/export_geometry.py",
+      "additions": {
+        "human": 20
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/package_remote.py",
+      "additions": {
+        "human": 38
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/package_smpl.py",
+      "additions": {
+        "human": 14
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/parallel_pull.py",
+      "additions": {
+        "human": 29
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/port_geometry_receipts.py",
+      "additions": {
+        "human": 40
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/prepare_local.py",
+      "additions": {
+        "human": 42
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/preview_report.py",
+      "additions": {
+        "human": 38
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/python_local.sh",
+      "additions": {
+        "human": 11
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/render_selected.py",
+      "additions": {
+        "human": 52
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/run_flat_heading_fixed.py",
+      "additions": {
+        "human": 22
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/run_followups.py",
+      "additions": {
+        "human": 22
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/run_matrix.py",
+      "additions": {
+        "human": 23
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/run_matrix_heading_fixed.py",
+      "additions": {
+        "human": 25
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/summarize.py",
+      "additions": {
+        "human": 33
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/summarize_heading_fixed.py",
+      "additions": {
+        "human": 33
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/reproduction/write_report.py",
+      "additions": {
+        "human": 58
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/rollout_qa.json",
+      "additions": {
+        "human": 26
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/summary.json",
+      "additions": {
+        "human": 375
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/summary_heading_fixed.json",
+      "additions": {
+        "human": 375
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_local_eval_20261020/visual_qa.json",
+      "additions": {
+        "human": 41
+      }
+    },
+    {
+      "old_path": "docs/a3_terrain_stage2_design.md",
+      "new_path": "docs/a3_terrain_stage2_design.md",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    }
+  ]
+}
