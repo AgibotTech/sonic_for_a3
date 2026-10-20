@@ -1,0 +1,61 @@
+gear_sonic/trl/callbacks/terrain_stage2_regression_callback.py
+  s_39dd0fdffafee0::t_9cf349fc7385b2 11-32,75,82-83,88-91,98-99
+tests/test_terrain_stage2_regression_process.py
+  s_39dd0fdffafee0::t_991cfb189c76f8 1-71
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "26064dbb1bea53dcd46155623ad1ec376fd67a83",
+  "prompts": {},
+  "sessions": {
+    "s_39dd0fdffafee0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a139a8-310d-7110-a6bf-93fa5bd9a5de",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.session_started_at": "2026-10-20T03:39:03Z",
+        "tlab.token_usage.input_tokens": "2935339",
+        "tlab.token_usage.output_tokens": "480533",
+        "tlab.token_usage.cache_read_tokens": "163324800"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "tests/test_terrain_stage2_regression_process.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 71
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic/trl/callbacks/terrain_stage2_regression_callback.py",
+      "new_path": "gear_sonic/trl/callbacks/terrain_stage2_regression_callback.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 31
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_39dd0fdffafee0",
+            "lines": 5
+          }
+        ]
+      }
+    }
+  ]
+}
