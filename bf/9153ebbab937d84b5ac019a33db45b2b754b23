@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "bf9153ebbab937d84b5ac019a33db45b2b754b23",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_stage2_tione_130k_20261023/README.md",
+      "additions": {
+        "human": 40
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_tione_130k_20261023/launch_receipt.json",
+      "additions": {
+        "human": 31
+      }
+    }
+  ]
+}
