@@ -1,0 +1,111 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "c877ffb944476e32b8ef3fa32f9be427e3a1de20",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/README.md",
+      "additions": {
+        "human": 30
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/full_flat_baseline130k.json",
+      "additions": {
+        "human": 44
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/full_flat_regression_20k.json",
+      "additions": {
+        "human": 44
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/local_config.yaml",
+      "additions": {
+        "human": 1364
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/manifest.json",
+      "additions": {
+        "human": 8229
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/per_window.json",
+      "additions": {
+        "human": 1922
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/render_manifest.json",
+      "additions": {
+        "human": 606
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/compose.py",
+      "additions": {
+        "human": 29
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/pipeline.py",
+      "additions": {
+        "human": 8
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/prepare_local.py",
+      "additions": {
+        "human": 24
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/python_local.sh",
+      "additions": {
+        "human": 11
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/render_local.py",
+      "additions": {
+        "human": 29
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/run_local.py",
+      "additions": {
+        "human": 30
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/reproduction/summarize.py",
+      "additions": {
+        "human": 33
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/summary.json",
+      "additions": {
+        "human": 116
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/visual_qa.json",
+      "additions": {
+        "human": 25
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_stage2_eval_20k_20261026/windows.json",
+      "additions": {
+        "human": 7698
+      }
+    }
+  ]
+}
