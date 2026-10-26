@@ -1,0 +1,33 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "a6785447e100f6b0b8a7c900d90db4f9f3393211",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "artifacts/terrain_pose_diagnosis_20261026/README.md",
+      "additions": {
+        "human": 24
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_pose_diagnosis_20261026/ablate.py",
+      "additions": {
+        "human": 22
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_pose_diagnosis_20261026/controls.py",
+      "additions": {
+        "human": 23
+      }
+    },
+    {
+      "new_path": "artifacts/terrain_pose_diagnosis_20261026/results.json",
+      "additions": {
+        "human": 366
+      }
+    }
+  ]
+}
