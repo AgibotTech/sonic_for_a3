@@ -1,0 +1,202 @@
+gear_sonic_deploy/xr_retarget/VENDOR.md
+  s_1071e05eefc772::t_01b73f06a7ffa0 1-2
+  s_1071e05eefc772::t_9668b3bd388dc0 3
+  s_1071e05eefc772::t_1fae31bc342251 4-6
+  s_1071e05eefc772::t_3ad690a279e353 7
+gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh
+  s_1071e05eefc772::t_cd7a7ff3a6206b 1000,1003,1014,1080
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "1c25ea25c41a3b898abb185919804fc945b5b868",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": null,
+      "custom_attributes": {
+        "tlab.token_usage.output_tokens": "1363491",
+        "tlab.session_started_at": "2026-10-29T10:48:45Z",
+        "tlab.token_usage.cache_read_tokens": "637987200",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.input_tokens": "11925364"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "gear_sonic_deploy/scripts/prepare_a3_089_runtime.py",
+      "additions": {
+        "human": 53
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config_089.yaml",
+      "additions": {
+        "human": 329
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/LICENSE.xr-retarget",
+      "additions": {
+        "human": 21
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/VENDOR.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/assets/mjcf/a3u_t3d0.xml",
+      "additions": {
+        "human": 826
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/ros2/ros2_plugin_proto/CMakeLists.txt",
+      "additions": {
+        "human": 7
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/ros2/ros2_plugin_proto/msg/RosMsgWrapper.msg",
+      "additions": {
+        "human": 3
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/ros2/ros2_plugin_proto/package.xml",
+      "additions": {
+        "human": 24
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/scripts/pico_a3_retarget_publisher.py",
+      "additions": {
+        "human": 385
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/__init__.py",
+      "additions": {
+        "human": 3
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/config/a3u_pico_retarget.yaml",
+      "additions": {
+        "human": 45
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/contract/__init__.py",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/contract/joint_order.py",
+      "additions": {
+        "human": 33
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/paths.py",
+      "additions": {
+        "human": 11
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/stream/__init__.py",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/stream/a3_ref_stream.py",
+      "additions": {
+        "human": 73
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/stream/ta_ros_publisher.py",
+      "additions": {
+        "human": 87
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/teleop/__init__.py",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/teleop/a3_motion_io.py",
+      "additions": {
+        "human": 105
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/teleop/a3_retargeter.py",
+      "additions": {
+        "human": 445
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/teleop/pico_body_source.py",
+      "additions": {
+        "human": 440
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/sonic_a3/teleop/synthetic_body.py",
+      "additions": {
+        "human": 144
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/tests/ta_reference_fixture.cpp",
+      "additions": {
+        "human": 22
+      }
+    },
+    {
+      "new_path": "gear_sonic_deploy/xr_retarget/tests/test_ta_publisher.py",
+      "additions": {
+        "human": 118
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh",
+      "new_path": "gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      }
+    }
+  ]
+}
