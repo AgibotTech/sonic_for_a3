@@ -997,8 +997,10 @@ stage_body_drive_debug_files() {
 stage_run_scripts() {
   local default_transport="iceoryx"
   local source_robot_env_default="0"
+  local robot_env_default=""
   if [[ "${ARCH}" == "rockchip" ]]; then
     source_robot_env_default="1"
+    robot_env_default="/agibot/software/v0/entry/env/env.sh"
   fi
 
   cat > "${PKG_DIR}/run_a3.sh" <<'RUN_A3'
@@ -1009,7 +1011,7 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 cd "${SCRIPT_DIR}"
 
 A3_SOURCE_ROBOT_ENV_DEFAULT="__A3_SOURCE_ROBOT_ENV_DEFAULT__"
-A3_ROBOT_ENV="${A3_ROBOT_ENV:-}"
+A3_ROBOT_ENV="${A3_ROBOT_ENV:-__A3_ROBOT_ENV_DEFAULT__}"
 A3_SOURCE_ROBOT_ENV_ENABLED="${A3_SOURCE_ROBOT_ENV:-${A3_SOURCE_ROBOT_ENV_DEFAULT}}"
 if [[ "${A3_SOURCE_ROBOT_ENV_ENABLED}" != "0" ]]; then
   if [[ -z "${A3_ROBOT_ENV}" ]]; then
@@ -1075,6 +1077,7 @@ exec "${SCRIPT_DIR}/a3_deploy_onnx_ref" \
 RUN_A3
   sed -i "s/__DEFAULT_A3_TRANSPORT__/${default_transport}/g" "${PKG_DIR}/run_a3.sh"
   sed -i "s/__A3_SOURCE_ROBOT_ENV_DEFAULT__/${source_robot_env_default}/g" "${PKG_DIR}/run_a3.sh"
+  sed -i "s|__A3_ROBOT_ENV_DEFAULT__|${robot_env_default}|g" "${PKG_DIR}/run_a3.sh"
 
   cat > "${PKG_DIR}/run_a3_probe.sh" <<'RUN_A3_PROBE'
 #!/usr/bin/env bash

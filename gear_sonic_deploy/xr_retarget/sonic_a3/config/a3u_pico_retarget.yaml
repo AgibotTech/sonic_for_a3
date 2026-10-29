@@ -1,0 +1,45 @@
+# Pico SMPL-24 body tracking -> A3 Ultra T3.0 retargeting (mink differential IK).
+#
+# Calibration pose = first frame of stand_Skeleton0.csv (the same standing reference
+# Isaac holds before streaming): upright, arms as in that stance, not the MJCF zero
+# pose with forearms horizontal. `calibration_q` overrides individual joints.
+
+# Paths are resolved by the retargeting package.
+mjcf: assets/mjcf/a3u_t3d0.xml
+calibration_q: {}
+calibration_frames: 10
+
+ik:
+  solver: daqp
+  dt: 0.02
+  iterations: 3
+  calibration_iterations: 100
+  damping: 1.0e-3
+  posture_cost: 0.02
+  limit_gain: 0.95
+
+# Orientation targets come from the named SMPL joint's rotation relative to calibration.
+# Position targets of the limb bodies come from the robot-length bone chain.
+tasks:
+  pelvis_link:           {orientation_from: pelvis,      position_cost: 20.0, orientation_cost: 10.0}
+  torso_Link:            {orientation_from: spine3,      position_cost: 0.0,  orientation_cost: 5.0}
+  left_knee_Link:        {position_cost: 2.0}
+  right_knee_Link:       {position_cost: 2.0}
+  left_ankle_roll_Link:  {orientation_from: left_ankle,  position_cost: 10.0, orientation_cost: 3.0}
+  right_ankle_roll_Link: {orientation_from: right_ankle, position_cost: 10.0, orientation_cost: 3.0}
+  left_elbow_Link:       {position_cost: 2.0}
+  right_elbow_Link:      {position_cost: 2.0}
+  left_wrist_yaw_Link:   {orientation_from: left_wrist,  position_cost: 6.0,  orientation_cost: 2.0}
+  right_wrist_yaw_Link:  {orientation_from: right_wrist, position_cost: 6.0,  orientation_cost: 2.0}
+
+# Rotate each human bone direction by the calibration misalignment expressed in the
+# bone's own joint frame (absorbs stance width / arm carriage differences).
+bone_direction_correction: true
+
+root:
+  ground_feet: true
+  ground_alpha: 0.2
+
+smoothing:
+  output_alpha: 0.6
+  max_joint_step: 0.25
