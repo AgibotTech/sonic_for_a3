@@ -48,6 +48,8 @@ class EventCfg:
     robot_joint_friction_armature = None
     robot_joint_friction_armature_regular = None
     robot_joint_friction_armature_ankle_waist = None
+    robot_joint_friction_ankle = None
+    ankle_motor_inertia = None
 
 
 class randomize_rigid_body_mass(_IsaacLabRandomizeRigidBodyMass):

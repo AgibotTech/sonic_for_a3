@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """A3 closed-chain MuJoCo sim2sim runner.
 
-This is the A3 sim2sim ground-truth path.  It uses repository-local defaults
-for the T2.5 loop MJCF, A3 ankle/waist solver library, and motion CSV. Pass the
-policy checkpoint explicitly; the released default artifact is
-``checkpoints/024_step100000/model_step_100000.pt``.
+This runner defaults to the 089 rigid-foot loop MJCF, 089 policy joint
+control parameters, the A3 ankle/waist solver library, and an example motion.
+Pass the policy checkpoint explicitly; see the 089 training-to-deploy guide.
 
 Controls:
   Space   - pause/resume
@@ -76,7 +75,7 @@ from gear_sonic.utils.terrain_profile import patch_mjcf_with_terrain_profile
 
 DEFAULT_URDF = (
     REPO_ROOT
-    / "gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot_twostage_fit_optimized.urdf"
+    / "gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf"
 )
 AUTO_OUTPUT_VIDEO = Path("__auto_output_video__")
 
@@ -1005,17 +1004,17 @@ def get_a3_joint_control(joint_name: str) -> JointControl:
     if "_hip_pitch_joint" in joint_name:
         return JointControl(80.0 * KP_SCALE, 3.0 * KD_SCALE, 220.0, ARMATURE_PFP_93_65, 0.15)
     if "_knee_joint" in joint_name:
-        return JointControl(250.0 * KP_SCALE, 8.0 * KD_SCALE, 320.0, ARMATURE_PFP_110_75, 0.15)
+        return JointControl(250.0 * KP_SCALE, 8.0 * KD_SCALE, 300.0, ARMATURE_PFP_110_75, 0.15)
     if "_ankle_pitch_joint" in joint_name:
-        return JointControl(50.0 * KP_SCALE, 2.0 * KD_SCALE, 118.2, ARMATURE_PFP_78_58 * 5.333, 0.25)
+        return JointControl(60.0 * KP_SCALE, 1.2 * KD_SCALE, 118.2, ARMATURE_PFP_78_58 * 5.333, 0.25)
     if "_ankle_roll_joint" in joint_name:
-        return JointControl(50.0 * KP_SCALE, 2.0 * KD_SCALE, 54.75, ARMATURE_PFP_78_58 * 1.66562, 0.25)
+        return JointControl(60.0 * KP_SCALE, 1.2 * KD_SCALE, 54.75, ARMATURE_PFP_78_58 * 1.66562, 0.25)
     if joint_name == "waist_yaw_joint":
-        return JointControl(85.0 * KP_SCALE, 3.0 * KD_SCALE, 220.0, ARMATURE_PFP_93_65, 0.15)
+        return JointControl(85.0 * KP_SCALE, 3.0 * KD_SCALE, 200.0, ARMATURE_PFP_93_65, 0.15)
     if joint_name == "waist_roll_joint":
-        return JointControl(50.0 * KP_SCALE, 2.0 * KD_SCALE, 46.0, ARMATURE_PFP_78_58 * 1.21, 0.15)
+        return JointControl(50.0 * KP_SCALE, 2.0 * KD_SCALE, 42.0, ARMATURE_PFP_78_58 * 1.21, 0.15)
     if joint_name == "waist_pitch_joint":
-        return JointControl(50.0 * KP_SCALE, 2.0 * KD_SCALE, 115.0, ARMATURE_PFP_78_58 * 7.3, 0.15)
+        return JointControl(50.0 * KP_SCALE, 2.0 * KD_SCALE, 105.0, ARMATURE_PFP_78_58 * 7.3, 0.15)
     if "_shoulder_pitch_joint" in joint_name:
         return JointControl(40.0 * KP_SCALE, 3.0 * KD_SCALE, 60.0, ARMATURE_PFP_78_58, 0.1)
     if "_shoulder_roll_joint" in joint_name:
@@ -1430,7 +1429,7 @@ def default_video_path(config: SimConfig, motion_paths: list[Path]) -> Path:
 
 DEFAULT_LOOP_MJCF = (
     REPO_ROOT
-    / "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop_passive_foot_twostage_fit_optimized.xml"
+    / "gear_sonic/data/assets/robot_description/mjcf/a3_089_rigid_foot_loop.xml"
 )
 DEFAULT_SOLVER_LIB = (
     REPO_ROOT
@@ -4350,7 +4349,7 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         required=True,
         help=(
-            "PT checkpoint. Required; pass the released 024 step-100k PT "
+            "PT checkpoint. Required; pass the 089 step-136k PT "
             "or a compatible replacement."
         ),
     )

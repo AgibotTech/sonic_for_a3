@@ -554,6 +554,8 @@ class MySceneCfg(InteractiveSceneCfg):
         )
 
         robot_config = config.get("robot", {})
+        from gear_sonic.envs.manager_env.robots.a3_self_contact_reward import configure_self_contact_sensors
+        configure_self_contact_sensors(self, robot_config)
         robot_asset_path = str(robot_config.get("asset_path", ""))
         enable_foot_end_contact = bool(
             robot_config.get("enable_foot_end_contact_sensor", "hard_sole_3seg" in robot_asset_path)
@@ -1213,7 +1215,10 @@ class ModularTrackingEnvCfg(ManagerBasedRLEnvCfg):
                 config["robot"].get("foot_contact_compliance", {}),
                 a3_old,
             )
-        if robot_type == "a3" and config["robot"].get("disable_passive_foot", False):
+        if "enable_self_collisions" in config["robot"]:
+            from gear_sonic.envs.manager_env.robots.a3_self_collision import configure_self_collision
+            configure_self_collision(self.scene.robot, config["robot"])
+        if robot_type in {"a3", "a3_024", "a3_exp020", "a3_exp023"} and config["robot"].get("disable_passive_foot", False):
             self.scene.robot.actuators.pop("passive_foot_springs", None)
             for joint_name in a3.A3_PASSIVE_FOOT_JOINT_NAMES:
                 self.scene.robot.init_state.joint_pos.pop(joint_name, None)
@@ -1244,6 +1249,24 @@ class ModularTrackingEnvCfg(ManagerBasedRLEnvCfg):
                     actuator_delay_cfg.get("max_delay_control_steps", 0) * self.decimation
                 )
             _set_delayed_implicit_actuators(self.scene.robot, min_delay, max_delay)
+
+        dynamic_ankle_cfg = config["robot"].get("dynamic_ankle", {})
+        if dynamic_ankle_cfg.get("enabled", False):
+            from gear_sonic.envs.manager_env.a3_dynamic_articulation import with_dynamic_ankles
+            import re
+
+            ankle_names = [f"{side}_ankle_{axis}_joint" for side in ("left", "right") for axis in ("pitch", "roll")]
+            for event_name in dir(self.events):
+                event = getattr(self.events, event_name)
+                params = getattr(event, "params", {})
+                if params.get("armature_distribution_params") is None:
+                    continue
+                entity = params.get("asset_cfg")
+                names = getattr(entity, "joint_names", None) or [".*"]
+                names = [names] if isinstance(names, str) else names
+                if any(re.fullmatch(pattern, name) for pattern in names for name in ankle_names):
+                    raise ValueError(f"Ankle motor inertia DR conflicts with {event_name}")
+            self.scene.robot = with_dynamic_ankles(self.scene.robot, dynamic_ankle_cfg)
 
         active_joint_names = robot_mapping[robot_type].get("active_joint_names")
         if active_joint_names is not None:

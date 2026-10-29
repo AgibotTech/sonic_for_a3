@@ -75,7 +75,7 @@ data/
 # Keep the small A3 actuator-model lookup tables versioned.  The generic
 # Python-template data/ rule above otherwise hides this package asset.
 !gear_sonic/data/
-gear_sonic/data/*
+!gear_sonic/data/assets/
 !gear_sonic/data/a3_motor_model/
 !gear_sonic/data/a3_motor_model/**
 

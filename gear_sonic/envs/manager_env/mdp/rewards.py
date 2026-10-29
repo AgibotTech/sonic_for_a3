@@ -19,6 +19,7 @@ from gear_sonic.envs.manager_env.mdp.commands import (
     TrackingCommand,
     _get_body_indexes,
 )
+from gear_sonic.evaluation.joint_angle import joint_angle_tracking_reward, resolve_reference_and_robot_joint_indices
 from gear_sonic.utils.a3_motor_model import (
     A3MotorConstraintCache,
     compute_cross_penalty,
@@ -50,6 +51,7 @@ class RewardsCfg:
     action_rate_l2 = None
     joint_limit = None
     undesired_contacts = None
+    self_collision_contacts = None
     undesired_contacts_no_hands = None
     undesired_contacts_no_ankle_hand = None
     tracking_body_pos = None
@@ -59,6 +61,7 @@ class RewardsCfg:
     tracking_vr_3point_force = None
     tracking_vr_2wrists_ori_tight = None
     tracking_vr_2wrists_local_ori = None
+    tracking_wrist_joint_angle = None
     tracking_head_local_ori = None
     anti_shake_ang_vel = None
     tracking_vr_5point_local = None
@@ -621,6 +624,43 @@ def tracking_local_vr_2wrists_ori_error(
 
     error = quat_error_magnitude(ref_wrist_quat_local, robot_wrist_quat_local) ** 2
     return torch.exp(-error.mean(-1) / std**2)
+
+
+def _wrist_joint_indices(
+    command: TrackingCommand, joint_names: list[str]
+) -> tuple[list[int], list[int]]:
+    robot_joint_names = list(command.robot.joint_names)
+    body_joint_indices = None
+    if command.has_dof_mismatch:
+        body_joint_indices = list(command.body_joint_indices.detach().cpu().tolist())
+    return resolve_reference_and_robot_joint_indices(
+        robot_joint_names, joint_names, body_joint_indices
+    )
+
+
+def tracking_wrist_joint_angle_error(
+    env: ManagerBasedRLEnv,
+    command_name: str,
+    std: float,
+    joint_names: list[str] | None = None,
+) -> torch.Tensor:
+    """Track bilateral wrist generalized coordinates with wrapped error."""
+    command: TrackingCommand = env.command_manager.get_term(command_name)
+    if joint_names is None:
+        joint_names = [
+            "left_wrist_roll_joint",
+            "left_wrist_pitch_joint",
+            "left_wrist_yaw_joint",
+            "right_wrist_roll_joint",
+            "right_wrist_pitch_joint",
+            "right_wrist_yaw_joint",
+        ]
+    reference_indices, robot_indices = _wrist_joint_indices(command, joint_names)
+    return joint_angle_tracking_reward(
+        command.joint_pos[:, reference_indices],
+        command.robot_joint_pos[:, robot_indices],
+        std,
+    )
 
 
 def tracking_local_head_ori_error(env: ManagerBasedRLEnv, command_name: str, std: float) -> torch.Tensor:

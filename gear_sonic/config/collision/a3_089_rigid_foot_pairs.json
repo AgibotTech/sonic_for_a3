@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "approved",
+  "asset_sha256": "4999e0d413c5da3a6968a1687e6f471428e6e707d706f17a3bd272751c3be4ce",
+  "pairs": [
+    {
+      "body1": "pelvis_link",
+      "body2": "torso_Link",
+      "reason": "Structural waist housing overlap",
+      "evidence": "Original 089 rigid-foot collision contract"
+    },
+    {
+      "body1": "left_wrist_roll_Link",
+      "body2": "left_wrist_yaw_Link",
+      "reason": "Left wrist housing overlap",
+      "evidence": "Original 089 rigid-foot collision contract"
+    },
+    {
+      "body1": "right_wrist_roll_Link",
+      "body2": "right_wrist_yaw_Link",
+      "reason": "Right wrist housing overlap",
+      "evidence": "Original 089 rigid-foot collision contract"
+    }
+  ]
+}
