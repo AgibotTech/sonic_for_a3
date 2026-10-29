@@ -1,517 +1,170 @@
-# A3 035: Training → Sim2Sim → Sim2Deploy
+# A3 089: Training → Sim2Sim → Sim2Deploy
 
-This is the single end-to-end guide for the A3 035 line in this repository. It
-assumes that readers are already familiar with the SONIC paper and the
-[NVIDIA GR00T-WholeBodyControl repository](https://github.com/NVlabs/GR00T-WholeBodyControl)
-and its [project documentation](https://nvlabs.github.io/GR00T-WholeBodyControl/).
-The focus here is therefore the A3-specific body, simulation, training, and
-deployment details rather than a reintroduction to the general SONIC or
-GR00T workflow.
+This guide uses the 089 / step-136,000 A3 policy and its later rigid-foot
+collision contract. The release has G1 and A3-fast encoders; it has no SMPL
+encoder. The PT is required for training and sim2sim; ONNX and RKNN files are
+inference artifacts.
 
-It uses the 20 A3 flat CSV files included in the repository to:
+The 089 binaries have not yet been publicly uploaded. Until a release location
+is available, obtain the artifact bundle separately and check the PT using
+`checkpoints/089_step136000/SHA256SUMS`. The examples below assume execution from the repository root
+with the SONIC/Isaac Lab environment activated; see the upstream
+[training installation](https://nvlabs.github.io/GR00T-WholeBodyControl/getting_started/installation_training.html)
+and [deployment installation](https://nvlabs.github.io/GR00T-WholeBodyControl/getting_started/installation_deploy.html).
 
-1. convert CSV files into a training motion library;
-2. train from scratch or fine-tune from 035 PT weights;
-3. run closed-loop MuJoCo sim2sim with the same PT checkpoint;
-4. export and validate ONNX, convert it to RKNN, and build an A3 deploy package;
-5. bring up the package in stages with `latest_cache` state handling.
+## 1. Training contract
 
-For the complete training parameters, see the [035 training contract](a3_035_training_contract.md).
-For T–N curves, Jacobian tables, and passive-foot fitting material, see
-[T–N / passive foot](a3_024_sim2real_materials/README.md).
+The launch configuration is
+[`sonic_a3_089.yaml`](../gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_089.yaml).
+Its robot asset is the **later**
+[`a3_089_rigid_foot.urdf`](../gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf)
+(SHA-256 `a85eef849d65105f5c222961589445f94b7d26e1726eba24b4781212423e441a`).
+The foot geometry is rigidly merged; the 29 policy joints do not include
+passive foot joints. Self-collision is enabled with three reviewed filters:
+pelvis/torso, left wrist roll/yaw, and right wrist roll/yaw. The filters and
+asset hash are in [`a3_089_rigid_foot_pairs.json`](../gear_sonic/config/collision/a3_089_rigid_foot_pairs.json).
+Self-contact sensing and its reward, wrist-joint tracking, delayed actuation,
+and the configuration-dependent ankle inertia model are enabled by the
+configuration. The previous passive-foot asset is not used for this training.
 
-## 0. Scope, A3 model, and environment
+The original training corpus is not included. The public example below is a
+small software/recipe example, not a reproduction of the original dataset,
+training trajectory, or checkpoint quality. Motion conversion and retargeting
+must preserve A3 joint order and coordinate conventions.
 
-This repository retains the 035 code, configuration, A3 assets, 20 publishable
-CSV examples, the 035 step-200k PT checkpoint download manifest
-with its matching side-by-side configuration, and the ONNX/RKNN deploy paths.
-The PT, ONNX/RKNN and Rockchip sysroot binaries are hosted on
-[Hugging Face](https://huggingface.co/sonic-for-a3/sonic); download the required groups before use. Training and sim2sim
-use the PT; an ONNX artifact cannot be converted back into a trainable
-checkpoint.
-
-From the repository root, download the groups required by your workflow:
-
-```bash
-python -m pip install huggingface_hub
-python download_from_hf.py --component pt       # training / MuJoCo: PT + matching configs
-python download_from_hf.py --component onnx     # full policies + encoder / decoder
-python download_from_hf.py --component rknn     # RK3588 models + sidecars
-python download_from_hf.py --component sysroot  # Rockchip cross-build input
-# Or fetch everything:
-python download_from_hf.py --component all
-```
-
-Model downloads also retrieve the shared root `config.json` release metadata
-as `checkpoints/035_step200000/hub_config.json`. Hugging Face uses requests to
-this configuration for its native download counter; sysroot-only downloads do
-not fetch it. This is a request count, not a count of unique users or completed
-weight transfers. Fully cached runs and direct binary-only downloads may not
-be counted. See [Hugging Face's counting rules](https://huggingface.co/docs/hub/models-download-stats).
-
-The A3 URDF/MJCF derives from the public
-[AgibotTech/A3-A3U-robot-model](https://github.com/AgibotTech/A3-A3U-robot-model).
-
-The policy action space contains 29 actuated A3 joints; the two head joints are
-not part of the training action view. `g1`, `g1_dyn`, `g1_kin`, and `a3_fast`
-are historical checkpoint/ONNX ABI names. They **do not** mean that this
-repository targets G1 hardware and must not be renamed casually.
-
-For environment setup, follow the upstream SONIC documentation:
-
-- [Installation (Training)](https://nvlabs.github.io/GR00T-WholeBodyControl/getting_started/installation_training.html)
-- [Installation (Deployment)](https://nvlabs.github.io/GR00T-WholeBodyControl/getting_started/installation_deploy.html)
-
-Once the environment is ready, continue with the A3-specific workflow below.
-
-## 1. Three sim2real design choices in 035
-
-### 1.1 Two-stage passive feet: suppress toe-standing and forward lean through physical cost
-
-With the earlier rigid, single-piece foot model, a policy could treat the
-forefoot or toe as a low-cost support point, leading to toe-standing and a
-forward-leaning body. On a real A3, that regime causes forefoot roll, toe
-deformation, and redistribution of contact load. 035 therefore models each
-foot as three segments—rear foot → forefoot → toe—with two physics-only passive
-hinges per foot (four in total). They are not part of the 29-dimensional policy
-action.
-
-| Passive hinge | Start from rear foot | Stiffness | Damping | Travel |
-| --- | ---: | ---: | ---: | ---: |
-| forefoot | 90 mm | 2396.666 Nm/rad | 1.51683722 | ±0.06606093 rad |
-| toe | 140 mm | 27.58407 Nm/rad | 0.0686125693 | ±0.23058250 rad |
-
-Consequently, forefoot loading and roll carry more realistic spring-restoring,
-joint-limit, contact-geometry, and dynamics costs, reducing the opportunity to
-exploit a rigid-foot loophole. This "penalty" is an **indirect physical cost**;
-it is not a standalone `foot_end_load` reward. The current 035 configuration
-does not enable an explicit toe-load reward. Adding one would change the
-published 035 training contract.
-
-The training URDF and the sim2sim MJCF must be used as a matched pair:
-
-```text
-gear_sonic/data/assets/robot_description/urdf/a3/
-  a3_035_passive_foot.urdf
-gear_sonic/data/assets/robot_description/mjcf/
-  a3_035_passive_foot_loop.xml
-```
-
-#### Original bench data and its boundary
-
-This release also includes the **original quasi-static force–displacement CSV
-exports** for five A3 metal-shoe toe-cantilever locations (A–E; source labels
-X90, 117, 140, 160, and 182 mm), under
-[`docs/a3_024_sim2real_materials/03_passive_foot/raw/`](a3_024_sim2real_materials/03_passive_foot/raw/README.md).
-They retain their original GB18030 bytes with no resampling, filtering, unit
-conversion, or encoding conversion; the five files total only 2,612,163 bytes.
-Each contains the instrument-exported summary table and the raw Result Table 2
-with time, displacement, force, and compressive strain. The complete source
-archive SHA-256, original member names, and per-file checksums are in
-[`raw_manifest.csv`](a3_024_sim2real_materials/03_passive_foot/raw/raw_manifest.csv).
-
-The data can be inspected alongside the
-passive-foot stiffness/limit choice, but they are quasi-static curves: they do
-not independently identify damping, dynamic contact behavior, full
-fixture/calibration details, or a sim2real gain.
-
-Although some passive-foot parameters were identified from physical measurements,
-the model still differs substantially from real sole deformation. Its main
-practical benefit so far is that the relatively soft toe discourages the policy
-from supporting the robot's full weight on its toes. This reduces the tendency
-to stand on tiptoe and improves standing and walking stability.
-
-The passive joints also introduce drawbacks, including simulation instability
-and excessive bending that the policy can sometimes exploit in simulation.
-We are still exploring simpler ways to reduce the sim2real gap. **Use passive
-feet cautiously when training your own policies.** They are included here to
-fully document the training recipe used for the 035 checkpoint, rather than as
-a general recommendation for new training runs.
-
-### 1.2 T–N rewards for ankle/waist parallel joints: designed for real motor capability
-
-The ankle and waist pitch/roll axes are parallel mechanisms coupled by two
-motors. An implicit PD controller in simulation can request joint-space
-torque/speed combinations that the two physical motors cannot jointly deliver.
-035 therefore maps requests into motor coordinates with a position-dependent
-Jacobian, then checks every motor against its torque–speed (T–N) capability:
-
-$$
-\dot q_{joint}=J(q)\dot q_{motor},\qquad
-\dot q_{motor}=J(q)^{-1}\dot q_{joint},\qquad
-\tau_{motor}=J(q)^T\tau_{joint}.
-$$
-
-For each motor, utilization is
-
-$$
-u=\frac{|\tau_{motor}|}{\tau_{max}(|\dot q_{motor}|)}.
-$$
-
-The 035 PFP78 reward curve remains at 58 Nm up to 16.755161 rad/s, then drops
-linearly to zero at 23.561945 rad/s. `motor_tn_parallel` covers the paired
-motors in both ankles and the waist; `motor_tn_serial` covers serial joints.
-The central T–N penalty is:
-
-$$
-p_{TN}=0.05[\min(\mathrm{clip}(u,0,2),1)]^8+
-5[\max(\mathrm{clip}(u,0,2)-1,0)]^2.
-$$
-
-035 also includes an 80%-threshold ankle motor speed/power term, a fixed 58 Nm
-ankle-torque term, high-load shaping on both ankle/waist axes, and 85% ankle
-joint-position protection. These read `computed_torque` before implicit-PD
-effort clipping. They **only change the training reward**: they do not hard-limit
-PhysX actuator effort and are not a deploy-time hardware protection mechanism.
-The real robot still depends on current, thermal, position-limit, watchdog, and
-operational safety systems.
-
-### 1.3 Armature: a reflected-inertia starting point, not complete closed-chain dynamics
-
-The nominal armature for a serial joint approximates motor-side effective
-inertia reflected through the reduction ratio to the output shaft:
-
-$$
-I_{armature}=I_{effective,motor}N^2.
-$$
-
-For example, the training-side PFP78 uses
-`30.118e-6 × 20.03² = 0.01208337` kg·m². The parallel ankles/waist then multiply
-this by empirical factors in the current 035 training configuration:
-
-| Joint coordinate | Current expression | Nominal armature |
-| --- | --- | ---: |
-| ankle pitch | `PFP78 × 5.333` | 0.0644406 |
-| ankle roll | `PFP78 × 1.66562` | 0.0201263 |
-| waist pitch | `PFP78 × 7.3` | 0.0882086 |
-| waist roll | `PFP78 × 1.21` | 0.0146209 |
-
-These four factors did not come from a sim2real rollout search. They are a
-historical output-speed-matching heuristic. Starting from a PFP78 output-side
-speed reference of $\omega_{ref}\approx25$ rad/s, use the following for a
-parallel output joint with a speed limit $\omega_{joint,max}$. Here $r$ is
-an **effective transmission-ratio multiplier relative to the PFP78 output
-side**, not the actual reduction ratio obtained from CAD or a Jacobian:
-
-$$
-r\approx\frac{\omega_{ref}}{\omega_{joint,max}},\qquad
-k\approx r^2=\left(\frac{25}{\omega_{joint,max}}\right)^2,\qquad
-I_{joint}\approx I_{PFP78,out}k.
-$$
-
-Reflected inertia scales with the square of the effective transmission ratio,
-so $\sqrt{k}\omega_{joint,max}$ returns to approximately 25 rad/s:
-
-| Joint coordinate | Configured $k$ | Joint speed limit (rad/s) | $\sqrt{k}\omega_{joint,max}$ (rad/s) |
-| --- | ---: | ---: | ---: |
-| ankle pitch | 5.333 | 10.8 | 24.941 |
-| ankle roll | 1.66562 | 19.37 | 24.999 |
-| waist pitch | 7.3 | 9.24785 | 24.986 |
-| waist roll | 1.21 | 22.7 | 24.970 |
-
-Treat these values as a speed-normalization/effective-transmission
-approximation, not as a full closed-chain Jacobian inertia matrix or physical
-parameters identified on a test bench. The 25 rad/s is the historical
-output-side/simulation speed reference used to select armature; it is **not**
-the 23.561945 rad/s zero-torque speed of the 035 T–N reward curve. Training
-also randomizes armature by 0.9–1.1× for ordinary joints and 0.8–1.2× for the
-ankles/waist. PhysX `armature` can only specify diagonal joint terms, so the
-closed-chain, compliance, and transmission limits discussed below remain
-incompletely represented.
-
-Sim2sim and training use the same canonical armature values from
-`gear_sonic/utils/a3_motor_params.py`; sim2sim must not introduce a separate
-planetary reflected-inertia approximation. For PFP78 the shared serial-joint
-value is `30.118e-6 × 20.03² = 0.01208337` kg·m², and the parallel ankle/waist
-coordinates use the same configured multipliers listed above. This keeps the
-training and sim2sim physics conventions aligned.
-
-A more complete parallel-mechanism model would use the configuration-dependent
-closed-chain inertia matrix:
-
-$$
-\Gamma(q)=J(q)^{-1},\qquad M_{joint}(q)=\Gamma(q)^T\mathrm{diag}(I_m)\Gamma(q).
-$$
-
-However, PhysX `armature` can only express diagonal joint terms. The current
-model therefore omits configuration-dependent off-diagonal coupling as well as
-transmission compliance, backlash, friction, current loops, temperature,
-latency, and contact load.
-
-## 2. Convert the repository's selected20 CSV data into a training motion library
-
-`a3_data/agibot_a3/` contains 20 A3 flat CSV files at 120 Hz with 38 columns.
-They are the common examples for training, sim2sim, and normal deploy playback.
-The training loader accepts only `.pkl` motion-library data, so convert them first:
+## 2. Prepare a motion library and check inputs
 
 ```bash
 python gear_sonic/data_process/convert_soma_csv_to_motion_lib.py \
   --input a3_data/agibot_a3 \
-  --output .cache/motionlib_035_selected20 \
-  --individual \
-  --robot a3_29 \
-  --fps 30 \
-  --fps_source 120 \
-  --num_workers 8
+  --output .cache/motionlib_089_selected20 \
+  --individual --robot a3_29 --fps 30 --fps_source 120 --num_workers 8
 
-export MOTION_FILE="$PWD/.cache/motionlib_035_selected20"
+export MOTION_FILE="$PWD/.cache/motionlib_089_selected20"
+ISAAC_PYTHON="$(command -v python)" MOTION_FILE="$MOTION_FILE" \
+  bash train_a3_089.sh --preflight
 ```
 
-`a3_29` removes the two head joints from the 31-DOF A3 CSV view. The following
-preflight creates no logs and allocates no environments:
+Preflight checks the motion input, URDF hash, collision mesh hashes and the
+three-filter manifest. Supply a larger compatible motion library for an actual
+tracking experiment; a directory, a PKL file, or a comma-separated list is
+accepted. The converted example does not include the original motion metadata.
+
+## 3. Train or fine-tune
+
+For a small functional run from random initialization:
 
 ```bash
-ISAAC_PYTHON="$(command -v python)" \
-MOTION_FILE="$MOTION_FILE" \
-bash train_a3_035_fromscratch.sh --preflight
+ISAAC_PYTHON="$(command -v python)" MOTION_FILE="$MOTION_FILE" \
+  NUM_ENVS=16 NUM_LEARNING_ITERATIONS=2 \
+  bash train_a3_089.sh --num-processes 1
 ```
 
-## 3. Two 035 training commands
-
-The two commands below use the repository's `selected20` set only to demonstrate
-how to start 035 training and to provide a quick-start regression check. Training
-`selected20` on top of 035 is not the recommended recipe for broad motion
-tracking. For a large tracking run, replace `MOTION_FILE` with a large motion
-dataset; for a particular user's requested behaviors, use the desired motion set
-for targeted fine-tuning on top of 035.
-
-For large-scale sources, start with [HiPHI](https://github.com/noitom-robotics/hiphi)
-and the [BONES-SEED dataset](https://bones.studio/datasets/seed). HiPHI provides
-large-scale human motion and synchronized interaction data, while BONES-SEED is
-a broad everyday embodied-motion source. The data license, release format, and
-retargeting quality still need to be checked for the intended experiment.
-
-[SOMA Retargeter](https://github.com/NVIDIA/soma-retargeter) now includes an
-`agibot-a3t3` robot configuration, so BONES-SEED or other human-motion sources
-can be retargeted into A3-compatible robot motion as a fast data-preparation
-route. HiPHI's BVH release can likewise be used as the upstream motion source:
-convert its skeleton/joint naming into the SOMA-X skeleton format expected by
-SOMA Retargeter, then run the A3 retargeting configuration. The exact BVH-to-
-SOMA-X adapter should be validated against the released HiPHI joint names,
-coordinate conventions, and contacts before using the result for training.
-
-**Known issue in SOMA Retargeter v0.2.0:** A3 retargeting is generally good for
-motions dominated by two-foot ground contact, such as standing and walking. It
-currently produces more ground penetration for motions with richer contact
-patterns, including sitting on the ground, kneeling, crawling, falling, and
-standing up after a fall. Treat those motions as requiring contact-aware
-post-processing and manual visual validation before adding them to a training
-set; do not assume that a successful two-foot retarget guarantees valid
-multi-contact geometry.
-
-### 3.1 Train from scratch on selected20
-
-This is the smallest reproducible mainline in the repository. The example uses
-small smoke-test parameters. Remove the `NUM_ENVS` and
-`NUM_LEARNING_ITERATIONS` overrides to use the script defaults of 4,096
-environments and 200,000 iterations.
+For a warm start from the release checkpoint:
 
 ```bash
-ISAAC_PYTHON="$(command -v python)" \
-MOTION_FILE="$PWD/.cache/motionlib_035_selected20" \
-NUM_ENVS=16 \
-NUM_LEARNING_ITERATIONS=2 \
-bash train_a3_035_fromscratch.sh --num-processes 1
+export MODEL_089_PT="$PWD/checkpoints/089_step136000/model_step_136000.pt"
+(cd checkpoints/089_step136000 && sha256sum -c SHA256SUMS)
+ISAAC_PYTHON="$(command -v python)" MOTION_FILE="$MOTION_FILE" \
+  CHECKPOINT="$MODEL_089_PT" NUM_ENVS=16 NUM_LEARNING_ITERATIONS=2 \
+  bash train_a3_089.sh --num-processes 1
 ```
 
-### 3.2 Fine-tune the 035 PT on selected20
+The launcher loads policy/value weights with `resume=false`; optimizer,
+scheduler, sampler, environment state and step restart. This is fine-tuning,
+not continuation of the original run. Omit the small-run overrides for the
+launcher defaults; inspect `bash train_a3_089.sh --help` for multi-process
+options. Set a unique `EXP_VAR` and `EXPERIMENT_DIR` for each run. Check the
+motion data and GPU capacity before increasing the workload.
 
-Download the released step-200k PT with `python download_from_hf.py --component pt`.
-It is installed at `checkpoints/035_step200000/model_step_200000.pt` and verified against the release SHA-256. The side-by-side `config.yaml` is the matching release-portable configuration used
-for export/evaluation. The PT is not an ONNX/RKNN artifact.
+## 4. Sim2sim and export
 
-```bash
-export MODEL_035_PT="$PWD/checkpoints/035_step200000/model_step_200000.pt"
-printf '%s  %s\n' \
-  '9cf33be2f4e602858b68ce31d5824113ab1dda250acaab5842b6d3bf88b70f2d' \
-  "$MODEL_035_PT" | sha256sum -c -
-test -f "${MODEL_035_PT%/*}/config.yaml"
-
-ISAAC_PYTHON="$(command -v python)" \
-MOTION_FILE="$PWD/.cache/motionlib_035_selected20" \
-CHECKPOINT="$MODEL_035_PT" \
-NUM_ENVS=16 \
-NUM_LEARNING_ITERATIONS=2 \
-bash train_a3_035_fromscratch.sh --num-processes 1
-```
-
-This mode loads policy/value weights while fixing `resume=false`: optimizer,
-scheduler, sampler, environment state, and training step all restart. It is a
-selected20 fine-tune/warm start, not a full-state resume of an older experiment.
-Append `--preflight` first to validate inputs only.
-
-## 4. PT sim2sim and ONNX export
-
-Sim2sim uses the PT, the `a3_fast` encoder, the same two-stage passive-foot
-MJCF, and selected20 CSV data. It is a regression gate, not proof of hardware
-safety:
+The closed-loop MuJoCo asset
+[`a3_089_rigid_foot_loop.xml`](../gear_sonic/data/assets/robot_description/mjcf/a3_089_rigid_foot_loop.xml)
+uses collision shapes and poses from the later 089 URDF and the same three
+explicit body-pair exclusions. Its ankle/waist linkages and contact solver are
+MuJoCo's closed-loop model; it does not implement the Isaac Lab dynamic-ankle
+correction or training domain randomization, so it is a sim2sim approximation,
+not identical training physics. The runner uses the 089 policy control gains
+and action scales. Run the full selected motion headlessly:
 
 ```bash
-export MODEL_035_PT="$PWD/checkpoints/035_step200000/model_step_200000.pt"
+export MODEL_089_PT="$PWD/checkpoints/089_step136000/model_step_136000.pt"
 python gear_sonic/scripts/sim2sim_a3_mujoco.py \
-  --checkpoint "$MODEL_035_PT" \
+  --checkpoint "$MODEL_089_PT" \
   --motion a3_data/agibot_a3/001_walk_front_slow.csv \
-  --encoder-mode a3_fast \
-  --mjcf gear_sonic/data/assets/robot_description/mjcf/a3_035_passive_foot_loop.xml \
-  --batch-once \
-  --metrics-out /tmp/a3_035_sim2sim_metrics.json \
-  --output-video /tmp/a3_035_sim2sim.mp4
+  --encoder-mode a3_fast --batch-once \
+  --metrics-out /tmp/a3_089_sim2sim_metrics.json
 ```
 
-For a quick smoke test, append `--max-policy-steps 10` and omit the video.
-The example uses the pelvis anchor, 120 Hz CSV input (stride 4 to 30 Hz),
-a 50 Hz policy clock, and zero actuator delay. It tests the software pipeline;
-for a hardware-delay comparison, set `--action-delay-ms 10` explicitly and
-record it as a different protocol. Any run that changes the foot asset, motion
-delay, CSV sampling rate, encoder window, or checkpoint must be recorded as a new experiment.
+For a short smoke check, add `--max-policy-steps 50`. The full command was
+exercised on one 33-second walk clip; it ran without a detected fall, but
+position tracking error was substantial and should be evaluated on the
+intended motions before drawing performance or hardware conclusions.
 
-Export/evaluation reads the `config.yaml` beside the checkpoint; a bare `.pt`
-cannot reliably reconstruct the network. The released step-200k PT already has
-its path-scrubbed matching configuration, which defaults to the selected20
-motion-lib produced above. Override it explicitly if you write the motion-lib
-elsewhere. Both 035 ONNX artifacts must satisfy
-`obs_dict[1,1570] → action[1,29]`:
+To regenerate the MJCF collision geometry after changing the source URDF,
+run `python gear_sonic/data_process/build_a3_089_mjcf.py` and the contract test
+`python tests/test_089_training_contract.py -v`.
+
+Isaac Lab scene initialization and ONNX export use the 089 URDF:
 
 ```bash
+export MODEL_089_PT="$PWD/checkpoints/089_step136000/model_step_136000.pt"
 python gear_sonic/eval_agent_trl.py \
-  +checkpoint="$MODEL_035_PT" \
-  +headless=True \
-  ++num_envs=1 \
-  "++manager_env.commands.motion.motion_lib_cfg.motion_file=[$PWD/.cache/motionlib_035_selected20]" \
+  +checkpoint="$MODEL_089_PT" +headless=True ++num_envs=1 \
+  "++manager_env.commands.motion.motion_lib_cfg.motion_file=[$MOTION_FILE]" \
+  ++manager_env.commands.motion.motion_lib_cfg.motion_metadata_files=null \
   +export_onnx_only=true
 ```
 
-## 5. ONNX → RKNN and the deploy package
+The command reads the adjacent `config.yaml` and writes G1, A3-fast, encoder
+and decoder ONNX files in `checkpoints/089_step136000/exported/`. The two full
+policies use `obs_dict[1,1570] → action[1,29]`. An export smoke check does not
+establish closed-loop stability.
 
-The default runtime configuration is already bound to the repository's 035
-step-200k G1/A3-fast ONNX and RKNN paths. Fetch them with
-`python download_from_hf.py --component onnx rknn` before use:
+## 5. Prepare ONNX/RKNN and build deploy packages
 
-```text
-gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config.yaml
-```
-
-The export command above writes the four ONNX files to
-`checkpoints/035_step200000/exported/` and regenerates the adjacent
-`model_config.yaml`. Only the full G1 and A3-fast policies are supported by
-the RKNN converter; do not pass the standalone encoder or decoder.
-
-Use a separate Python 3.10/3.11 environment for RKNN conversion: Toolkit 2.3.2
-requires PyTorch ≤2.4.0 and would downgrade a newer Isaac Lab training environment.
-CPU PyTorch is sufficient for conversion. Run from the repository root:
+Given the 089 bundle containing `onnx/` and `rknn/`, stage its verified full
+policies and RKNN sidecars:
 
 ```bash
-python -m venv .venv_rknn
-.venv_rknn/bin/python -m pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cpu
-.venv_rknn/bin/python -m pip install -r gear_sonic_deploy/requirements-rknn.txt
-.venv_rknn/bin/python gear_sonic_deploy/scripts/convert_a3_onnx_to_rknn.py \
-  --onnx \
-    checkpoints/035_step200000/exported/model_step_200000_g1.onnx \
-    checkpoints/035_step200000/exported/model_step_200000_a3_fast.onnx \
-  --out-dir assets/a3_runtime/rknn_models/035_reexported \
-  --target-platform rk3588 \
-  --overwrite
+python gear_sonic_deploy/scripts/prepare_a3_089_runtime.py \
+  --source /path/to/089_136k_ckpt_onnx_rknn --include-rknn
+
+bash gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh --arch x86_64 --jobs 20 \
+  --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config_089.yaml
 ```
 
-A relative `--out-dir` is resolved beneath `gear_sonic_deploy/`. This example
-keeps re-exported RKNN files separate from the downloaded release. The package
-commands below still use the verified Hugging Face release artifacts. To package
-your own exports, place both ONNX files in a new runtime model directory and
-update the two ONNX paths and two RKNN paths in a copy of
-`a3_runtime_config.yaml`; pass that copy with `--runtime-cfg`. Keep the generated
-`.rknn.json` checksum sidecars beside the RKNN files.
-
-Build the x86_64 package first. The Rockchip AArch64 sysroot is distributed
-through Hugging Face; fetch and verify it first:
+The native package requires ROS 2 development packages and ONNX Runtime C++.
+For RK3588 cross-compilation, obtain the Rockchip sysroot with
+`python download_from_hf.py --component sysroot`, provide an ABI-compatible
+AArch64 ONNX Runtime archive, and run:
 
 ```bash
-python download_from_hf.py --component sysroot
-(cd gear_sonic_deploy/thirdparty/rockchip_sysroot && \
-  sha256sum -c rockchip-1.0-aarch64-sysroot.tar.gz.sha256)
-```
-
-Rockchip still needs one local build input that is **not distributed with this
-repository**: obtain or build a target-compatible aarch64 ONNX Runtime package from the
-[official ONNX Runtime v1.19.2 release](https://github.com/microsoft/onnxruntime/releases/tag/v1.19.2),
-and archive it with
-`<install-prefix>/lib/cmake/onnxruntime/onnxruntimeConfig.cmake`.
-The archive must match the target ABI. Set its path independently of the
-optional sysroot-regeneration step:
-
-```bash
-export A3_ONNXRUNTIME_AARCH64_TARBALL='/absolute/path/to/onnxruntime-aarch64-1.19.2.tar.gz'
-```
-
-If the target BSP, OS, ROS ABI, or userspace does not match the bundled
-sysroot, obtain a matching AArch64 NVIDIA Thor base image through NVIDIA's
-official [Thor Docker setup guide](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_docker.html),
-load/tag it in the local Docker daemon, then regenerate the sysroot. This
-repository intentionally does not prescribe an NVIDIA image tag or pull from
-an implicit registry:
-
-```bash
-export A3_THOR_BASE_IMAGE='<local-nvidia-thor-image>'
-gear_sonic_deploy/scripts/export_rockchip_sysroot.sh \
-  --image "$A3_THOR_BASE_IMAGE"
-```
-
-For the A3 package, the native x86 build requires ROS 2 development packages
-(Humble was tested) and ONNX Runtime C++ headers/libraries. The build script
-sources `ROS_DISTRO` when set, otherwise an installed Jazzy or Humble environment.
-Rockchip cross-compilation requires Docker and the two archives described above.
-These package commands disable TensorRT; their inference backends are ONNX
-Runtime CPU and RKNN respectively.
-
-Then build:
-
-```bash
-gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh \
-  --arch x86_64 \
-  --jobs 20 \
-  --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config.yaml
-
-gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh \
-  --arch rockchip \
-  --jobs 20 \
+export A3_ONNXRUNTIME_AARCH64_TARBALL=/absolute/path/to/onnxruntime-aarch64.tar.gz
+bash gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh --arch rockchip --jobs 20 \
   --onnxruntime-aarch64-tarball "$A3_ONNXRUNTIME_AARCH64_TARBALL" \
-  --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config.yaml
+  --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config_089.yaml
 ```
 
-The default sysroot output is
-`gear_sonic_deploy/thirdparty/rockchip_sysroot/rockchip-1.0-aarch64-sysroot.tar.gz`.
-It is downloaded with `python download_from_hf.py --component sysroot` as a build-only sysroot, not as a complete
-Thor OS image. The ONNX Runtime archive remains a `.gitignore`d local input.
-Missing files, mismatched architecture, or a wrong archive layout cause an
-actionable error; the build never silently falls back to an incidental host
-dependency.
+To convert newly exported full policies, use a separate Python 3.10/3.11
+RKNN environment and `gear_sonic_deploy/scripts/convert_a3_onnx_to_rknn.py`;
+update the ONNX and RKNN paths in a copy of the runtime YAML. Keep the generated
+sidecars with the RKNN models. Do not pass the standalone encoder/decoder to the
+full-policy RKNN converter.
 
-The normal playback list points directly to the 20 CSV files in
-`a3_data/agibot_a3/` to avoid a duplicate source-tree copy. The package builder
-copies them into package-local `motions/`. The four directional
-`remote_motions/` clips and the standing/idle `teleop_motions/` clips are
-independent and do not enter the normal playback list.
+## 6. Simulation teleoperation and hardware bring-up
 
-## 6. Default runtime and staged bring-up
+PICO body tracking is retargeted on the HDU and sent over ROS 2 to the
+089 A3-fast policy on the MDU. The publisher uses the existing
+`/ta/whole_body_command` interface. Prepare and start it as described in §6.3.
 
-The default source-runtime semantics are:
-
-| Setting | Default |
-| --- | --- |
-| policy clock | 50 Hz |
-| `phase_align_to_sync` | `false` |
-| `backend.sync_mode` | `latest_cache` |
-| per-channel freshness | 10 ms |
-| frame-age watchdog | 50 ms |
-| x86 backend | ONNX Runtime CPU |
-| packaged Rockchip backend | RKNN |
-
-`latest_cache` updates each state topic independently and lets the fixed 50 Hz
-policy loop read the newest valid sample at every tick. Timestamp skew is only a
-diagnostic; it does not require six topics to form a 200 Hz coherent pair. The
-10 ms gate is per-channel freshness. Only when a new state cannot continuously
-be formed does the 50 ms frame-age watchdog execute safe halt. Do not switch to
-a different synchronization mode on a robot without revalidating timing and
-safety behavior.
+Before any real-robot deployment, validate the matching package and simulated
+behavior, use an authorized target with a safety support and emergency stop,
+and run the package's no-command-publish `run_a3_probe.sh` first. The probe
+must show fresh body-drive state and the intended model/backend before a formal
+run. Do not run SONIC concurrently with another body-drive command publisher.
+A successful simulation or probe is not proof of hardware safety.
 
 ### 6.1 MDU physical-robot bring-up
 
@@ -576,11 +229,11 @@ body-drive commands concurrently.
    file ./a3_deploy_onnx_ref | grep -F 'ARM aarch64'
    grep -Eq '^[[:space:]]*backend:[[:space:]]*rknn[[:space:]]*$' \
      config/a3_runtime_config.yaml
-   test -f models/model_step_200000_g1.rknn
-   test -f models/model_step_200000_a3_fast.rknn
+   test -f models/model_step_136000_g1.rknn
+   test -f models/model_step_136000_a3_fast.rknn
    ```
 
-4. Run the **no-command-publish** policy probe first. 035 has no SMPL ONNX, so
+4. Run the **no-command-publish** policy probe first. 089 has no SMPL ONNX, so
    the probe must select `g1`; `run_a3_probe.sh` now defaults to that value.
 
    ```bash
@@ -593,7 +246,7 @@ body-drive commands concurrently.
    taskset -c 4-5 ./run_a3_probe.sh
    ```
 
-   `--probe` loads the 035 model, receives state, and measures inference
+   `--probe` loads the 089 model, receives state, and measures inference
    latency, but forcibly disables the command publisher. Confirm that all six
    body-drive state streams are ready, freshness/watchdog behavior is normal,
    the model backend is correct, and there is no continuous stale state or safe
@@ -639,3 +292,74 @@ protective support:
 Keep the robot on a safety gantry or equivalent protective setup during
 debugging as far as practical. Emergency-stop coverage and on-site supervision remain required;
 `P` is a software fallback and does not replace the physical emergency stop.
+
+### 6.3 XR teleoperation on the HDU
+
+The HDU receives PICO tracking data and publishes A3 references to the MDU
+through `/ta/whole_body_command`. The following setup uses Python 3.11 and
+ROS 2 Jazzy on an AArch64 HDU.
+
+**1. Upload the files.** From the repository root on the development machine:
+
+```bash
+HDU='agi@<hdu-address>'
+tar -czf /tmp/xr_retarget.tar.gz \
+  gear_sonic_deploy/xr_retarget \
+  gear_sonic_deploy/assets/a3_runtime/teleop_motions/BMD_0319_a3_filtered_20260319_164305__stand_Skeleton0.csv \
+  external_dependencies/XRoboToolkit-PC-Service-Pybind_X86_and_ARM64
+ssh "$HDU" 'mkdir -p /agibot/sonic_a3_xr_retarget'
+scp /tmp/xr_retarget.tar.gz "$HDU:/agibot/sonic_a3_xr_retarget/"
+```
+
+The AArch64 XRoboToolkit PC service package is provided separately. Copy it to
+`/agibot/sonic_a3_xr_retarget/roboticsservice_arm64.deb` on the HDU. Ensure the
+SDK directory contains `lib/aarch64/libPXREARobotSDK.so`.
+
+**2. Prepare the HDU environment once.** The HDU needs `colcon`, CMake, a C++
+compiler and Python venv support:
+
+```bash
+cd /agibot/sonic_a3_xr_retarget
+tar -xzf xr_retarget.tar.gz
+dpkg-deb -x roboticsservice_arm64.deb service
+python3 -m venv --system-site-packages .venv
+.venv/bin/python -m pip install numpy scipy pyyaml mujoco mink daqp 'protobuf>=6.30,<7' pybind11 wheel
+SDK="$PWD/external_dependencies/XRoboToolkit-PC-Service-Pybind_X86_and_ARM64"
+export LD_LIBRARY_PATH="$SDK/lib/aarch64:${LD_LIBRARY_PATH:-}"
+export CMAKE_PREFIX_PATH="$(.venv/bin/python -m pybind11 --cmakedir)"
+.venv/bin/python -m pip install --no-build-isolation -e "$SDK"
+source /agibot/software/v0/entry/env/env.sh
+source /opt/ros/jazzy/setup.bash
+colcon --log-base .cache/log build --base-paths gear_sonic_deploy/xr_retarget/ros2 \
+  --build-base .cache/build --install-base .cache/install \
+  --cmake-args -DPython3_EXECUTABLE=/usr/bin/python3
+```
+
+On Debian 12, the PC service used in the verified setup also needs ICU 70. If
+it is missing, extract an AArch64 `libicu70` package into `service_deps` with
+`dpkg-deb -x /path/to/libicu70_arm64.deb service_deps`.
+
+**3. Start the publisher on the HDU.** The script loads the robot environment
+before ROS 2, which is required for communication with deploy, and starts the
+PC service if needed:
+
+```bash
+cd /agibot/sonic_a3_xr_retarget
+./gear_sonic_deploy/xr_retarget/run_xr_retarget.sh
+```
+
+In the PICO tracker app, complete body-tracker calibration, enable full-body tracking and **Send**,
+and disable **Switch w/ A Button**. Match the robot's standing pose, hold
+**A+B+X+Y** to calibrate retargeting, release the buttons, and press **A** to
+start or pause streaming. Holding left Menu temporarily pauses the stream.
+
+On the MDU, after the probe and standing checks in §6.1–6.2, use the deploy
+terminal to switch modes before teleoperation:
+
+1. Press **T** to enter teleoperation mode.
+2. Press **3** to select the **A3-fast** teleoperation source.
+
+The logs should show `first whole_body_command received` and
+`active source -> a3_fast`. Press **P** to return to passive. If the topic is
+publishing but the reference does not move, check the PICO tracker app
+calibration.
