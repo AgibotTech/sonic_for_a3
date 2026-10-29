@@ -1,0 +1,475 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "190dcd538467f179c6447f2a8b8fc0fd86d30c09",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "gear_sonic/data/assets/robot_description/mjcf/README.md",
+      "additions": {
+        "human": 8
+      }
+    },
+    {
+      "new_path": "gear_sonic/data/assets/robot_description/urdf/a3/README.md",
+      "additions": {
+        "human": 9
+      }
+    },
+    {
+      "old_path": "a3_hf_manifest.json",
+      "new_path": "a3_hf_manifest.json",
+      "deletions": {
+        "human": 14
+      }
+    },
+    {
+      "old_path": "checkpoints/035_step200000/README.md",
+      "new_path": "checkpoints/035_step200000/README.md",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "checkpoints/035_step200000/config.yaml",
+      "new_path": "checkpoints/035_step200000/config.yaml",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "checkpoints/035_step200000/model_config.yaml",
+      "new_path": "checkpoints/035_step200000/model_config.yaml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "checkpoints/089_step136000/config.yaml",
+      "new_path": "checkpoints/089_step136000/config.yaml",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "checkpoints/089_step136000/model_config.yaml",
+      "new_path": "checkpoints/089_step136000/model_config.yaml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "gear_sonic/config/collision/a3_089_rigid_foot_pairs.json",
+      "new_path": "gear_sonic/config/collision/a3_089_rigid_foot_pairs.json",
+      "additions": {
+        "human": 24
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3.yaml",
+      "new_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3.yaml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_035.yaml",
+      "new_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_035.yaml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_089.yaml",
+      "new_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_089.yaml",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic/config/manager_env/commands/terms/motion.yaml",
+      "new_path": "gear_sonic/config/manager_env/commands/terms/motion.yaml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_089_rigid_foot_loop.xml",
+      "new_path": "gear_sonic/data/assets/robot_description/mjcf/a3_089_rigid_foot_loop.xml",
+      "additions": {
+        "human": 21
+      },
+      "deletions": {
+        "human": 21
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5.xml",
+      "new_path": "gear_sonic/data/assets/robot_description/mjcf/a3_motion_skeleton.xml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop.xml",
+      "new_path": "gear_sonic/data/assets/robot_description/mjcf/a3_loop_template.xml",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop_hull_optimized.xml",
+      "deletions": {
+        "human": 521
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop_passive_foot.xml",
+      "deletions": {
+        "human": 591
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop_passive_foot_twostage_fit_optimized.xml",
+      "new_path": "gear_sonic/data/assets/robot_description/mjcf/a3_035_passive_foot_loop.xml",
+      "additions": {
+        "human": 96
+      },
+      "deletions": {
+        "human": 96
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_passive_foot.xml",
+      "deletions": {
+        "human": 508
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_passive_foot_twostage_fit_optimized.xml",
+      "deletions": {
+        "human": 512
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/urdf/a3/model.urdf",
+      "deletions": {
+        "human": 1077
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot.urdf",
+      "deletions": {
+        "human": 1196
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot_twostage_fit_optimized.urdf",
+      "new_path": "gear_sonic/data/assets/robot_description/urdf/a3/a3_035_passive_foot.urdf",
+      "additions": {
+        "human": 80
+      },
+      "deletions": {
+        "human": 80
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf",
+      "new_path": "gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf",
+      "additions": {
+        "human": 65
+      },
+      "deletions": {
+        "human": 65
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/assets/robot_description/urdf/a3/model_hard_sole_3seg.urdf",
+      "deletions": {
+        "human": 1173
+      }
+    },
+    {
+      "old_path": "gear_sonic/data_process/build_a3_089_mjcf.py",
+      "new_path": "gear_sonic/data_process/build_a3_089_mjcf.py",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "gear_sonic/data_process/convert_a3_pkl_to_motion_lib_29d.py",
+      "new_path": "gear_sonic/data_process/convert_a3_pkl_to_motion_lib_29d.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/data_process/convert_soma_csv_to_motion_lib.py",
+      "new_path": "gear_sonic/data_process/convert_soma_csv_to_motion_lib.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/commands.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/commands.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/a3.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/a3.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/a3_old.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_old.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/robots/a3_self_collision.py",
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_self_collision.py",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic/scripts/generate_a3_order_mapping.py",
+      "new_path": "gear_sonic/scripts/generate_a3_order_mapping.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic/scripts/sim2sim_a3_mujoco.py",
+      "new_path": "gear_sonic/scripts/sim2sim_a3_mujoco.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/scripts/verify_a3_order_mapping.py",
+      "new_path": "gear_sonic/scripts/verify_a3_order_mapping.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh",
+      "new_path": "gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/scripts/write_a3_deploy_manifest.py",
+      "new_path": "gear_sonic_deploy/scripts/write_a3_deploy_manifest.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/CMakeLists.txt",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/CMakeLists.txt",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/robot_io/a3_layout_extra.hpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/robot_io/a3_layout_extra.hpp",
+      "additions": {
+        "human": 3
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/scripts/tools/a3_body_drive_debug_convert.py",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/scripts/tools/a3_body_drive_debug_convert.py",
+      "additions": {
+        "human": 5
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/robot_io/a3_layout_extra.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/robot_io/a3_layout_extra.cpp",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/tests/test_a3_body_drive_debug_convert.py",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/tests/test_a3_body_drive_debug_convert.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_mujoco_order_sanity.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_mujoco_order_sanity.cpp",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "scripts/check_a3_flat_ground_motion_quality.py",
+      "new_path": "scripts/check_a3_flat_ground_motion_quality.py",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "scripts/plot_010_foot_force_curves.py",
+      "deletions": {
+        "human": 452
+      }
+    },
+    {
+      "old_path": "scripts/regen_foot_3seg_collision.py",
+      "deletions": {
+        "human": 79
+      }
+    },
+    {
+      "old_path": "scripts/test_a3_hull_optimized_mjcf.py",
+      "deletions": {
+        "human": 102
+      }
+    },
+    {
+      "old_path": "tests/test_089_training_contract.py",
+      "new_path": "tests/test_089_training_contract.py",
+      "additions": {
+        "human": 2
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "tests/test_download_from_hf.py",
+      "new_path": "tests/test_download_from_hf.py",
+      "additions": {
+        "human": 6
+      }
+    },
+    {
+      "old_path": "train_a3_089.sh",
+      "new_path": "train_a3_089.sh",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    }
+  ]
+}
