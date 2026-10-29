@@ -1,0 +1,167 @@
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.13.1",
+  "base_commit_sha": "90e601b91cc3f1fb9193fe05a0f8a18b7b79f4c9",
+  "prompts": {},
+  "changes": [
+    {
+      "new_path": "checkpoints/089_step136000/LICENSE",
+      "additions": {
+        "human": 202
+      }
+    },
+    {
+      "new_path": "checkpoints/089_step136000/README.md",
+      "additions": {
+        "human": 9
+      }
+    },
+    {
+      "new_path": "checkpoints/089_step136000/SHA256SUMS",
+      "additions": {
+        "human": 1
+      }
+    },
+    {
+      "new_path": "checkpoints/089_step136000/config.yaml",
+      "additions": {
+        "human": 1304
+      }
+    },
+    {
+      "new_path": "checkpoints/089_step136000/meta.yaml",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "new_path": "checkpoints/089_step136000/model_config.yaml",
+      "additions": {
+        "human": 395
+      }
+    },
+    {
+      "new_path": "gear_sonic/config/collision/a3_089_rigid_foot_pairs.json",
+      "additions": {
+        "human": 25
+      }
+    },
+    {
+      "new_path": "gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_089.yaml",
+      "additions": {
+        "human": 1306
+      }
+    },
+    {
+      "new_path": "gear_sonic/data/assets/robot_description/mjcf/a3_089_rigid_foot_loop.xml",
+      "additions": {
+        "human": 552
+      }
+    },
+    {
+      "new_path": "gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf",
+      "additions": {
+        "human": 1305
+      }
+    },
+    {
+      "new_path": "gear_sonic/data_process/build_a3_089_mjcf.py",
+      "additions": {
+        "human": 82
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/a3_dynamic_articulation.py",
+      "additions": {
+        "human": 192
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_every_step_contact_sensor.py",
+      "additions": {
+        "human": 34
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_self_collision.py",
+      "additions": {
+        "human": 85
+      }
+    },
+    {
+      "new_path": "gear_sonic/envs/manager_env/robots/a3_self_contact_reward.py",
+      "additions": {
+        "human": 75
+      }
+    },
+    {
+      "new_path": "gear_sonic/evaluation/joint_angle.py",
+      "additions": {
+        "human": 46
+      }
+    },
+    {
+      "new_path": "gear_sonic/utils/a3_dynamic_armature.py",
+      "additions": {
+        "human": 89
+      }
+    },
+    {
+      "new_path": "tests/test_089_training_contract.py",
+      "additions": {
+        "human": 80
+      }
+    },
+    {
+      "new_path": "train_a3_089.sh",
+      "additions": {
+        "human": 314
+      }
+    },
+    {
+      "old_path": ".gitignore",
+      "new_path": ".gitignore",
+      "additions": {
+        "human": 1
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/events.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/events.py",
+      "additions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/mdp/rewards.py",
+      "new_path": "gear_sonic/envs/manager_env/mdp/rewards.py",
+      "additions": {
+        "human": 40
+      }
+    },
+    {
+      "old_path": "gear_sonic/envs/manager_env/modular_tracking_env_cfg.py",
+      "new_path": "gear_sonic/envs/manager_env/modular_tracking_env_cfg.py",
+      "additions": {
+        "human": 24
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "gear_sonic/scripts/sim2sim_a3_mujoco.py",
+      "new_path": "gear_sonic/scripts/sim2sim_a3_mujoco.py",
+      "additions": {
+        "human": 12
+      },
+      "deletions": {
+        "human": 13
+      }
+    }
+  ]
+}
