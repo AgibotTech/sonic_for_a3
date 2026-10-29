@@ -2,7 +2,7 @@
 #pragma once
 
 // A3 31-DOF layout extension — matches the authoritative MuJoCo DOF order
-// (mujoco.MjModel.njnt iteration for a3_t2d5.xml). A3 is actuated on all
+// (mujoco.MjModel.njnt iteration for a3_motion_skeleton.xml). A3 is actuated on all
 // 31 DOFs; the "29-DOF policy view" is obtained by skipping the two neck
 // slots. See notes/a3_dof_orderings.md for the full discussion.
 //
@@ -20,7 +20,7 @@ namespace robot_io {
 constexpr int kA3Dof       = 31;
 
 // 31-DOF A3 SDK layout start/count constants.
-// Matches MuJoCo's real order (mujoco.MjModel.njnt iteration for a3_t2d5.xml):
+// Matches MuJoCo's real order (mujoco.MjModel.njnt iteration for a3_motion_skeleton.xml):
 //   [0..2]   waist     (yaw, roll, pitch)
 //   [3..4]   neck      (head_yaw, head_pitch)
 //   [5..18]  arms      (L then R, 7 DOF each)
@@ -45,7 +45,7 @@ constexpr int kA3LegCount   = 12;  // 6 L + 6 R
 
 // 31-DOF A3 layout accessor.
 //
-// Order (matches mujoco.MjModel.njnt iteration for a3_t2d5.xml):
+// Order (matches mujoco.MjModel.njnt iteration for a3_motion_skeleton.xml):
 //   [0..2]   waist     (yaw, roll, pitch)
 //   [3..4]   neck      (head_yaw, head_pitch)
 //   [5..11]  left arm  (shoulder_p/r/y, elbow, wrist_r/p/y)

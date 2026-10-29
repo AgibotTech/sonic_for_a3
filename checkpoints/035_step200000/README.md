@@ -1,6 +1,6 @@
 # A3 035 step-200,000 checkpoint
 
-Download the PT and matching portable configuration from [Hugging Face](https://huggingface.co/sonic-for-a3/sonic/tree/main/035_step200000), from the source repository root:
+Download the PT from [Hugging Face](https://huggingface.co/sonic-for-a3/sonic/tree/main/035_step200000), from the source repository root; the matching portable configuration is versioned in this repository:
 
 ```bash
 python -m pip install huggingface_hub

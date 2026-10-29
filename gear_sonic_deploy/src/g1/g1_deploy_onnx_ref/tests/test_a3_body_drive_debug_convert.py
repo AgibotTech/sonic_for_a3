@@ -293,7 +293,7 @@ def test_converter_generates_pd_torque_and_error_topics(tmp_path):
         "/a3_debug/timing",
     }
     assert required <= set(latest)
-    assert "package://a3/meshes/pelvis_link.STL" in attachment_names
+    assert "package://a3/meshes/visual/pelvis_link.STL" in attachment_names
 
     desired = typestore.deserialize_cdr(latest["/a3_debug/desired_joint_states_31"], "sensor_msgs/msg/JointState")
     error = typestore.deserialize_cdr(latest["/a3_debug/error_joint_states_31"], "sensor_msgs/msg/JointState")
@@ -301,7 +301,7 @@ def test_converter_generates_pd_torque_and_error_topics(tmp_path):
     tf_msg = typestore.deserialize_cdr(latest["/tf"], "tf2_msgs/msg/TFMessage")
     robot_description = typestore.deserialize_cdr(latest["/robot_description"], "std_msgs/msg/String")
 
-    assert "package://a3/meshes/pelvis_link.STL" in robot_description.data
+    assert "package://a3/meshes/visual/pelvis_link.STL" in robot_description.data
     assert "file://" not in robot_description.data
     assert tf_msg.transforms[0].header.frame_id == "world"
     assert tf_msg.transforms[0].child_frame_id == "pelvis_link"

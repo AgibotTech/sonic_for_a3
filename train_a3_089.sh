@@ -265,7 +265,7 @@ module_path = root / "gear_sonic/envs/manager_env/robots/a3_self_collision.py"
 spec = importlib.util.spec_from_file_location("a3_self_collision", module_path)
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
-asset = root / "gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf"
+asset = root / "gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf"
 manifest = root / "gear_sonic/config/collision/a3_089_rigid_foot_pairs.json"
 pairs = module.load_reviewed_pairs(manifest, asset)
 if len(pairs) != 3:

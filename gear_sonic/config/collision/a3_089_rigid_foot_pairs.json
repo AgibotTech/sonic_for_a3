@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "approved",
-  "asset_sha256": "4999e0d413c5da3a6968a1687e6f471428e6e707d706f17a3bd272751c3be4ce",
+  "asset_sha256": "a85eef849d65105f5c222961589445f94b7d26e1726eba24b4781212423e441a",
   "pairs": [
     {
       "body1": "pelvis_link",
@@ -21,5 +21,27 @@
       "reason": "Right wrist housing overlap",
       "evidence": "Original 089 rigid-foot collision contract"
     }
-  ]
+  ],
+  "collision_mesh_sha256": {
+    "meshes/collision_089/torso_00.STL": "d1592aa8459de0a44c5abacea892c46d4b1ea9f077e37b4e8e30d925b4bb614e",
+    "meshes/collision_089/head_yaw_00.STL": "25c285660cf941ef30ac3c2e523dcac9fbabc0d9b4ac845ab89554e9aafea81d",
+    "meshes/collision_089/head_pitch_00.STL": "f8ef48b1d757daac4c77b58e1ed867603ce2c711c489af4daeca2375cd1b6031",
+    "meshes/collision_089/left_shoulder_pitch_00.STL": "e8b8c40e2972aab2180c6549677124606a312c24001d35164ca6b97c80331bb3",
+    "meshes/collision_089/left_wrist_roll_00.STL": "e3036442af33700df0b41cf12c39786a0719b0f0f0863aae428c65e8a7471966",
+    "meshes/collision_089/left_wrist_roll_01.STL": "393ed8f063c58fd7e53e7e40bdc220a1498ff9367757e5e420affcb5a6e68a9a",
+    "meshes/collision_089/left_wrist_pitch_00.STL": "4fd0e45768c5df5c480a33bcc1d10373163c7e8b42202d0d5e2fb69f68c11003",
+    "meshes/collision_089/left_wrist_yaw_00.STL": "0b8769f888a8144d5f99b70b9b91a105c2529504652408060045b965720414a6",
+    "meshes/collision_089/left_hand_00.STL": "55a87fe389c5cd6ee939481776a0a8abc1b5abc2f0db9bb04c1397beb57246f0",
+    "meshes/collision_089/right_shoulder_pitch_00.STL": "8e39fe4c15b1d8a578e8cb2fc96142258233ba3283a2af759b2c8a9668665973",
+    "meshes/collision_089/right_wrist_roll_00.STL": "ae03a28baaa3fc7489b9abc2cdd480ca402315fa4423c000fc625558bf19cd3c",
+    "meshes/collision_089/right_wrist_pitch_00.STL": "592658b8fe56799db8301bc347fa2ab3494644e867ac51c038abc183d5cd4b01",
+    "meshes/collision_089/right_hand_00.STL": "b5759db4fd1b82cd56c4bb36ce90b70bd965d97d4f4e948892e5bf35be59c184",
+    "meshes/collision_089/left_hip_pitch_00.STL": "9125fa33f5380ab219dc76c46e02e4f37fe1ea5d3c3b46a4cb6a59c71d533f79",
+    "meshes/collision_089/left_hip_roll_00.STL": "ff2513329254d9f9ff6f018ab8754d453b08471b0de5704d4b62d35dc3e4c3e4",
+    "meshes/collision_089/left_tapered_calf.STL": "76f98708bbf3bb9b727a04f2b7f5c26f8bfa354fb29fafe88e06db6f4bfff602",
+    "meshes/collision_089/ankle_pitch_shared.STL": "72b63d428d2634f8d98e6407144cbec4d3f71f4b0a6ad65aff9544b5208df877",
+    "meshes/collision_089/right_hip_pitch_00.STL": "64788974a70a9045d8fe590f10c5cb84ac8ea0cec2698b669824477c18563b43",
+    "meshes/collision_089/right_hip_roll_00.STL": "dd145351416e09e6727524a479eb008eeb2ea502dc58ba059d93909f346bdaee",
+    "meshes/collision_089/right_tapered_calf.STL": "d3012845c047de4535c5bfa46b7033a9956f4abb6f121c3547f6b9804c0403aa"
+  }
 }

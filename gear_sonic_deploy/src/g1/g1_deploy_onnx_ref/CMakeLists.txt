@@ -960,7 +960,7 @@ if(A3_AIMRT_BACKEND_AVAILABLE AND A3_ROS_MSGS_AVAILABLE)
 
   set(_a3_debug_urdf_dir
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../../gear_sonic/data/assets/robot_description/urdf/a3")
-  if(EXISTS "${_a3_debug_urdf_dir}/model.urdf")
+  if(EXISTS "${_a3_debug_urdf_dir}/a3_035_passive_foot.urdf")
     file(COPY "${_a3_debug_urdf_dir}"
       DESTINATION "${GS_RUNTIME_OUTPUT_DIR}/assets/robot_description/urdf")
   endif()

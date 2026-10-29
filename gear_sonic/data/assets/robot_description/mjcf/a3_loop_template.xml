@@ -1,5 +1,5 @@
 <mujoco model="A3T2.5_loop">
-  <compiler angle="radian" meshdir="../urdf/a3/meshes" autolimits="true"/>
+  <compiler angle="radian" meshdir="../urdf/a3/meshes/visual" autolimits="true"/>
   <option timestep="0.001"/>
   <visual>
     <global azimuth="150" elevation="-20"/>
@@ -56,7 +56,7 @@
     <mesh name="left_knee_shell_Link" content_type="model/stl" file="left_knee_shell_Link.STL"/>
     <mesh name="left_ankle_pitch_Link" content_type="model/stl" file="left_ankle_pitch_Link.STL"/>
     <mesh name="left_ankle_roll_Link" content_type="model/stl" file="left_ankle_roll_Link.STL"/>
-    <mesh name="left_ankle_roll_Link_hull_optimized" content_type="model/stl" file="left_ankle_roll_Link_hull_optimized.STL"/>
+    <mesh name="left_ankle_roll_Link_hull" content_type="model/stl" file="left_ankle_roll_Link_hull.STL"/>
     <mesh name="right_hip_pitch_Link" content_type="model/stl" file="right_hip_pitch_Link.STL"/>
     <mesh name="right_hip_roll_Link" content_type="model/stl" file="right_hip_roll_Link.STL"/>
     <mesh name="right_hip_yaw_Link" content_type="model/stl" file="right_hip_yaw_Link.STL"/>
@@ -64,7 +64,7 @@
     <mesh name="right_knee_shell_Link" content_type="model/stl" file="right_knee_shell_Link.STL"/>
     <mesh name="right_ankle_pitch_Link" content_type="model/stl" file="right_ankle_pitch_Link.STL"/>
     <mesh name="right_ankle_roll_Link" content_type="model/stl" file="right_ankle_roll_Link.STL"/>
-    <mesh name="right_ankle_roll_Link_hull_optimized" content_type="model/stl" file="right_ankle_roll_Link_hull_optimized.STL"/>
+    <mesh name="right_ankle_roll_Link_hull" content_type="model/stl" file="right_ankle_roll_Link_hull.STL"/>
     <mesh name="left_waist_rod_up_Link" content_type="model/stl" file="left_waist_rod_up_Link.STL"/>
     <mesh name="left_waist_motor_Link" content_type="model/stl" file="left_waist_motor_Link.STL"/>
     <mesh name="right_waist_rod_up_Link" content_type="model/stl" file="right_waist_rod_up_Link.STL"/>
@@ -260,7 +260,7 @@
                   <inertial pos="0.0282846 -0.00151669 -0.0492679" quat="0.000159591 0.736212 0.000495015 0.676751" mass="0.747056" diaginertia="0.00381308 0.00367379 0.000695432"/>
                   <joint name="left_ankle_roll_joint" pos="0 0 0" axis="1 0 0" range="-0.349066 0.349066" damping="0.45" frictionloss="0.778"/>
                   <geom class="visual" type="mesh" rgba="1 1 1 1" mesh="left_ankle_roll_Link"/>
-                  <geom class="collision" type="mesh" rgba="1 1 1 1" mesh="left_ankle_roll_Link_hull_optimized"/>
+                  <geom class="collision" type="mesh" rgba="1 1 1 1" mesh="left_ankle_roll_Link_hull" margin="0.001"/>
                   <site name="left_foot" rgba="1 0 0 1" pos="0.04 0 -0.067"/>
                 </body>
               </body>
@@ -318,7 +318,7 @@
                   <inertial pos="0.0294182 0.00148331 -0.0492658" quat="0.00015983 0.736188 0.000495247 0.676777" mass="0.747056" diaginertia="0.00381308 0.00367379 0.00069543"/>
                   <joint name="right_ankle_roll_joint" pos="0 0 0" axis="1 0 0" range="-0.349066 0.349066" damping="0.45" frictionloss="0.778"/>
                   <geom class="visual" type="mesh" rgba="1 1 1 1" mesh="right_ankle_roll_Link"/>
-                  <geom class="collision" type="mesh" rgba="1 1 1 1" mesh="right_ankle_roll_Link_hull_optimized"/>
+                  <geom class="collision" type="mesh" rgba="1 1 1 1" mesh="right_ankle_roll_Link_hull" margin="0.001"/>
                   <site name="right_foot" rgba="1 0 0 1" pos="0.04 0 -0.067"/>
                 </body>
               </body>

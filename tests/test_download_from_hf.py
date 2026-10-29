@@ -57,6 +57,12 @@ class DownloadTests(unittest.TestCase):
             self.assertEqual(metadata[0]['remote'], 'config.json')
         self.assertTrue(all(e['group'] == 'sysroot' for e in module.selected_entries(manifest, ['sysroot'])))
 
+    def test_pt_download_preserves_repository_035_configs(self):
+        manifest = json.loads((ROOT / 'a3_hf_manifest.json').read_text())
+        destinations = {entry['destination'] for entry in module.selected_entries(manifest, ['pt'])}
+        self.assertNotIn('checkpoints/035_step200000/config.yaml', destinations)
+        self.assertNotIn('checkpoints/035_step200000/model_config.yaml', destinations)
+
     def test_manifest_has_safe_unique_destinations(self):
         entries = json.loads((ROOT / 'a3_hf_manifest.json').read_text())['files']
         self.assertEqual(len(entries), len({e['destination'] for e in entries}))

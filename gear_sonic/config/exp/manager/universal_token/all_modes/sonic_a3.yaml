@@ -234,7 +234,7 @@ manager_env:
         smpl_motion_file: dummy
         smpl_y_up: true
         asset:
-          assetFileName: "a3_t2d5.xml"
+          assetFileName: "a3_motion_skeleton.xml"
 
       encoder_sample_probs:
         g1: 1.0

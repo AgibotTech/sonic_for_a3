@@ -382,7 +382,7 @@ manager_env:
           uniform_sampling_rate: 0.1
           use_failure_rate_decay: false
         asset:
-          assetFileName: a3_t2d5.xml
+          assetFileName: a3_motion_skeleton.xml
           assetRoot: gear_sonic/data/assets/robot_description/mjcf/
           urdfFileName: ''
         extend_config: []
@@ -499,7 +499,7 @@ manager_env:
         max_delay: 2
         min_delay: 0
       algo_obs_dim_dict: {}
-      asset_path: gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf
+      asset_path: gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf
       disable_passive_foot: true
       dynamic_ankle:
         enabled: true

@@ -4,7 +4,7 @@
 // Implements the 31-DOF A3 layout (notes/a3_dof_orderings.md).
 //
 // This layout matches the ORDER produced by `mujoco.MjModel.njnt` iteration
-// for `a3_t2d5.xml` (the authoritative source, cross-checked by the training
+// for `a3_motion_skeleton.xml` (the authoritative source, cross-checked by the training
 // side's `gear_sonic/scripts/generate_a3_order_mapping.py`). A3 is actuated
 // on all 31 DOFs (waist[0..2], neck[3..4], arms[5..18], legs[19..30]), so
 // there are no virtual slots here — the layout IS the full MuJoCo DOF order.

@@ -21,7 +21,7 @@ import numpy as np
 
 DEFAULT_INPUT = Path("a3_data/base_model_data_flat_ground_training_pkl/base_model_data_flat_ground_csv")
 DEFAULT_OUTPUT = Path("a3_data/base_model_data_flat_ground_quality_review")
-DEFAULT_MJCF = Path("gear_sonic/data/assets/robot_description/mjcf/a3_t2d5.xml")
+DEFAULT_MJCF = Path("gear_sonic/data/assets/robot_description/mjcf/a3_motion_skeleton.xml")
 FATAL_RULES = (
     "very_high_root",
     "wrist_flicker",

@@ -29,7 +29,7 @@ from scipy.spatial.transform import Rotation
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = REPO_ROOT / "a3_data/output_pkl_v2v3"
 DEFAULT_OUTPUT = REPO_ROOT / "data/agibot_a3_motion_lib_29d/from_pkl/agibot_a3"
-DEFAULT_MJCF = REPO_ROOT / "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5.xml"
+DEFAULT_MJCF = REPO_ROOT / "gear_sonic/data/assets/robot_description/mjcf/a3_motion_skeleton.xml"
 HEAD_JOINT_NAMES = {"head_yaw_joint", "head_pitch_joint"}
 REQUIRED_ENTRY_KEYS = {"root_trans_offset", "pose_aa"}
 

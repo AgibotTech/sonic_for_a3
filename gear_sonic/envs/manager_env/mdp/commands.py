@@ -250,7 +250,7 @@ class TrackingCommand(CommandTerm):
                     "smpl_motion_file": getattr(self.cfg, "smpl_motion_file", None),
                     "asset": {
                         "assetRoot": "gear_sonic/data/assets/robot_description/mjcf/",
-                        "assetFileName": "a3_t2d5.xml",
+                        "assetFileName": "a3_motion_skeleton.xml",
                         "urdfFileName": "",
                     },
                     "extend_config": [],

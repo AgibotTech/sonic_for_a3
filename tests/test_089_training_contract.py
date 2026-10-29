@@ -38,7 +38,7 @@ class TrainingContractTest(unittest.TestCase):
 
 
     def test_mujoco_collision_geometry_and_exclusions(self):
-        robot = ROOT / 'gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf'
+        robot = ROOT / 'gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf'
         mjcf = ROOT / 'gear_sonic/data/assets/robot_description/mjcf/a3_089_rigid_foot_loop.xml'
         u = ET.parse(robot).getroot()
         m = ET.parse(mjcf).getroot()
@@ -69,7 +69,7 @@ class TrainingContractTest(unittest.TestCase):
                 size = [float(shape.get('radius'))]
             else:
                 asset = m.find(f"asset/mesh[@name='{geom.get('mesh')}']")
-                self.assertEqual(asset.get('file'), '../' + shape.get('filename'))
+                self.assertEqual(asset.get('file'), '../' + str(Path(shape.get('filename')).relative_to('meshes')))
                 continue
             np.testing.assert_allclose(np.fromstring(geom.get('size'), sep=' '), size, atol=1e-10)
         exclusions = {frozenset((x.get('body1'), x.get('body2'))) for x in m.findall('contact/exclude')}

@@ -361,7 +361,7 @@ env_config:
       actor_obs: 930
       critic_obs: 1645
       tokenizer: 2402
-    asset_path: gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf
+    asset_path: gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf
     disable_passive_foot: true
     dynamic_ankle:
       enabled: true

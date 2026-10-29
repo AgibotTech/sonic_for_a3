@@ -6,8 +6,8 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / 'gear_sonic/data/assets/robot_description'
-URDF = ASSETS / 'urdf/a3/model_exp089_v13_collision_rigid_foot.urdf'
-BASE = ASSETS / 'mjcf/a3_t2d5_loop.xml'
+URDF = ASSETS / 'urdf/a3/a3_089_rigid_foot.urdf'
+BASE = ASSETS / 'mjcf/a3_loop_template.xml'
 OUTPUT = ASSETS / 'mjcf/a3_089_rigid_foot_loop.xml'
 
 
@@ -52,7 +52,7 @@ def build():
                 filename = shape.get('filename')
                 if filename not in existing_mesh:
                     mesh_name = f'collision_089_mesh_{len(existing_mesh):02d}'
-                    ET.SubElement(asset, 'mesh', {'name': mesh_name, 'file': '../' + filename})
+                    ET.SubElement(asset, 'mesh', {'name': mesh_name, 'file': '../' + str(Path(filename).relative_to('meshes'))})
                     existing_mesh[filename] = mesh_name
                 attrs['mesh'] = existing_mesh[filename]
             elif shape.tag == 'capsule':

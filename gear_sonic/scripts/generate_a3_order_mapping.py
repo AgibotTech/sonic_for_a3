@@ -16,8 +16,8 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_URDF = REPO_ROOT / "gear_sonic/data/assets/robot_description/urdf/a3/model.urdf"
-DEFAULT_MJCF = REPO_ROOT / "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5.xml"
+DEFAULT_URDF = REPO_ROOT / "gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf"
+DEFAULT_MJCF = REPO_ROOT / "gear_sonic/data/assets/robot_description/mjcf/a3_motion_skeleton.xml"
 
 NON_ACTUATED_URDF_JOINT_TYPES = {"fixed"}
 

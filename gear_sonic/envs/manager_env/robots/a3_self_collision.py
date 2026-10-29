@@ -14,8 +14,9 @@ def load_reviewed_pairs(path, asset_path):
         raise ValueError('Collision review does not match this URDF')
     for mesh in ET.parse(asset_path).getroot().findall('.//collision/geometry/mesh'):
         path = Path(asset_path).parent / mesh.get('filename')
-        if hashlib.sha256(path.read_bytes()).hexdigest() != path.stem:
-            raise ValueError('Content-addressed collision mesh changed since asset assembly')
+        expected = manifest.get('collision_mesh_sha256', {}).get(mesh.get('filename'), path.stem)
+        if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+            raise ValueError(f'Collision mesh changed since asset assembly: {path}')
     pairs = []
     for row in manifest['pairs']:
         if not row.get('reason') or not row.get('evidence'):

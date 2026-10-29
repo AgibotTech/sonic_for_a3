@@ -3,7 +3,7 @@
 // Regression guard for A3's 31-DOF MuJoCo DOF order (notes/a3_dof_orderings.md).
 //
 // The "single source of truth" for A3's SDK-layer layout is mujoco.MjModel
-// iteration of a3_t2d5.xml (cross-checked by
+// iteration of a3_motion_skeleton.xml (cross-checked by
 // gear_sonic/scripts/generate_a3_order_mapping.py on the training side).
 // This test pins the exact 31 joint names, in order, as a hardcoded list —
 // so any accidental reshuffle of MakeA3Layout31() (or an A3 revision that
@@ -20,7 +20,7 @@
 
 TEST(A3MujocoOrderSanity, MakeA3Layout31MatchesMujocoRealOrder) {
   // Authoritative 31-DOF joint list — matches
-  // mujoco.MjModel.njnt iteration of a3_t2d5.xml (verified 2026-04-28).
+  // mujoco.MjModel.njnt iteration of a3_motion_skeleton.xml (verified 2026-04-28).
   //
   // Ordering rationale spelled out in notes/a3_dof_orderings.md:
   //   [0..2]   waist  (yaw, roll, pitch)

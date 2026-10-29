@@ -21,8 +21,8 @@ os.environ["ACCEPT_EULA"] = "Y"
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 ASSET_DIR = REPO_ROOT / "gear_sonic" / "data" / "assets"
-DEFAULT_URDF = ASSET_DIR / "robot_description" / "urdf" / "a3" / "model.urdf"
-DEFAULT_MJCF = ASSET_DIR / "robot_description" / "mjcf" / "a3_t2d5.xml"
+DEFAULT_URDF = ASSET_DIR / "robot_description" / "urdf" / "a3" / "a3_089_rigid_foot.urdf"
+DEFAULT_MJCF = ASSET_DIR / "robot_description" / "mjcf" / "a3_motion_skeleton.xml"
 RESULT_PATH = Path("/tmp/verify_a3_result.txt")
 
 

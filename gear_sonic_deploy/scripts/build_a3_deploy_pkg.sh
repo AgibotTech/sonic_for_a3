@@ -986,7 +986,7 @@ stage_body_drive_debug_files() {
     "${PKG_DIR}/tools/"
 
   local a3_urdf_src="${REPO_ROOT}/gear_sonic/data/assets/robot_description/urdf/a3"
-  if [[ ! -f "${a3_urdf_src}/model.urdf" ]]; then
+  if [[ ! -f "${a3_urdf_src}/a3_035_passive_foot.urdf" ]]; then
     echo "missing A3 URDF assets: ${a3_urdf_src}" >&2
     exit 1
   fi
@@ -1260,7 +1260,7 @@ verify_package() {
     "tools/a3_body_drive_debug_convert.py"
     "tools/a3_eval_cli.py"
     "tools/serve_foxglove_assets.py"
-    "assets/robot_description/urdf/a3/model.urdf"
+    "assets/robot_description/urdf/a3/a3_035_passive_foot.urdf"
   )
   local rel
   for rel in "${debug_required[@]}"; do

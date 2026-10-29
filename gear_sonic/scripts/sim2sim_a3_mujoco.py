@@ -75,7 +75,7 @@ from gear_sonic.utils.terrain_profile import patch_mjcf_with_terrain_profile
 
 DEFAULT_URDF = (
     REPO_ROOT
-    / "gear_sonic/data/assets/robot_description/urdf/a3/model_exp089_v13_collision_rigid_foot.urdf"
+    / "gear_sonic/data/assets/robot_description/urdf/a3/a3_089_rigid_foot.urdf"
 )
 AUTO_OUTPUT_VIDEO = Path("__auto_output_video__")
 

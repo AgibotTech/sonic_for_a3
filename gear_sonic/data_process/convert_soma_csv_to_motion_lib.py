@@ -24,7 +24,7 @@ from scipy.spatial import transform
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 A3_MJCF_PATH = os.path.join(
-    REPO_ROOT, "gear_sonic", "data", "assets", "robot_description", "mjcf", "a3_t2d5.xml"
+    REPO_ROOT, "gear_sonic", "data", "assets", "robot_description", "mjcf", "a3_motion_skeleton.xml"
 )
 def load_a3_mjcf_spec(mjcf_path: str = A3_MJCF_PATH, robot: str = "a3") -> dict:
     """Load A3 body/joint order and joint axes from the MJCF body DFS order."""

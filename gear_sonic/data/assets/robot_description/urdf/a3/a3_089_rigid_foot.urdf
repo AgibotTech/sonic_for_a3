@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="A3T2.5">
   <link name="pelvis_link">
     <inertial>
@@ -8,16 +9,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/pelvis_link.STL" />
+        <mesh filename="meshes/visual/pelvis_link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
-    <collision name="pelvis_link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="pelvis_sparse_contained_sphere">
+      <origin xyz="-0.002035964717 0 -0.118657650452" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/pelvis_link_convex_00.STL" />
+        <sphere radius="0.078932083056" />
       </geometry>
     </collision>
   </link>
@@ -30,7 +31,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/waist_yaw_Link.STL" />
+        <mesh filename="meshes/visual/waist_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -53,7 +54,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/waist_roll_Link.STL" />
+        <mesh filename="meshes/visual/waist_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -76,7 +77,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/torso_Link.STL" />
+        <mesh filename="meshes/visual/torso_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -85,7 +86,7 @@
     <collision name="torso_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/torso_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/torso_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -105,7 +106,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/torso_shell_Link.STL" />
+        <mesh filename="meshes/visual/torso_shell_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -126,7 +127,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/imu_in_torso_Link.STL" />
+        <mesh filename="meshes/visual/imu_in_torso_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -147,7 +148,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/head_yaw_Link.STL" />
+        <mesh filename="meshes/visual/head_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -156,7 +157,7 @@
     <collision name="head_yaw_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/head_yaw_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/head_yaw_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -176,7 +177,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/head_pitch_Link.STL" />
+        <mesh filename="meshes/visual/head_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -185,7 +186,7 @@
     <collision name="head_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/head_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/head_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -205,7 +206,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_shoulder_pitch_Link.STL" />
+        <mesh filename="meshes/visual/left_shoulder_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -214,7 +215,7 @@
     <collision name="left_shoulder_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_shoulder_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_shoulder_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -234,16 +235,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_shoulder_roll_Link.STL" />
+        <mesh filename="meshes/visual/left_shoulder_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="left_shoulder_roll_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="left_shoulder_roll_native_capsule">
+      <origin xyz="0.005170587286 0.006363161485 -0.059481331574" rpy="0.072062023043 0.134542124896 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_shoulder_roll_Link_convex_00.STL" />
+        <capsule radius="0.052027652000" length="0.084771263568" />
       </geometry>
     </collision>
   </link>
@@ -263,16 +264,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_shoulder_yaw_Link.STL" />
+        <mesh filename="meshes/visual/left_shoulder_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="left_shoulder_yaw_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="left_shoulder_yaw_native_capsule">
+      <origin xyz="0.001692317 0.000212743 -0.081116362" rpy="-0.003095146 -0.165977337 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_shoulder_yaw_Link_convex_00.STL" />
+        <capsule radius="0.042880954000" length="0.094656758000" />
       </geometry>
     </collision>
   </link>
@@ -292,16 +293,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_elbow_Link.STL" />
+        <mesh filename="meshes/visual/left_elbow_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="left_elbow_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="left_elbow_forearm_native_capsule">
+      <origin xyz="0.05306946 0.00336456 -0.00482632" rpy="0 1.64738112 -0.06423268" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_elbow_Link_convex_00.STL" />
+        <capsule radius="0.039560000000" length="0.098420465000" />
       </geometry>
     </collision>
   </link>
@@ -321,7 +322,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_wrist_roll_Link.STL" />
+        <mesh filename="meshes/visual/left_wrist_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -330,13 +331,13 @@
     <collision name="left_wrist_roll_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_wrist_roll_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_wrist_roll_00.STL" />
       </geometry>
     </collision>
     <collision name="left_wrist_roll_Link_collision_v6_01">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_wrist_roll_Link_convex_01.STL" />
+        <mesh filename="meshes/collision_089/left_wrist_roll_01.STL" />
       </geometry>
     </collision>
   </link>
@@ -356,7 +357,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_wrist_pitch_Link.STL" />
+        <mesh filename="meshes/visual/left_wrist_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -365,7 +366,7 @@
     <collision name="left_wrist_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_wrist_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_wrist_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -385,7 +386,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_wrist_yaw_Link.STL" />
+        <mesh filename="meshes/visual/left_wrist_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -394,7 +395,7 @@
     <collision name="left_wrist_yaw_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_wrist_yaw_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_wrist_yaw_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -414,7 +415,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_hand_Link.STL" />
+        <mesh filename="meshes/visual/left_hand_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -423,7 +424,7 @@
     <collision name="left_hand_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_hand_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_hand_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -441,7 +442,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_shoulder_pitch_Link.STL" />
+        <mesh filename="meshes/visual/right_shoulder_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -450,7 +451,7 @@
     <collision name="right_shoulder_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_shoulder_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_shoulder_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -470,16 +471,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_shoulder_roll_Link.STL" />
+        <mesh filename="meshes/visual/right_shoulder_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="right_shoulder_roll_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="right_shoulder_roll_native_capsule">
+      <origin xyz="0.005170587286 -0.006363161485 -0.059481331574" rpy="-0.072062023043 0.134542124896 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_shoulder_roll_Link_convex_00.STL" />
+        <capsule radius="0.052027652000" length="0.084771263568" />
       </geometry>
     </collision>
   </link>
@@ -499,16 +500,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_shoulder_yaw_Link.STL" />
+        <mesh filename="meshes/visual/right_shoulder_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="right_shoulder_yaw_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="right_shoulder_yaw_native_capsule">
+      <origin xyz="0.001692317 -0.000212743 -0.081116362" rpy="0.003095146 -0.165977337 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_shoulder_yaw_Link_convex_00.STL" />
+        <capsule radius="0.042880954000" length="0.094656758000" />
       </geometry>
     </collision>
   </link>
@@ -528,16 +529,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_elbow_Link.STL" />
+        <mesh filename="meshes/visual/right_elbow_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="right_elbow_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="right_elbow_forearm_native_capsule">
+      <origin xyz="0.05427107 0.00335702 -0.00497013" rpy="0 1.64676532 -0.06606091" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_elbow_Link_convex_00.STL" />
+        <capsule radius="0.039560000000" length="0.098420465000" />
       </geometry>
     </collision>
   </link>
@@ -557,7 +558,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_wrist_roll_Link.STL" />
+        <mesh filename="meshes/visual/right_wrist_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -566,7 +567,7 @@
     <collision name="right_wrist_roll_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_wrist_roll_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_wrist_roll_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -586,7 +587,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_wrist_pitch_Link.STL" />
+        <mesh filename="meshes/visual/right_wrist_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -595,7 +596,7 @@
     <collision name="right_wrist_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_wrist_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_wrist_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -615,7 +616,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_wrist_yaw_Link.STL" />
+        <mesh filename="meshes/visual/right_wrist_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -624,7 +625,7 @@
     <collision name="right_wrist_yaw_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_wrist_yaw_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_wrist_yaw_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -644,7 +645,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_hand_Link.STL" />
+        <mesh filename="meshes/visual/right_hand_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -653,7 +654,7 @@
     <collision name="right_hand_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_hand_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_hand_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -671,7 +672,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/imu_in_pelvis_Link.STL" />
+        <mesh filename="meshes/visual/imu_in_pelvis_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -692,7 +693,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_hip_pitch_Link.STL" />
+        <mesh filename="meshes/visual/left_hip_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -701,7 +702,7 @@
     <collision name="left_hip_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_hip_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_hip_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -721,7 +722,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_hip_roll_Link.STL" />
+        <mesh filename="meshes/visual/left_hip_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -730,7 +731,7 @@
     <collision name="left_hip_roll_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_hip_roll_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_hip_roll_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -750,16 +751,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_hip_yaw_Link.STL" />
+        <mesh filename="meshes/visual/left_hip_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="left_hip_yaw_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="left_stout_thigh_native_capsule">
+      <origin xyz="0.009790000000 0 -0.236340000000" rpy="0 -0.006570047266484 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_hip_yaw_Link_convex_00.STL" />
+        <capsule radius="0.066230000000" length="0.190240000000" />
       </geometry>
     </collision>
   </link>
@@ -779,16 +780,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_knee_Link.STL" />
+        <mesh filename="meshes/visual/left_knee_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="left_knee_Link_collision_v6_00">
+    <collision name="left_tapered_calf_v7">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_knee_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/left_tapered_calf.STL" />
       </geometry>
     </collision>
   </link>
@@ -808,7 +809,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_knee_shell_Link.STL" />
+        <mesh filename="meshes/visual/left_knee_shell_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -829,7 +830,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/left_ankle_pitch_Link.STL" />
+        <mesh filename="meshes/visual/left_ankle_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -838,7 +839,7 @@
     <collision name="left_ankle_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_ankle_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/ankle_pitch_shared.STL" />
       </geometry>
     </collision>
   </link>
@@ -850,24 +851,138 @@
     <limit lower="-0.9075712110370514" upper="0.5235987755982988" effort="118.2" velocity="10.8" />
   </joint>
   <link name="left_ankle_roll_Link">
-    <inertial>
-      <origin xyz="0.014322797 -0.0017557402 -0.049735658" rpy="0 0 0" />
-      <mass value="0.65335332" />
-      <inertia ixx="0.0006417007" ixy="1.6118453e-05" ixz="0.00028981602" iyy="0.002584202" iyz="8.2162963e-07" izz="0.0026639197" />
-    </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_compliant_foot/left_foot_rear_visual.STL" />
+        <mesh filename="meshes/visual/left_foot_rear_visual.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <inertial>
+      <origin xyz="0.0282846195291177 -0.00151668996066783 -0.0492678802888945" rpy="0 0 0" />
+      <mass value="0.747055694" />
+      <inertia ixx="0.000717440002732652" ixy="-1.27999924046348e-06" ixz="0.00026100999405196" iyy="0.00367378998200848" iyz="2.39999929864794e-07" izz="0.00379107003637954" />
+    </inertial>
+    <visual>
       <geometry>
-        <mesh filename="meshes_collision_optimized/left_foot_rear_collision_convex.STL" />
+        <mesh filename="meshes/visual/left_foot_forefoot_visual.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="meshes/visual/left_foot_toe_visual.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <collision name="left_rear_sole_capsule_n040">
+      <origin xyz="0.007251228693 -0.040461716967 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.143791819754" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_sole_capsule_n020">
+      <origin xyz="0.008477481249 -0.020230858483 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.141339314643" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_sole_capsule_center">
+      <origin xyz="0.009881224253 0 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.138531828635" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_sole_capsule_p020">
+      <origin xyz="0.011448860291 0.020230858483 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.135396556559" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_sole_capsule_p040">
+      <origin xyz="0.013039787986 0.040461716967 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.132214701170" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_heel_native_capsule">
+      <origin xyz="-0.080397260034 0 -0.051564466117" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.012500000000" length="0.043000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_body_main_box">
+      <origin xyz="0.0094 0.0004 -0.03425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.159000000000 0.062000000000 0.032000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_rear_body_bridge_box">
+      <origin xyz="-0.0011 0.0001 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.089000000000 0.041000000000 0.023000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_forefoot_proximal_native_capsule">
+      <origin xyz="0.1035 0 -0.0552" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.011900000000" length="0.081200000000" />
+      </geometry>
+    </collision>
+    <collision name="left_forefoot_distal_native_capsule">
+      <origin xyz="0.1267 0 -0.05255" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.013300000000" length="0.065100000000" />
+      </geometry>
+    </collision>
+    <collision name="left_forefoot_body_main_box">
+      <origin xyz="0.115 0.0004 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048000000000 0.059000000000 0.017500000000" />
+      </geometry>
+    </collision>
+    <collision name="left_forefoot_body_crown_box">
+      <origin xyz="0.1071 -0.0001 -0.02675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032000000000 0.041000000000 0.011000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_toe_clean_root_native_capsule">
+      <origin xyz="0.1465 0 -0.05705" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.006250000000" length="0.076000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_toe_clean_middle_native_capsule">
+      <origin xyz="0.1575 0 -0.0525" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.008500000000" length="0.060000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_toe_clean_distal_native_capsule">
+      <origin xyz="0.1705 0 -0.04675" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.009750000000" length="0.027000000000" />
+      </geometry>
+    </collision>
+    <collision name="left_toe_body_main_box">
+      <origin xyz="0.154 0.0005 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026000000000 0.046000000000 0.011500000000" />
+      </geometry>
+    </collision>
+    <collision name="left_toe_body_crown_box">
+      <origin xyz="0.1482 0.0004 -0.03375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014500000000 0.034000000000 0.007000000000" />
       </geometry>
     </collision>
   </link>
@@ -887,7 +1002,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_hip_pitch_Link.STL" />
+        <mesh filename="meshes/visual/right_hip_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -896,7 +1011,7 @@
     <collision name="right_hip_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_hip_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_hip_pitch_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -916,7 +1031,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_hip_roll_Link.STL" />
+        <mesh filename="meshes/visual/right_hip_roll_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -925,7 +1040,7 @@
     <collision name="right_hip_roll_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_hip_roll_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_hip_roll_00.STL" />
       </geometry>
     </collision>
   </link>
@@ -945,16 +1060,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_hip_yaw_Link.STL" />
+        <mesh filename="meshes/visual/right_hip_yaw_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="right_hip_yaw_Link_collision_v6_00">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision name="right_stout_thigh_native_capsule">
+      <origin xyz="0.009790000000 0 -0.236340000000" rpy="0 -0.006570047266484 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_hip_yaw_Link_convex_00.STL" />
+        <capsule radius="0.066230000000" length="0.190240000000" />
       </geometry>
     </collision>
   </link>
@@ -974,16 +1089,16 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_knee_Link.STL" />
+        <mesh filename="meshes/visual/right_knee_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision name="right_knee_Link_collision_v6_00">
+    <collision name="right_tapered_calf_v7">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_knee_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/right_tapered_calf.STL" />
       </geometry>
     </collision>
   </link>
@@ -1003,7 +1118,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_knee_shell_Link.STL" />
+        <mesh filename="meshes/visual/right_knee_shell_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.1 0.1 0.1 1" />
@@ -1024,7 +1139,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/right_ankle_pitch_Link.STL" />
+        <mesh filename="meshes/visual/right_ankle_pitch_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -1033,7 +1148,7 @@
     <collision name="right_ankle_pitch_Link_collision_v6_00">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_ankle_pitch_Link_convex_00.STL" />
+        <mesh filename="meshes/collision_089/ankle_pitch_shared.STL" />
       </geometry>
     </collision>
   </link>
@@ -1045,24 +1160,138 @@
     <limit lower="-0.9075712110370514" upper="0.5235987755982988" effort="118.2" velocity="10.8" />
   </joint>
   <link name="right_ankle_roll_Link">
-    <inertial>
-      <origin xyz="0.015249417 0.0015374098 -0.049757984" rpy="0 0 0" />
-      <mass value="0.65151835" />
-      <inertia ixx="0.00063988822" ixy="-5.1705892e-06" ixz="0.00029076885" iyy="0.0025737687" iyz="1.0236934e-07" izz="0.0026531626" />
-    </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes_compliant_foot/right_foot_rear_visual.STL" />
+        <mesh filename="meshes/visual/right_foot_rear_visual.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <inertial>
+      <origin xyz="0.0294182400358676 0.00148330998684395 -0.0492658300284561" rpy="0 0 0" />
+      <mass value="0.747055694" />
+      <inertia ixx="0.00071739999782326" ixy="-1.27999977032304e-06" ixz="0.000260789996710446" iyy="0.00367378999038809" iyz="2.40000022297877e-07" izz="0.00379110995054588" />
+    </inertial>
+    <visual>
       <geometry>
-        <mesh filename="meshes_collision_optimized/right_foot_rear_collision_convex.STL" />
+        <mesh filename="meshes/visual/right_foot_forefoot_visual.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="meshes/visual/right_foot_toe_visual.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <collision name="right_rear_sole_capsule_n040">
+      <origin xyz="0.013039787986 -0.040461716967 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.132214701170" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_sole_capsule_n020">
+      <origin xyz="0.011448860291 -0.020230858483 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.135396556559" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_sole_capsule_center">
+      <origin xyz="0.009881224253 0 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.138531828635" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_sole_capsule_p020">
+      <origin xyz="0.008477481249 0.020230858483 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.141339314643" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_sole_capsule_p040">
+      <origin xyz="0.007251228693 0.040461716967 -0.05519308123" rpy="-0 1.57079632679 0" />
+      <geometry>
+        <capsule radius="0.012166918770" length="0.143791819754" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_heel_native_capsule">
+      <origin xyz="-0.080397260034 0 -0.051564466117" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.012500000000" length="0.043000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_body_main_box">
+      <origin xyz="0.0094 0.0004 -0.03425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.159000000000 0.062000000000 0.032000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_rear_body_bridge_box">
+      <origin xyz="-0.0011 0.0001 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.089000000000 0.041000000000 0.023000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_forefoot_proximal_native_capsule">
+      <origin xyz="0.1035 0 -0.0552" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.011900000000" length="0.081200000000" />
+      </geometry>
+    </collision>
+    <collision name="right_forefoot_distal_native_capsule">
+      <origin xyz="0.1267 0 -0.05255" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.013300000000" length="0.065100000000" />
+      </geometry>
+    </collision>
+    <collision name="right_forefoot_body_main_box">
+      <origin xyz="0.115 0.0004 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048000000000 0.059000000000 0.017500000000" />
+      </geometry>
+    </collision>
+    <collision name="right_forefoot_body_crown_box">
+      <origin xyz="0.1071 -0.0001 -0.02675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032000000000 0.041000000000 0.011000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_toe_clean_root_native_capsule">
+      <origin xyz="0.1465 0 -0.05705" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.006250000000" length="0.076000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_toe_clean_middle_native_capsule">
+      <origin xyz="0.1575 0 -0.0525" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.008500000000" length="0.060000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_toe_clean_distal_native_capsule">
+      <origin xyz="0.1705 0 -0.04675" rpy="1.57079632679 0 0" />
+      <geometry>
+        <capsule radius="0.009750000000" length="0.027000000000" />
+      </geometry>
+    </collision>
+    <collision name="right_toe_body_main_box">
+      <origin xyz="0.154 0.0005 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026000000000 0.046000000000 0.011500000000" />
+      </geometry>
+    </collision>
+    <collision name="right_toe_body_crown_box">
+      <origin xyz="0.1482 0.0004 -0.03375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014500000000 0.034000000000 0.007000000000" />
       </geometry>
     </collision>
   </link>
@@ -1072,125 +1301,5 @@
     <child link="right_ankle_roll_Link" />
     <axis xyz="1.0 0.0 0.0" />
     <limit lower="-0.3490658503988659" upper="0.3490658503988659" effort="54.75" velocity="19.37" />
-  </joint>
-  <link name="left_foot_forefoot_Link">
-    <inertial>
-      <origin xyz="0.022889288 0.00014680508 0.010051296" rpy="0 0 0" />
-      <mass value="0.066801623" />
-      <inertia ixx="6.0805859e-05" ixy="-2.1230993e-09" ixz="2.1169036e-06" iyy="2.8650309e-05" iyz="-2.0925951e-09" izz="5.9268326e-05" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.09 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_compliant_foot/left_foot_forefoot_visual.STL" />
-      </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.09 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_collision_optimized/left_foot_forefoot_collision_convex.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <link name="left_foot_toe_Link">
-    <inertial>
-      <origin xyz="0.017287484 0.00015835989 0.006367646" rpy="0 0 0" />
-      <mass value="0.026900751" />
-      <inertia ixx="1.3235743e-05" ixy="-1.2068381e-09" ixz="-3.959489e-08" iyy="6.3399015e-06" iyz="2.1241656e-09" izz="1.4386603e-05" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.14 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_compliant_foot/left_foot_toe_visual.STL" />
-      </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.14 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_collision_optimized/left_foot_toe_collision_convex.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint name="left_foot_forefoot_joint" type="revolute">
-    <origin xyz="0.09 0 -0.055" rpy="0 0 0" />
-    <parent link="left_ankle_roll_Link" />
-    <child link="left_foot_forefoot_Link" />
-    <axis xyz="0 1 0" />
-    <limit lower="-0.06606093" upper="0.06606093" effort="20" velocity="20" />
-    <dynamics damping="1.51683722" friction="0.0" />
-  </joint>
-  <joint name="left_foot_toe_joint" type="revolute">
-    <origin xyz="0.05 0 0" rpy="0 0 0" />
-    <parent link="left_foot_forefoot_Link" />
-    <child link="left_foot_toe_Link" />
-    <axis xyz="0 1 0" />
-    <limit lower="-0.2305825" upper="0.2305825" effort="20" velocity="20" />
-    <dynamics damping="0.0686125693" friction="0.0" />
-  </joint>
-  <link name="right_foot_forefoot_Link">
-    <inertial>
-      <origin xyz="0.022921418 0.0011115484 0.010218898" rpy="0 0 0" />
-      <mass value="0.067535892" />
-      <inertia ixx="6.1963616e-05" ixy="-3.9772676e-09" ixz="2.1728849e-06" iyy="2.9230078e-05" iyz="2.8401851e-10" izz="6.0159354e-05" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.09 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_compliant_foot/right_foot_forefoot_visual.STL" />
-      </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.09 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_collision_optimized/right_foot_forefoot_collision_convex.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <link name="right_foot_toe_Link">
-    <inertial>
-      <origin xyz="0.017689681 0.0011211941 0.0063686812" rpy="0 0 0" />
-      <mass value="0.028001452" />
-      <inertia ixx="1.4005833e-05" ixy="-2.0202914e-09" ixz="-3.8062255e-08" iyy="6.8312651e-06" iyz="9.6671461e-10" izz="1.5340553e-05" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.14 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_compliant_foot/right_foot_toe_visual.STL" />
-      </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.14 0 0.055" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes_collision_optimized/right_foot_toe_collision_convex.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint name="right_foot_forefoot_joint" type="revolute">
-    <origin xyz="0.09 0 -0.055" rpy="0 0 0" />
-    <parent link="right_ankle_roll_Link" />
-    <child link="right_foot_forefoot_Link" />
-    <axis xyz="0 1 0" />
-    <limit lower="-0.06606093" upper="0.06606093" effort="20" velocity="20" />
-    <dynamics damping="1.51683722" friction="0.0" />
-  </joint>
-  <joint name="right_foot_toe_joint" type="revolute">
-    <origin xyz="0.05 0 0" rpy="0 0 0" />
-    <parent link="right_foot_forefoot_Link" />
-    <child link="right_foot_toe_Link" />
-    <axis xyz="0 1 0" />
-    <limit lower="-0.2305825" upper="0.2305825" effort="20" velocity="20" />
-    <dynamics damping="0.0686125693" friction="0.0" />
   </joint>
 </robot>

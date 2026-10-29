@@ -234,7 +234,7 @@ def find_a3_asset_dir(script_path: Path, override: str | None) -> Path:
         for rel in rels:
             candidates.append(base / rel)
     for candidate in candidates:
-        if (candidate / "model.urdf").is_file() and (candidate / "meshes").is_dir():
+        if ((candidate / "a3_035_passive_foot.urdf").is_file() or (candidate / "model.urdf").is_file()) and (candidate / "meshes").is_dir():
             return candidate.resolve()
     raise FileNotFoundError(
         "could not locate A3 URDF assets; pass --asset-dir "
@@ -279,6 +279,9 @@ def copy_and_rewrite_urdf(
     shutil.copytree(asset_dir, dst)
 
     urdf_path = dst / "model.urdf"
+    release_urdf = dst / "a3_035_passive_foot.urdf"
+    if release_urdf.is_file():
+        shutil.copyfile(release_urdf, urdf_path)
     text = urdf_path.read_text(encoding="utf-8")
     normalized_mesh_url_base = mesh_url_base.rstrip("/") if mesh_url_base else None
     attachments_by_name: dict[str, MeshAttachment] = {}
@@ -1249,7 +1252,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("raw_path", help="Raw AimRT bag directory, raw parent directory, or .mcap file")
     parser.add_argument("--output", help="Output foxglove directory; default is <session>/foxglove")
-    parser.add_argument("--asset-dir", help="A3 URDF asset directory containing model.urdf and meshes/")
+    parser.add_argument("--asset-dir", help="A3 URDF asset directory containing a3_035_passive_foot.urdf and meshes/")
     parser.add_argument(
         "--mesh-url-base",
         help=(

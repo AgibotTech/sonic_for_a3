@@ -29,11 +29,11 @@ DEFAULT_MOTION = (
 )
 DEFAULT_MJCF = (
     REPO_ROOT
-    / "gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop_passive_foot_twostage_fit_optimized.xml"
+    / "gear_sonic/data/assets/robot_description/mjcf/a3_035_passive_foot_loop.xml"
 )
 DEFAULT_URDF = (
     REPO_ROOT
-    / "gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot_twostage_fit_optimized.urdf"
+    / "gear_sonic/data/assets/robot_description/urdf/a3/a3_035_passive_foot.urdf"
 )
 DEFAULT_SOLVER_LIB = (
     REPO_ROOT

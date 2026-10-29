@@ -92,9 +92,9 @@ The training URDF and the sim2sim MJCF must be used as a matched pair:
 
 ```text
 gear_sonic/data/assets/robot_description/urdf/a3/
-  model_collision_optimized_passive_foot_twostage_fit_optimized.urdf
+  a3_035_passive_foot.urdf
 gear_sonic/data/assets/robot_description/mjcf/
-  a3_t2d5_loop_passive_foot_twostage_fit_optimized.xml
+  a3_035_passive_foot_loop.xml
 ```
 
 #### Original bench data and its boundary
@@ -352,7 +352,7 @@ python gear_sonic/scripts/sim2sim_a3_mujoco.py \
   --checkpoint "$MODEL_035_PT" \
   --motion a3_data/agibot_a3/001_walk_front_slow.csv \
   --encoder-mode a3_fast \
-  --mjcf gear_sonic/data/assets/robot_description/mjcf/a3_t2d5_loop_passive_foot_twostage_fit_optimized.xml \
+  --mjcf gear_sonic/data/assets/robot_description/mjcf/a3_035_passive_foot_loop.xml \
   --batch-once \
   --metrics-out /tmp/a3_035_sim2sim_metrics.json \
   --output-video /tmp/a3_035_sim2sim.mp4

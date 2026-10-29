@@ -320,7 +320,7 @@ manager_env:
         smpl_motion_file: dummy
         asset:
           assetRoot: gear_sonic/data/assets/robot_description/mjcf/
-          assetFileName: a3_t2d5.xml
+          assetFileName: a3_motion_skeleton.xml
           urdfFileName: ''
         extend_config: []
         target_fps: 50
@@ -1171,7 +1171,7 @@ manager_env:
     robot:
       type: a3_024
       algo_obs_dim_dict: {}
-      asset_path: gear_sonic/data/assets/robot_description/urdf/a3/model_collision_optimized_passive_foot_twostage_fit_optimized.urdf
+      asset_path: gear_sonic/data/assets/robot_description/urdf/a3/a3_035_passive_foot.urdf
       use_fitted_passive_foot_gains: true
     rewards:
       num_critics: 1
