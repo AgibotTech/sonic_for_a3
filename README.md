@@ -14,13 +14,14 @@ We sincerely thank the GEAR team for their amazing and solid work, their
 comprehensive open-source release, and their thorough documentation, which
 made this A3 adaptation possible.
 
-This repository provides the SONIC whole-body-control workflow for **AgiBot A3**,
+This repository provides the SONIC whole-body-control workflow for **AgiBot A3/A3U**,
 including the 035 and 089 training contracts, MuJoCo simulation, deployment,
 and real-time XR retargeting.
 
 Start with the [end-to-end guide](docs/a3_training2sim2deploy.md). It provides
 the authoritative path from A3 flat CSV data to training, sim2sim, ONNX/RKNN,
-and a staged deploy package.
+a staged deploy package, and the complete XR teleoperation workflow in simulation
+and on the real robot.
 
 The identifiers `035` and `089` are experiment labels only; they have no special
 meaning and do not denote product versions, model generations, or hardware variants.
@@ -92,13 +93,13 @@ step-136,000, follow the artifact preparation and package build steps in the
 
 ### 4. Sim-to-real experience and implementation
 
-The release documents and implements the sim-to-real constraints used for A3,
-including T–N motor curves and serial/parallel joint torque-space limits. The
-035 passive-foot model approximates sole compliance and helps suppress
-tiptoe behavior, but still differs substantially from real sole deformation.
-Its passive joints can introduce simulation instability and excessive bending;
-use them cautiously when training your own policies. The 089 contract instead
-uses rigid feet and the later collision geometry.
+The release includes tested sim-to-real training configurations for A3,
+including domain randomization of actuator gains, joint friction and armature,
+body mass, contact materials, joint offsets and external pushes. It also models
+motor T–N curves and serial/parallel joint torque limits. The 089 configuration
+adds actuator delay and a dynamic ankle model with randomized motor inertia.
+See the checkpoint documentation for the [035](checkpoints/035_step200000/README.md)
+and [089](checkpoints/089_step136000/README.md) training configurations.
 
 ## Current limitations
 
