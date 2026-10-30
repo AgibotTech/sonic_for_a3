@@ -1,0 +1,166 @@
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_manual_control.cpp
+  s_1071e05eefc772::t_8b72ec75442356 139-154
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/a3_deploy/safe_halt.hpp
+  s_1071e05eefc772::t_b86d673acd8ecf 20-23
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/a3_manual_control.cpp
+  s_1071e05eefc772::t_09626f38ed989e 24-33,279,290,321-322,438,516-517
+  s_1071e05eefc772::t_3cd3b4058975fb 518
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_policy_driver.cpp
+  s_1071e05eefc772::t_7b02e6410f1926 280-291
+docs/a3_training2sim2deploy.md
+  s_1071e05eefc772::t_71d37d488b1b01 288-289
+  s_1071e05eefc772::t_744afccc0658c0 290-293,366
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/a3_deploy/a3_manual_control.hpp
+  s_1071e05eefc772::t_09626f38ed989e 21,27,56
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/main.cpp
+  s_1071e05eefc772::t_b86d673acd8ecf 3254
+  s_1071e05eefc772::t_988081c8a59861 2636-2639,3019-3025,3253,4054
+  s_1071e05eefc772::t_c5d146ebc38ab4 3255-3257
+gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/safe_halt.cpp
+  s_1071e05eefc772::t_b86d673acd8ecf 29-35
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "08d562bb2a1f97797c0047a82b3a4f02990bf3fd",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.cache_read_tokens": "649214848",
+        "tlab.token_usage.input_tokens": "11983136",
+        "tlab.session_started_at": "2026-10-29T10:55:58Z",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.output_tokens": "1378584"
+      }
+    }
+  },
+  "changes": [
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/a3_deploy/a3_manual_control.hpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/a3_deploy/a3_manual_control.hpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 3
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/a3_deploy/safe_halt.hpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/a3_deploy/safe_halt.hpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/a3_manual_control.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/a3_manual_control.cpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 18
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/main.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/main.cpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 17
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/safe_halt.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/a3_deploy/safe_halt.cpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_manual_control.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_manual_control.cpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 16
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_policy_driver.cpp",
+      "new_path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/unit_tests/test_a3_policy_driver.cpp",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 12
+          }
+        ]
+      }
+    }
+  ]
+}
