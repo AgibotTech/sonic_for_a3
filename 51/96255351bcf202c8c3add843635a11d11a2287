@@ -1,0 +1,49 @@
+README.md
+  s_1071e05eefc772::t_da52d67ae1a2ca 17
+  s_1071e05eefc772::t_7d7ace80dd3380 95-101
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "5196255351bcf202c8c3add843635a11d11a2287",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": null,
+      "custom_attributes": {
+        "tlab.token_usage.output_tokens": "1444000",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.cache_read_tokens": "743682176",
+        "tlab.session_started_at": "2026-10-30T07:47:54Z",
+        "tlab.token_usage.input_tokens": "12493280"
+      }
+    }
+  },
+  "changes": [
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 8
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 8
+          }
+        ]
+      }
+    }
+  ]
+}
