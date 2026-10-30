@@ -1,0 +1,207 @@
+README.md
+  s_1071e05eefc772::t_e9fa1f876bc521 17-19,28-35
+  s_1071e05eefc772::t_f9eb8a1e34afd9 25-26
+  s_1071e05eefc772::t_bb918a47322ea2 40
+  s_1071e05eefc772::t_49544498736854 36-37,39,42-46
+  s_1071e05eefc772::t_703fe9c9145e35 9,59-62,64-67,88-91,95-97,100-101,105-106,128-129
+  s_1071e05eefc772::t_1424ea6766f87e 47-52
+  s_1071e05eefc772::t_69c964ef3fa132 38,41
+  s_1071e05eefc772::t_ce16f3f0ebf3ad 69
+  s_1071e05eefc772::t_fb5214e11f84fb 27
+tests/test_download_from_hf.py
+  s_1071e05eefc772::t_0953f79518ea69 74-88
+checkpoints/089_step136000/README.md
+  s_1071e05eefc772::t_6e145498340997 49-148
+  s_1071e05eefc772::t_bb918a47322ea2 3-11,15
+  s_1071e05eefc772::t_4eef4b7b97e183 17-46
+  s_1071e05eefc772::t_410a5631ee7cce 16
+.gitignore
+  s_1071e05eefc772::t_f33b58347dd233 271
+gear_sonic_deploy/xr_retarget/LICENSE.xr-retarget
+  s_1071e05eefc772::t_d33a5c8897cbad 4
+checkpoints/035_step200000/README.md
+  s_1071e05eefc772::t_6e145498340997 16-101
+docs/a3_training2sim2deploy.md
+  s_1071e05eefc772::t_bb918a47322ea2 8-10,18,130,133,181
+download_from_hf.py
+  s_1071e05eefc772::t_4b5a9df793dd07 2,9,77-78,82-83,89-92
+a3_hf_manifest_089.json
+  s_1071e05eefc772::t_bc65de31ef7397 1-104
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "5e4ff403f58876473fab3accd2c2c7dddd882c51",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.input_tokens": "12466367",
+        "tlab.token_usage.output_tokens": "1440132",
+        "tlab.token_usage.cache_read_tokens": "742021760",
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.session_started_at": "2026-10-30T06:58:38Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "a3_hf_manifest_089.json",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 104
+          }
+        ]
+      }
+    },
+    {
+      "old_path": ".gitignore",
+      "new_path": ".gitignore",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 54
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 29
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "checkpoints/035_step200000/README.md",
+      "new_path": "checkpoints/035_step200000/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 86
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "checkpoints/089_step136000/README.md",
+      "new_path": "checkpoints/089_step136000/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 141
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "docs/a3_035_training_contract.md",
+      "deletions": {
+        "human": 103
+      }
+    },
+    {
+      "old_path": "docs/a3_089_training_contract.md",
+      "deletions": {
+        "human": 111
+      }
+    },
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      },
+      "deletions": {
+        "human": 1,
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 9
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "download_from_hf.py",
+      "new_path": "download_from_hf.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 10
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic_deploy/xr_retarget/LICENSE.xr-retarget",
+      "new_path": "gear_sonic_deploy/xr_retarget/LICENSE.xr-retarget",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "tests/test_download_from_hf.py",
+      "new_path": "tests/test_download_from_hf.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 15
+          }
+        ]
+      }
+    }
+  ]
+}
