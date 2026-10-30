@@ -6,7 +6,7 @@
 
 [Explore the 024 / 035 training curves](https://agibottech.github.io/sonic_for_a3/training/) — searchable, interactive TensorBoard scalar snapshots.
 
-> **Note — Real-robot safety:** We strongly recommend using a safety gantry / fall-arrest harness and appropriate protective measures during real-robot teleoperation. This checkpoint does **not** guarantee stable tracking of every motion; unexpected behavior, loss of balance, and falls can occur. **Before playing any motion or deploying your own teleoperation integration on the real robot, first validate it in MuJoCo.** MuJoCo simulation cannot fully represent real-robot behavior, and successful simulation does not guarantee safe hardware execution. Keep physical safety protection in place, maintain a safe distance from the robot, and prioritize the personal safety of operators and bystanders.
+> **Note — Real-robot safety:** We strongly recommend using a safety gantry / fall-arrest harness and appropriate protective measures during real-robot teleoperation. These checkpoints do **not** guarantee stable tracking of every motion; unexpected behavior, loss of balance, and falls can occur. **Before playing any motion or deploying your own teleoperation integration on the real robot, first validate it in MuJoCo.** MuJoCo simulation cannot fully represent real-robot behavior, and successful simulation does not guarantee safe hardware execution. Keep physical safety protection in place, maintain a safe distance from the robot, and prioritize the personal safety of operators and bystanders.
 
 This project builds on
 [GR00T-WholeBodyControl / SONIC](https://nvlabs.github.io/GR00T-WholeBodyControl/).
@@ -14,30 +14,59 @@ We sincerely thank the GEAR team for their amazing and solid work, their
 comprehensive open-source release, and their thorough documentation, which
 made this A3 adaptation possible.
 
-This repository is a focused public release of the SONIC whole-body-control
-workflow for **AgiBot A3**.  It is intentionally scoped to the 035 training contract, its A3 simulation assets, MuJoCo sim2sim,
-and the matching step-200,000 deploy artifacts.
+This repository provides the SONIC whole-body-control workflow for **AgiBot A3**,
+including the 035 and 089 training contracts, MuJoCo simulation, deployment,
+and real-time XR retargeting.
 
 Start with the [end-to-end guide](docs/a3_training2sim2deploy.md). It provides
 the authoritative path from A3 flat CSV data to training, sim2sim, ONNX/RKNN,
 and a staged deploy package.
 
-The identifier `035` is an experiment label only; it has no special meaning
-and does not denote a product version, model generation, or hardware variant.
+The identifiers `035` and `089` are experiment labels only; they have no special
+meaning and do not denote product versions, model generations, or hardware variants.
+
+## News
+
+- **[2026-10-30]** Released the **089 / 136k checkpoint** with improved
+  sim-to-real performance, standalone
+  [AimRT MuJoCo simulation](aimrt_mujoco_sim_a3/README.md), and a real-time
+  XR retargeting teleoperation pipeline.
+- **[2026-09-25]** Released the initial code and the **035 / 200k checkpoint**.
+
+## Model card
+
+| Model | Training step | Major improvement | Encoders | A3-fast reference | Artifacts |
+| --- | ---: | --- | --- | --- | --- |
+| [089](checkpoints/089_step136000/README.md) | 136,000 | 1. More stable upper body, more accurate wrist tracking and a larger workspace for manipulation.<br>2. Smoother walking with less stumbling and bouncing. | G1, A3-fast | 10 frames at 20 ms intervals | [Hugging Face](https://huggingface.co/sonic-for-a3/sonic/tree/main/089_step136000) |
+| [035](checkpoints/035_step200000/README.md) | 200,000 |  | G1, A3-fast | 10 frames at 20 ms intervals | [Hugging Face](https://huggingface.co/sonic-for-a3/sonic/tree/main/035_step200000) |
+
+Both policies control 29 A3 joints at 50 Hz. PT files support training and
+sim2sim; matching ONNX and RKNN files are used for deployment. Neither
+checkpoint includes an SMPL encoder.
+
+Download a specific release from the repository root:
+
+```bash
+python download_from_hf.py --model 089 --component pt onnx rknn
+python download_from_hf.py --model 035 --component pt onnx rknn
+```
 
 ## What is included
 
 ### 1. A3 training code adaptation
 
 The release contains the complete A3 adaptation of the SONIC training workflow:
-Hydra configurations, portable launchers, passive-foot URDF/MJCF assets,
-selected flat CSV examples, the 035 checkpoint/config location, and the
-A3-specific reward and observation contracts. It provides download commands for the pretrained
-035 step-200,000 checkpoint trained on the internal motion dataset, targeting
-basic walking and simple manipulation abilities; the PT is hosted on
+Hydra configurations, portable launchers, A3 URDF/MJCF assets, selected flat
+CSV examples, and the A3-specific reward and observation contracts. The
+[035 / 200k contract](checkpoints/035_step200000/README.md) uses a passive-foot
+model; its PT is hosted on
 [Hugging Face](https://huggingface.co/sonic-for-a3/sonic/tree/main/035_step200000).
+The [089 / 136k contract](checkpoints/089_step136000/README.md) uses the later
+rigid-foot collision model, self-contact rewards and dynamic ankle model. See
+the [089 checkpoint directory](checkpoints/089_step136000/README.md) for its
+artifact and availability details.
 
-Although this checkpoint was trained using the A3 URDF, its domain randomization
+Although the 035 checkpoint was trained using the A3 URDF, its domain randomization
 was specifically tuned to support both **A3 and A3 Ultra (A3U)**. The corresponding
 models can therefore also run on A3 Ultra.
 
@@ -56,33 +85,31 @@ runtime variant. **The Rockchip / RKNN deployment workflow also supports A3 Ultr
 (A3U)**; A3 Ultra can use either the Rockchip deployment path or the Thor runtime
 variant, depending on the target hardware.
 
-Download the step-200,000 G1 and A3-fast ONNX/RKNN artifacts from Hugging Face
-before inference or deployment; the runtime configuration already points to
-their default local paths.
+Use the matching G1 and A3-fast ONNX/RKNN artifacts for the selected checkpoint.
+The 035 step-200,000 artifacts are available from Hugging Face; for 089
+step-136,000, follow the artifact preparation and package build steps in the
+[end-to-end guide](docs/a3_training2sim2deploy.md).
 
 ### 4. Sim-to-real experience and implementation
 
-The release documents and implements the sim-to-real constraints used for A3:
-T–N motor curves, serial/parallel joint torque-space limits, and passive-joint
-foot simulation. The passive-foot model approximates sole compliance and helps suppress
+The release documents and implements the sim-to-real constraints used for A3,
+including T–N motor curves and serial/parallel joint torque-space limits. The
+035 passive-foot model approximates sole compliance and helps suppress
 tiptoe behavior, but still differs substantially from real sole deformation.
 Its passive joints can introduce simulation instability and excessive bending;
-use them cautiously when training your own policies.
+use them cautiously when training your own policies. The 089 contract instead
+uses rigid feet and the later collision geometry.
 
 ## Current limitations
 
-- The current 035 checkpoint provides only the **G1 encoder** and the
-  **A3-fast encoder**. It does not provide an SMPL encoder or a teleoperation
-  encoder.
+- The 035 and 089 checkpoints provide the **G1 encoder** and the **A3-fast
+  encoder**. Neither provides an SMPL encoder or a teleoperation encoder.
 - A3-fast is the low-latency deployment path: it uses the G1 encoder with a
   20 ms frame interval and exposes future frames through 180 ms. It is not a
   separate SMPL or teleoperation representation, so an upstream real-time
   retargeting module is still required. This release cannot directly run the
   original SONIC SMPL teleoperation chain or the `MotionBricks + VR3 point`
   hybrid chain.
-- Wrist tracking ability remains poor because of the current training data
-  distribution. The 035 checkpoint is not the final wrist-tracking
-  quality target.
 - The current policy is intended for motions whose ground contact stays on both
   feet or in which one foot is lifted from the ground. It does not currently
   support kneeling, lying down, standing back up, or other motions that add
@@ -92,16 +119,14 @@ use them cautiously when training your own policies.
 
 ## Future TODO
 
-- [ ] Publish a better wrist-tracking checkpoint.
 - [ ] Publish a checkpoint with SMPL and teleoperation encoders.
-- [ ] Provide a complete open-source teleoperation pipeline.
 - [ ] Improve sim-to-real transfer and expand abilities, including ground-based motions.
 - [ ] Add a detailed deployment-on-Thor tutorial for the A3 Ultra Thor runtime.
 
 ## Licensing and asset provenance
 
-Source code and the released **035 step-200,000 model artifacts (PT, ONNX and
-RKNN)** are licensed under the [Apache License 2.0](LICENSE). Third-party
+Source code and the **035 step-200,000 and 089 step-136,000 model artifacts**
+(PT, ONNX and RKNN) are licensed under the [Apache License 2.0](LICENSE). Third-party
 components and data retain their respective licenses and notices; see
 [Third-party and asset notices](docs/THIRD_PARTY_NOTICES.md).  The A3 robot description is a modified derivative of the
 public [AgibotTech/A3-A3U-robot-model](https://github.com/AgibotTech/A3-A3U-robot-model)

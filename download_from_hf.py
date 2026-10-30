@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Download A3 035 / 200k artifacts into their configured source-tree paths.
+"""Download A3 035 / 200k or 089 / 136k artifacts into their source-tree paths.
 
 Examples (run from the repository root):
   python download_from_hf.py --component pt
   python download_from_hf.py --component onnx rknn
   python download_from_hf.py --component sysroot
   python download_from_hf.py --component all
+  python download_from_hf.py --model 089 --component pt onnx rknn
 
 Defaults to runtime models (ONNX + RKNN). Every file is size/SHA-256 checked.
 """
@@ -72,18 +73,23 @@ def selected_entries(manifest, components):
 
 
 def main(argv=None):
-    manifest = json.loads((ROOT / 'a3_hf_manifest.json').read_text())
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--model', choices=['035', '089'], default='035',
+                        help='checkpoint release to download (default: 035)')
     parser.add_argument('--component', nargs='+', choices=['pt', 'onnx', 'rknn', 'sysroot', 'runtime', 'all'],
                         default=['runtime'], help='one or more groups; default: runtime (ONNX + RKNN)')
     parser.add_argument('--output-dir', type=Path, default=ROOT, help='source-tree root to populate')
-    parser.add_argument('--repo-id', default=os.environ.get('A3_HF_REPO_ID', manifest['repo_id']))
-    parser.add_argument('--revision', default=os.environ.get('A3_HF_REVISION', manifest['revision']),
+    parser.add_argument('--repo-id', default=os.environ.get('A3_HF_REPO_ID'))
+    parser.add_argument('--revision', default=os.environ.get('A3_HF_REVISION'),
                         help='defaults to the pinned release commit; checksums always remain enforced')
     parser.add_argument('--token', default=os.environ.get('HF_TOKEN'))
     parser.add_argument('--force', action='store_true', help='redownload and replace even verified files')
     parser.add_argument('--list', action='store_true', help='show selected files without downloading')
     args = parser.parse_args(argv)
+    manifest_name = 'a3_hf_manifest.json' if args.model == '035' else 'a3_hf_manifest_089.json'
+    manifest = json.loads((ROOT / manifest_name).read_text())
+    args.repo_id = args.repo_id or manifest['repo_id']
+    args.revision = args.revision or manifest['revision']
     entries = selected_entries(manifest, args.component)
     print(f"Repository: {args.repo_id} @ {args.revision}")
     print(f"Selected: {len(entries)} files, {sum(e['size'] for e in entries) / 1e6:.1f} MB")

@@ -71,6 +71,21 @@ class DownloadTests(unittest.TestCase):
             self.assertNotIn('..', Path(entry['destination']).parts)
             self.assertEqual(len(entry['sha256']), 64)
 
+    def test_089_model_selects_matching_artifacts(self):
+        manifest = json.loads((ROOT / 'a3_hf_manifest_089.json').read_text())
+        for group in ('pt', 'onnx', 'rknn'):
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                module.main(['--model', '089', '--component', group, '--list'])
+            self.assertIn('089_step136000/', out.getvalue())
+            self.assertNotIn('035_step200000/', out.getvalue())
+        entries = manifest['files']
+        self.assertEqual(len(entries), len({e['destination'] for e in entries}))
+        for entry in entries:
+            self.assertFalse(Path(entry['destination']).is_absolute())
+            self.assertNotIn('..', Path(entry['destination']).parts)
+            self.assertEqual(len(entry['sha256']), 64)
+
 
 if __name__ == '__main__':
     unittest.main()

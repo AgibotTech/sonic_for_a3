@@ -268,6 +268,7 @@ tests/local/
 # License copies installed alongside downloaded inference models.
 /gear_sonic_deploy/assets/a3_runtime/models/035_step200000/LICENSE
 /gear_sonic_deploy/assets/a3_runtime/rknn_models/035_step200000/LICENSE
+/gear_sonic_deploy/assets/a3_runtime/**/exp089_step136000/LICENSE
 
 # Separate RKNN conversion environment (Toolkit has different Torch constraints).
 .venv_rknn/

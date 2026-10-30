@@ -1,0 +1,104 @@
+{
+  "repo_id": "sonic-for-a3/sonic",
+  "revision": "a4e3b648d49d9eed0b226d8aa5399bbcf1749f2a",
+  "files": [
+    {
+      "remote": "089_step136000/model_step_136000.pt",
+      "destination": "checkpoints/089_step136000/model_step_136000.pt",
+      "group": "pt",
+      "size": 402050867,
+      "sha256": "a9bc7ea2a7937c9cf277f314fde54b56d1185b0e22ca986994945733b6198385"
+    },
+    {
+      "remote": "089_step136000/meta.yaml",
+      "destination": "checkpoints/089_step136000/meta.yaml",
+      "group": "pt",
+      "size": 40,
+      "sha256": "1d8d2af7660e03727470bfac5fe0fbd947b683663bbaead61cf27b6848753bff"
+    },
+    {
+      "remote": "089_step136000/onnx/model_step_136000_g1.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/exp089_step136000/model_step_136000_g1.onnx",
+      "group": "onnx",
+      "size": 58137890,
+      "sha256": "9006131bab66eb63f4d3502ad38ddae32e794b5b76d743061a2fea5cfe62530a"
+    },
+    {
+      "remote": "089_step136000/onnx/model_step_136000_a3_fast.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/exp089_step136000/model_step_136000_a3_fast.onnx",
+      "group": "onnx",
+      "size": 58138265,
+      "sha256": "7225c52ecc8ca8866f2b0ec58d938806fe6479fc07f7df9e88d2e310bcefa5bc"
+    },
+    {
+      "remote": "089_step136000/onnx/model_step_136000_encoder.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/exp089_step136000/model_step_136000_encoder.onnx",
+      "group": "onnx",
+      "size": 34535178,
+      "sha256": "d08b76064ba6f79738f2c73fb0966de32a7c1259fcc266a54b7ab4e3f147c589"
+    },
+    {
+      "remote": "089_step136000/onnx/model_step_136000_decoder.onnx",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/exp089_step136000/model_step_136000_decoder.onnx",
+      "group": "onnx",
+      "size": 40955884,
+      "sha256": "59ffdae4b207c874cadc5656083a9fe5210d409cf5394ed650324c960db42203"
+    },
+    {
+      "remote": "089_step136000/rknn/model_step_136000_g1.rknn",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/exp089_step136000/model_step_136000_g1.rknn",
+      "group": "rknn",
+      "size": 31101293,
+      "sha256": "ef220b56aabe85c73976a509ad6bb9f397bfc3bea93862ba97152830d73b3552"
+    },
+    {
+      "remote": "089_step136000/rknn/model_step_136000_g1.rknn.json",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/exp089_step136000/model_step_136000_g1.rknn.json",
+      "group": "rknn",
+      "size": 651,
+      "sha256": "bec22b38b100fe2e5c6bb15bedbedb9b6b91bf8e5019905bedb223b36e7805f3"
+    },
+    {
+      "remote": "089_step136000/rknn/model_step_136000_a3_fast.rknn",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/exp089_step136000/model_step_136000_a3_fast.rknn",
+      "group": "rknn",
+      "size": 31101485,
+      "sha256": "bbc990cf417437c4ded7c066f55500bea091028af5f476bf7ca9860d5fd379bb"
+    },
+    {
+      "remote": "089_step136000/rknn/model_step_136000_a3_fast.rknn.json",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/exp089_step136000/model_step_136000_a3_fast.rknn.json",
+      "group": "rknn",
+      "size": 666,
+      "sha256": "35380014677648971e31d37035c8033e4bf3e792d468dd6fb9e8de15c639e8e7"
+    },
+    {
+      "remote": "089_step136000/LICENSE",
+      "destination": "checkpoints/089_step136000/LICENSE",
+      "group": "pt",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "remote": "089_step136000/LICENSE",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/models/exp089_step136000/LICENSE",
+      "group": "onnx",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "remote": "089_step136000/LICENSE",
+      "destination": "gear_sonic_deploy/assets/a3_runtime/rknn_models/exp089_step136000/LICENSE",
+      "group": "rknn",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "remote": "rockchip_sysroot/rockchip-1.0-aarch64-sysroot.tar.gz",
+      "destination": "gear_sonic_deploy/thirdparty/rockchip_sysroot/rockchip-1.0-aarch64-sysroot.tar.gz",
+      "group": "sysroot",
+      "size": 677015198,
+      "sha256": "af1d7d230b486f18f570e78c2c3b401ee977f206a616048e791ce487704df961"
+    }
+  ]
+}

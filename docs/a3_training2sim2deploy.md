@@ -5,9 +5,9 @@ collision contract. The release has G1 and A3-fast encoders; it has no SMPL
 encoder. The PT is required for training and sim2sim; ONNX and RKNN files are
 inference artifacts.
 
-The 089 binaries have not yet been publicly uploaded. Until a release location
-is available, obtain the artifact bundle separately and check the PT using
-`checkpoints/089_step136000/SHA256SUMS`. The examples below assume execution from the repository root
+Download the 089 artifacts from [Hugging Face](https://huggingface.co/sonic-for-a3/sonic/tree/main/089_step136000)
+with `python download_from_hf.py --model 089 --component pt onnx rknn`. The
+downloader checks file sizes and SHA-256 values. The examples below assume execution from the repository root
 with the SONIC/Isaac Lab environment activated; see the upstream
 [training installation](https://nvlabs.github.io/GR00T-WholeBodyControl/getting_started/installation_training.html)
 and [deployment installation](https://nvlabs.github.io/GR00T-WholeBodyControl/getting_started/installation_deploy.html).
@@ -15,7 +15,7 @@ and [deployment installation](https://nvlabs.github.io/GR00T-WholeBodyControl/ge
 ## 1. Training contract
 
 For the complete 089 configuration and reward contract, see the
-[A3 089 training contract](a3_089_training_contract.md).
+[A3 089 training contract](../checkpoints/089_step136000/README.md).
 
 The launch configuration is
 [`sonic_a3_089.yaml`](../gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_089.yaml).
@@ -127,12 +127,10 @@ establish closed-loop stability.
 
 ## 5. Prepare ONNX/RKNN and build deploy packages
 
-Given the 089 bundle containing `onnx/` and `rknn/`, stage its verified full
-policies and RKNN sidecars:
+Download the verified 089 models and RKNN sidecars, then build the x86 package:
 
 ```bash
-python gear_sonic_deploy/scripts/prepare_a3_089_runtime.py \
-  --source /path/to/089_136k_ckpt_onnx_rknn --include-rknn
+python download_from_hf.py --model 089 --component onnx rknn
 
 bash gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh --arch x86_64 --jobs 20 \
   --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config_089.yaml
@@ -180,8 +178,7 @@ From the repository root, prepare the 089 ONNX models and build both programs:
 
 ```bash
 source /opt/ros/humble/setup.bash
-python gear_sonic_deploy/scripts/prepare_a3_089_runtime.py \
-  --source /path/to/089_136k_ckpt_onnx_rknn
+python download_from_hf.py --model 089 --component onnx
 bash gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh --arch x86_64 --jobs 10 \
   --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config_089.yaml
 
