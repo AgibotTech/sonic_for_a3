@@ -1,0 +1,189 @@
+.gitattributes
+  s_1071e05eefc772::t_999e445726afe2 29-30,33
+docs/THIRD_PARTY_NOTICES.md
+  s_1071e05eefc772::t_84f1697315a385 63
+docs/a3_035_sim2real_materials/01_serial_parallel_torque_coupling/README.md
+  s_1071e05eefc772::t_886248e27527ba 42-43
+docs/a3_035_sim2real_materials/README.md
+  s_1071e05eefc772::t_9ef956945737fd 1,17
+docs/a3_035_training_contract.md
+  s_1071e05eefc772::t_d4e692525dc56c 55,70
+docs/a3_089_training_contract.md
+  s_1071e05eefc772::t_043ff6b1dfaf20 1-111
+docs/a3_training2sim2deploy.md
+  s_1071e05eefc772::t_5d73042cd7cd86 17-19
+gear_sonic/data/a3_motor_model/README.md
+  s_1071e05eefc772::t_3ae7aabd9feb9b 29
+tests/test_a3_035_contract.py
+  s_1071e05eefc772::t_79c30207fac8c7 16
+tests/test_a3_motor_reward.py
+  s_1071e05eefc772::t_ad8d9549d14f83 35
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "bffe18002698ec6577278a1dd8d1632e6e46dec3",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.cache_read_tokens": "656454656",
+        "tlab.token_usage.input_tokens": "12236177",
+        "tlab.token_usage.output_tokens": "1386699",
+        "tlab.session_started_at": "2026-10-09T03:29:46Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "docs/a3_089_training_contract.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 111
+          }
+        ]
+      }
+    },
+    {
+      "old_path": ".gitattributes",
+      "new_path": ".gitattributes",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 3
+          }
+        ]
+      },
+      "deletions": {
+        "human": 3
+      }
+    },
+    {
+      "old_path": "docs/THIRD_PARTY_NOTICES.md",
+      "new_path": "docs/THIRD_PARTY_NOTICES.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "docs/a3_024_sim2real_materials/01_serial_parallel_torque_coupling/README.md",
+      "new_path": "docs/a3_035_sim2real_materials/01_serial_parallel_torque_coupling/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "docs/a3_024_sim2real_materials/README.md",
+      "new_path": "docs/a3_035_sim2real_materials/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "docs/a3_035_training_contract.md",
+      "new_path": "docs/a3_035_training_contract.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      },
+      "deletions": {
+        "human": 2
+      }
+    },
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 3
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "gear_sonic/data/a3_motor_model/README.md",
+      "new_path": "gear_sonic/data/a3_motor_model/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "tests/test_a3_035_contract.py",
+      "new_path": "tests/test_a3_035_contract.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      },
+      "deletions": {
+        "human": 1
+      }
+    },
+    {
+      "old_path": "tests/test_a3_motor_reward.py",
+      "new_path": "tests/test_a3_motor_reward.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      },
+      "deletions": {
+        "human": 1
+      }
+    }
+  ]
+}
