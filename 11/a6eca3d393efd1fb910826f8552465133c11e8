@@ -1,0 +1,1631 @@
+aimrt_mujoco_sim_a3/README.md
+  s_1071e05eefc772::t_7609d885b27d52 34
+  s_1071e05eefc772::t_caf0c741df8046 1-33,35-37
+docs/a3_training2sim2deploy.md
+  s_1071e05eefc772::t_42c591d5d116ef 166-169
+  s_1071e05eefc772::t_387d340f950800 196-197,200-203,211,265-266
+  s_1071e05eefc772::t_d0b328fea9d2a9 164-165,170-195,198-199,204-210,212-264,267-268
+  s_1071e05eefc772::t_f85be536c46a9f 161-163
+aimrt_mujoco_sim_a3/src/models/bin/run_a3_sim.sh
+  s_1071e05eefc772::t_115b6a641241e8 9,11
+  s_1071e05eefc772::t_b179bb0bbe3f4f 1-8,10,12-16
+aimrt_mujoco_sim_a3/build.sh
+  s_1071e05eefc772::t_5beba902990228 17
+  s_1071e05eefc772::t_b179bb0bbe3f4f 1-16,18-20
+aimrt_mujoco_sim_a3/src/CMakeLists.txt
+  s_1071e05eefc772::t_5beba902990228 1-15
+.gitignore
+  s_1071e05eefc772::t_74d6c6daa6357c 234
+aimrt_mujoco_sim_a3/.clang-format
+  s_1071e05eefc772::t_88cfafd4266eea 1-15
+aimrt_mujoco_sim_a3/.cmake-format.py
+  s_1071e05eefc772::t_350777cbfa5aca 1-166
+aimrt_mujoco_sim_a3/.github/workflows/build-workflow.yml
+  s_1071e05eefc772::t_87ad3f13c0d555 1-49
+aimrt_mujoco_sim_a3/.github/workflows/ci.yml
+  s_1071e05eefc772::t_48d2ae09226484 1-51
+aimrt_mujoco_sim_a3/.github/workflows/cppcheck.yml
+  s_1071e05eefc772::t_76289258864564 1-207
+aimrt_mujoco_sim_a3/.github/workflows/test-workflow.yml
+  s_1071e05eefc772::t_f848fa5fd315db 1-47
+aimrt_mujoco_sim_a3/.gitignore
+  s_1071e05eefc772::t_a854ecd0fa6c86 1-19
+aimrt_mujoco_sim_a3/.pycodestyle
+  s_1071e05eefc772::t_ac86c8b3fd617e 1-6
+aimrt_mujoco_sim_a3/CMakeLists.txt
+  s_1071e05eefc772::t_61016dba6fdb37 1-80
+aimrt_mujoco_sim_a3/LICENSE
+  s_1071e05eefc772::t_25b8b1172fd5c8 1-65
+aimrt_mujoco_sim_a3/cmake/GetAimRT.cmake
+  s_1071e05eefc772::t_b217870cefefda 1-51
+aimrt_mujoco_sim_a3/cmake/GetGTest.cmake
+  s_1071e05eefc772::t_855a13be246201 1-68
+aimrt_mujoco_sim_a3/cmake/GetMujoco.cmake
+  s_1071e05eefc772::t_9efa7560cef588 1-39
+aimrt_mujoco_sim_a3/cmake/NamespaceTool.cmake
+  s_1071e05eefc772::t_091b1bdd3a3813 1-27
+aimrt_mujoco_sim_a3/format.sh
+  s_1071e05eefc772::t_3310d5aec15666 1-23
+aimrt_mujoco_sim_a3/src/examples/CMakeLists.txt
+  s_1071e05eefc772::t_5b6773074326f8 1-7
+aimrt_mujoco_sim_a3/src/examples/hardware/CMakeLists.txt
+  s_1071e05eefc772::t_62d2f0250a79e9 1-28
+aimrt_mujoco_sim_a3/src/examples/hardware/hardware_type_supprot_pkg/CMakeLists.txt
+  s_1071e05eefc772::t_58b1ef7e202d62 1-53
+aimrt_mujoco_sim_a3/src/examples/hardware/hardware_type_supprot_pkg/type_support_pkg_main.cc
+  s_1071e05eefc772::t_0f98d7aec0d3ba 1-43
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_imu_pb_cfg.yaml
+  s_1071e05eefc772::t_d1f7c402817f2d 1-59
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_imu_ros2_cfg.yaml
+  s_1071e05eefc772::t_18cb3a33384470 1-59
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_joint_pb_cfg.yaml
+  s_1071e05eefc772::t_a9e848ffc89e01 1-77
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_joint_ros2_cfg.yaml
+  s_1071e05eefc772::t_3a74be189c605f 1-81
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_touch_sensor_pb_cfg.yaml
+  s_1071e05eefc772::t_cf91e599e38a51 1-75
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_touch_sensor_ros2_cfg.yaml
+  s_1071e05eefc772::t_db35e84e3a21ef 1-75
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/examples_hardware_imu_model.xml
+  s_1071e05eefc772::t_1706bc19ea7846 1-46
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/examples_hardware_joint_model.xml
+  s_1071e05eefc772::t_44bf5f4f6f0fcd 1-39
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/examples_hardware_touch_model.xml
+  s_1071e05eefc772::t_7903e6261ef136 1-61
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/resource/imu.png
+  s_1071e05eefc772::t_9ca003c6c3079b 1-3
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_imu_pb.sh
+  s_1071e05eefc772::t_38186d29f77b41 1-5
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_imu_ros2.sh
+  s_1071e05eefc772::t_5fc902f026b531 1-5
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_joint_pb.sh
+  s_1071e05eefc772::t_7bdba88936e3a6 1-5
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_joint_ros2.sh
+  s_1071e05eefc772::t_e52c7ea3ab4517 1-7
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_touch_sensor_pb.sh
+  s_1071e05eefc772::t_a13810b2cc5ee9 1-5
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_touch_sensor_ros2.sh
+  s_1071e05eefc772::t_36dfdabc050d6b 1-7
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/tools/pb_joint_command_tool.sh
+  s_1071e05eefc772::t_1d1fdef4bd4549 1-40
+aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/tools/ros2_joint_command_tool.sh
+  s_1071e05eefc772::t_9ebe68e902bd3e 1-47
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/CMakeLists.txt
+  s_1071e05eefc772::t_c9d3c73877253b 1-32
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/examples_inverted_pendulum_time_manipulator_cfg.yaml
+  s_1071e05eefc772::t_1aff3315f4cd18 1-95
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/examples_inverted_pendulum_with_pid_control_cfg.yaml
+  s_1071e05eefc772::t_7c5775b1c877c7 1-85
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/model/flat.xml
+  s_1071e05eefc772::t_bf9f30015cc9ee 1-24
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/model/inverted_pendulum.xml
+  s_1071e05eefc772::t_79401477ef9047 1-45
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/model/inverted_pendulum_flat.xml
+  s_1071e05eefc772::t_2d6ec4e4e39414 1-6
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/start_examples_inverted_pendulum_time_manipulator.sh
+  s_1071e05eefc772::t_9fc57188f59a57 1-5
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/start_examples_inverted_pendulum_with_pid_control.sh
+  s_1071e05eefc772::t_005ee9bed105e7 1-5
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/tools/inverted_pendulum_pid_gui.py
+  s_1071e05eefc772::t_69cf59e70ae6df 1-258
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/tools/inverted_pendulum_time_manipulator.py
+  s_1071e05eefc772::t_6be2de2dc98361 1-100
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/CMakeLists.txt
+  s_1071e05eefc772::t_33b8e373d3a469 1-46
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/global.cc
+  s_1071e05eefc772::t_5600dd2184a267 1-12
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/global.h
+  s_1071e05eefc772::t_e662d6dd4e9cbe 1-13
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_algorithm.h
+  s_1071e05eefc772::t_6e83eac01dcc7d 1-49
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_module.cc
+  s_1071e05eefc772::t_55a3f645348b73 1-86
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_module.h
+  s_1071e05eefc772::t_89bb7e6760e814 1-44
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_service.cc
+  s_1071e05eefc772::t_7790f08553790b 1-36
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_service.h
+  s_1071e05eefc772::t_2f0119c2787cd9 1-32
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/pkg/inverted_pendulum_pkg/CMakeLists.txt
+  s_1071e05eefc772::t_21ed920b4207ac 1-32
+aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/pkg/inverted_pendulum_pkg/pkg_main.cc
+  s_1071e05eefc772::t_cadbe103ce9b88 1-14
+aimrt_mujoco_sim_a3/src/models/CMakeLists.txt
+  s_1071e05eefc772::t_4ba21e67677a19 1-15
+aimrt_mujoco_sim_a3/src/models/bin/cfg/a3_t3d0.yaml
+  s_1071e05eefc772::t_8cf730f343a05b 1-190
+aimrt_mujoco_sim_a3/src/models/bin/cfg/a3u_t3d0.yaml
+  s_1071e05eefc772::t_923b54dfdef188 1-190
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/head_pitch_Link.STL
+  s_1071e05eefc772::t_d485b00ad961bb 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/head_yaw_Link.STL
+  s_1071e05eefc772::t_5595e1f268ac14 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/imu_in_pelvis_Link.STL
+  s_1071e05eefc772::t_aad77af9132f91 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/imu_in_torso_Link.STL
+  s_1071e05eefc772::t_509998cca580c1 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_ankle_pitch_Link.STL
+  s_1071e05eefc772::t_211b8b5d7b70aa 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_ankle_roll_Link.STL
+  s_1071e05eefc772::t_aa1c156c9138d0 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_elbow_Link.STL
+  s_1071e05eefc772::t_368711fb7de843 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_hand_Link.STL
+  s_1071e05eefc772::t_ad6c3422a6c2e2 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_hip_pitch_Link.STL
+  s_1071e05eefc772::t_81e775eba0223b 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_hip_roll_Link.STL
+  s_1071e05eefc772::t_599f8e97d7bdfc 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_hip_yaw_Link.STL
+  s_1071e05eefc772::t_3c5baf3ec6e15c 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_knee_Link.STL
+  s_1071e05eefc772::t_e2643ca82d2d3a 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_knee_shell_Link.STL
+  s_1071e05eefc772::t_88c8e7ffe4b8ef 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_shoulder_pitch_Link.STL
+  s_1071e05eefc772::t_fce58b5e89435e 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_shoulder_roll_Link.STL
+  s_1071e05eefc772::t_75a65c1d62333e 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_shoulder_yaw_Link.STL
+  s_1071e05eefc772::t_78e8a1ab0ddc1c 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_wrist_pitch_Link.STL
+  s_1071e05eefc772::t_c7e7de2fd467ea 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_wrist_roll_Link.STL
+  s_1071e05eefc772::t_1ea2f2849738b2 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/left_wrist_yaw_Link.STL
+  s_1071e05eefc772::t_abbe317cea122a 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/pelvis_link.STL
+  s_1071e05eefc772::t_c3771fba4b825f 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/pingbang_ball_Link.STL
+  s_1071e05eefc772::t_9559567d501121 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/pingpang_black_Link.STL
+  s_1071e05eefc772::t_fe56429d785131 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/pingpang_red_Link.STL
+  s_1071e05eefc772::t_cc329ca4df430f 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_ankle_pitch_Link.STL
+  s_1071e05eefc772::t_ea455001f3ca78 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_ankle_roll_Link.STL
+  s_1071e05eefc772::t_b6d150a40e97d2 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_elbow_Link.STL
+  s_1071e05eefc772::t_3c3930fa60fdc4 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_hand_Link.STL
+  s_1071e05eefc772::t_42d8837a92e950 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_hand_pingpang_Link.STL
+  s_1071e05eefc772::t_d4c2a03ba7f3e6 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_hip_pitch_Link.STL
+  s_1071e05eefc772::t_539e7590c35067 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_hip_roll_Link.STL
+  s_1071e05eefc772::t_55103cc34f4486 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_hip_yaw_Link.STL
+  s_1071e05eefc772::t_45674703a05bfe 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_knee_Link.STL
+  s_1071e05eefc772::t_b6cdc60f258d50 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_knee_shell_Link.STL
+  s_1071e05eefc772::t_285aea422351bf 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_shoulder_pitch_Link.STL
+  s_1071e05eefc772::t_29f269deb8e8d3 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_shoulder_roll_Link.STL
+  s_1071e05eefc772::t_50c01f22ca5ccd 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_shoulder_yaw_Link.STL
+  s_1071e05eefc772::t_4132e68146b112 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_wrist_pitch_Link.STL
+  s_1071e05eefc772::t_c319619f738f64 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_wrist_roll_Link.STL
+  s_1071e05eefc772::t_33722b2f5d7bea 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/right_wrist_yaw_Link.STL
+  s_1071e05eefc772::t_bc53d47908e12b 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/std_head_stereo_camera_Link.STL
+  s_1071e05eefc772::t_ca2cdfa7bad601 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/torso_Link.STL
+  s_1071e05eefc772::t_1bba6a1d8e8267 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/torso_shell_Link.STL
+  s_1071e05eefc772::t_67915f5ca7b65b 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/waist_roll_Link.STL
+  s_1071e05eefc772::t_270309830e9af0 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/meshes/waist_yaw_Link.STL
+  s_1071e05eefc772::t_929f1412948409 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/mjcf/a3_t3d0.xml
+  s_1071e05eefc772::t_07c69033457615 1-495
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/a3u_t3d0.xml
+  s_1071e05eefc772::t_332608c7b475fa 1-826
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/imu_in_pelvis_Link.STL
+  s_1071e05eefc772::t_2feffcb4c9eddf 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/imu_in_torso_Link.STL
+  s_1071e05eefc772::t_b22a9c709d2311 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_ankle_pitch_Link.STL
+  s_1071e05eefc772::t_60f8e42f65c0bf 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_ankle_roll_Link.STL
+  s_1071e05eefc772::t_d7e8ef580b7ebe 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_elbow_Link.STL
+  s_1071e05eefc772::t_ae2bc94d04eb5b 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_hip_pitch_Link.STL
+  s_1071e05eefc772::t_6fa9ea2ecb93d8 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_hip_roll_Link.STL
+  s_1071e05eefc772::t_feaa41566246ff 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_hip_yaw_Link.STL
+  s_1071e05eefc772::t_20fe0323e35b66 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_knee_Link.STL
+  s_1071e05eefc772::t_d21cc27f34d8c4 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_knee_shell_Link.STL
+  s_1071e05eefc772::t_f29dcc3f1b23c0 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_shoulder_pitch_Link.STL
+  s_1071e05eefc772::t_029e48e2fc94f4 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_shoulder_roll_Link.STL
+  s_1071e05eefc772::t_9e646f2d9df77e 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_shoulder_yaw_Link.STL
+  s_1071e05eefc772::t_d304eb152d8b49 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_wrist_pitch_Link.STL
+  s_1071e05eefc772::t_6736f9db186960 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_wrist_roll_Link.STL
+  s_1071e05eefc772::t_99b77054db7b17 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/left_wrist_yaw_Link.STL
+  s_1071e05eefc772::t_9a82c7ea8976a3 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/pelvis_link.STL
+  s_1071e05eefc772::t_87e99967c4068c 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_ankle_pitch_Link.STL
+  s_1071e05eefc772::t_a4b132b922fb33 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_ankle_roll_Link.STL
+  s_1071e05eefc772::t_8f5134d94f94d0 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_elbow_Link.STL
+  s_1071e05eefc772::t_d1f4a5c43929e0 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_hip_pitch_Link.STL
+  s_1071e05eefc772::t_e56e175df972a1 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_hip_roll_Link.STL
+  s_1071e05eefc772::t_12893a8acc1a89 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_hip_yaw_Link.STL
+  s_1071e05eefc772::t_138e571dfde443 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_knee_Link.STL
+  s_1071e05eefc772::t_6a4aed53bd04ce 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_knee_shell_Link.STL
+  s_1071e05eefc772::t_d212ff32e5e974 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_shoulder_pitch_Link.STL
+  s_1071e05eefc772::t_d63594c20e1c9a 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_shoulder_roll_Link.STL
+  s_1071e05eefc772::t_5ddb326630b89c 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_shoulder_yaw_Link.STL
+  s_1071e05eefc772::t_5bad1bbddd4c97 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_wrist_pitch_Link.STL
+  s_1071e05eefc772::t_55cd7c0ac11d20 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_wrist_roll_Link.STL
+  s_1071e05eefc772::t_671cdc6a71c1a6 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/right_wrist_yaw_Link.STL
+  s_1071e05eefc772::t_4958b97ab2d7e2 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/torso_Link.STL
+  s_1071e05eefc772::t_2e6049ae707a9c 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/torso_shell_Link.STL
+  s_1071e05eefc772::t_3f15d9df58ca4d 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/waist_roll_Link.STL
+  s_1071e05eefc772::t_15f2cc4958c1c3 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3/waist_yaw_Link.STL
+  s_1071e05eefc772::t_4b677f63440e63 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/D415_in_torso_Link.STL
+  s_1071e05eefc772::t_2d6d4038676c48 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/D457_in_torso_Link.STL
+  s_1071e05eefc772::t_bd3e2a821e100e 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/finger_abad.STL
+  s_1071e05eefc772::t_50c222f1995c3b 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/finger_dip.STL
+  s_1071e05eefc772::t_01fcdf85da4922 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/finger_pip.STL
+  s_1071e05eefc772::t_9a21b7452b9d78 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/head_yaw_Link.STL
+  s_1071e05eefc772::t_6d58f7f8801a60 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/l_palm.STL
+  s_1071e05eefc772::t_656b837372c7be 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/l_thumb_roll.STL
+  s_1071e05eefc772::t_b0c8847f35fbdd 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/left_hand_camera_Link.STL
+  s_1071e05eefc772::t_13f36ffcde7fde 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/r_palm.STL
+  s_1071e05eefc772::t_d9b2882c6f7a15 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/r_thumb_roll.STL
+  s_1071e05eefc772::t_49560b9ea35906 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/right_hand_camera_Link.STL
+  s_1071e05eefc772::t_29840ae07efbba 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/senyun_in_torso_Link.STL
+  s_1071e05eefc772::t_9bb2b781becf7b 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/thumb_abad.STL
+  s_1071e05eefc772::t_a213109f8038b2 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/thumb_dip.STL
+  s_1071e05eefc772::t_f65725e6381fde 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/thumb_mcp.STL
+  s_1071e05eefc772::t_75938f0d65a03a 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/thumb_pip.STL
+  s_1071e05eefc772::t_0f73644073b9a4 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/ultra_head_fisheye_camera_back_Link.STL
+  s_1071e05eefc772::t_ba51d7eb5d95f4 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/ultra_head_fisheye_camera_left_Link.STL
+  s_1071e05eefc772::t_76bdb9caeeca08 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/ultra_head_fisheye_camera_right_Link.STL
+  s_1071e05eefc772::t_ff08c34309a69a 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/ultra_head_mid360_Link.STL
+  s_1071e05eefc772::t_9e2c0eff1fa8cc 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/ultra_head_pitch_Link.STL
+  s_1071e05eefc772::t_d9ca3f22f36a7a 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/meshes/a3u_t3d0/ultra_head_stereo_camera_Link.STL
+  s_1071e05eefc772::t_4c57fbd27fa58e 1-3
+aimrt_mujoco_sim_a3/src/models/bin/cfg/model/terrain/mujoco/flat.xml
+  s_1071e05eefc772::t_0ed1bd4e13c701 1-27
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/CMakeLists.txt
+  s_1071e05eefc772::t_f89080e2466157 1-90
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/common/xmodel_reader.cc
+  s_1071e05eefc772::t_6ba782b526b3dc 1-141
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/common/xmodel_reader.h
+  s_1071e05eefc772::t_bcdb8324dd8e8a 1-30
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/global.cc
+  s_1071e05eefc772::t_1a527cda32dd43 1-12
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/global.h
+  s_1071e05eefc772::t_313ec6bf020c1e 1-13
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/mujoco_sim_module.cc
+  s_1071e05eefc772::t_171c129273e6fa 1-470
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/mujoco_sim_module.h
+  s_1071e05eefc772::t_137da58fb31f1d 1-105
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/imu_sensor_publisher.cc
+  s_1071e05eefc772::t_0aa9b8cb48e9b5 1-171
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/imu_sensor_publisher.h
+  s_1071e05eefc772::t_a81e7c24fd7dec 1-109
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/joint_sensor_publisher.cc
+  s_1071e05eefc772::t_be737263231e25 1-234
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/joint_sensor_publisher.h
+  s_1071e05eefc772::t_38767977090919 1-130
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/pose_twist_ros2_publisher.cc
+  s_1071e05eefc772::t_d074b41e0d0c42 1-256
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/pose_twist_ros2_publisher.h
+  s_1071e05eefc772::t_1f80cf2df2a90c 1-167
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/publisher_base.h
+  s_1071e05eefc772::t_1ea562575cc207 1-45
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/touch_sensor_publisher.cc
+  s_1071e05eefc772::t_9ddd28233fb26f 1-220
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/touch_sensor_publisher.h
+  s_1071e05eefc772::t_67902c70894d5d 1-104
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/utils.h
+  s_1071e05eefc772::t_1ef738e684bb16 1-39
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/utils_test.cc
+  s_1071e05eefc772::t_ddbe9bc17873bf 1-43
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/joint_actuator_subscriber.cc
+  s_1071e05eefc772::t_757c91d3f58469 1-291
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/joint_actuator_subscriber.h
+  s_1071e05eefc772::t_eb14481043383a 1-126
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/sim_reset_ros2_subscriber.cc
+  s_1071e05eefc772::t_291dc0da38c80c 1-155
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/sim_reset_ros2_subscriber.h
+  s_1071e05eefc772::t_40b1f4381ed13a 1-49
+aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/subscriber_base.h
+  s_1071e05eefc772::t_9fdb28ad505768 1-34
+aimrt_mujoco_sim_a3/src/pkg/mujoco_sim_pkg/CMakeLists.txt
+  s_1071e05eefc772::t_2f68fe222d6510 1-43
+aimrt_mujoco_sim_a3/src/pkg/mujoco_sim_pkg/pkg_main.cc
+  s_1071e05eefc772::t_fe556dd75bc2a0 1-12
+aimrt_mujoco_sim_a3/src/protocols/CMakeLists.txt
+  s_1071e05eefc772::t_6d5dd7a0a7dc80 1-13
+aimrt_mujoco_sim_a3/src/protocols/examples/inverted_pendulum/CMakeLists.txt
+  s_1071e05eefc772::t_65810a05bdf600 1-27
+aimrt_mujoco_sim_a3/src/protocols/examples/inverted_pendulum/pid_control.proto
+  s_1071e05eefc772::t_a1887eef47cd98 1-36
+aimrt_mujoco_sim_a3/src/protocols/joint_msgs/CMakeLists.txt
+  s_1071e05eefc772::t_b4fae9621aa6e8 1-37
+aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/Command.msg
+  s_1071e05eefc772::t_fe3704b86af38d 1-7
+aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/JointCommand.msg
+  s_1071e05eefc772::t_beceaeef7cc81e 1-3
+aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/JointState.msg
+  s_1071e05eefc772::t_e866b19462b9dc 1-3
+aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/State.msg
+  s_1071e05eefc772::t_2c35814ce2ba47 1-5
+aimrt_mujoco_sim_a3/src/protocols/joint_msgs/package.xml
+  s_1071e05eefc772::t_9f545822e3b6d4 1-23
+aimrt_mujoco_sim_a3/src/protocols/mujoco_sim_msgs/CMakeLists.txt
+  s_1071e05eefc772::t_b8f934412fa2d9 1-38
+aimrt_mujoco_sim_a3/src/protocols/mujoco_sim_msgs/msg/SimReset.msg
+  s_1071e05eefc772::t_fbb07c1b4ba1ee 1-18
+aimrt_mujoco_sim_a3/src/protocols/mujoco_sim_msgs/package.xml
+  s_1071e05eefc772::t_70490d922cbf33 1-25
+aimrt_mujoco_sim_a3/test.sh
+  s_1071e05eefc772::t_b75575be2d75d7 1-17
+aimrt_mujoco_sim_a3/tests/test_models.py
+  s_1071e05eefc772::t_934a0299420bd8 1-35
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "11a6eca3d393efd1fb910826f8552465133c11e8",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.output_tokens": "1407584",
+        "tlab.token_usage.cache_read_tokens": "685047808",
+        "tlab.token_usage.input_tokens": "12315177",
+        "tlab.session_started_at": "2026-10-30T05:54:52Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.clang-format",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 15
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.cmake-format.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 166
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.github/workflows/build-workflow.yml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 49
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.github/workflows/ci.yml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 51
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.github/workflows/cppcheck.yml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 207
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.github/workflows/test-workflow.yml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 47
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.gitignore",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 19
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/.pycodestyle",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 6
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 80
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/LICENSE",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 65
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 37
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/build.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 20
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/cmake/GetAimRT.cmake",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 51
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/cmake/GetGTest.cmake",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 68
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/cmake/GetMujoco.cmake",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 39
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/cmake/NamespaceTool.cmake",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 27
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/format.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 23
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 15
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 28
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/hardware_type_supprot_pkg/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 53
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/hardware_type_supprot_pkg/type_support_pkg_main.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 43
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_imu_pb_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 59
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_imu_ros2_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 59
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_joint_pb_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 77
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_joint_ros2_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 81
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_touch_sensor_pb_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 75
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/examples_hardware_touch_sensor_ros2_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 75
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/examples_hardware_imu_model.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 46
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/examples_hardware_joint_model.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 39
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/cfg/model/examples_hardware_touch_model.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 61
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_imu_pb.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_imu_ros2.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_joint_pb.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_joint_ros2.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_touch_sensor_pb.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/start_examples_hardware_touch_sensor_ros2.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/tools/pb_joint_command_tool.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 40
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/hardware/install/linux/bin/tools/ros2_joint_command_tool.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 47
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 32
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/examples_inverted_pendulum_time_manipulator_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 95
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/examples_inverted_pendulum_with_pid_control_cfg.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 85
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/model/flat.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 24
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/model/inverted_pendulum.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 45
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/cfg/model/inverted_pendulum_flat.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 6
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/start_examples_inverted_pendulum_time_manipulator.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/start_examples_inverted_pendulum_with_pid_control.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/tools/inverted_pendulum_pid_gui.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 258
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/install/linux/bin/tools/inverted_pendulum_time_manipulator.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 100
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 46
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/global.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 12
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/global.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 13
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_algorithm.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 49
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_module.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 86
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_module.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 44
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_service.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 36
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/module/pid_control_module/pid_control_service.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 32
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/pkg/inverted_pendulum_pkg/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 32
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/examples/inverted_pendulum/pkg/inverted_pendulum_pkg/pkg_main.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 14
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 15
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/bin/cfg/a3_t3d0.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 190
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/bin/cfg/a3u_t3d0.yaml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 190
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3_t3d0/mjcf/a3_t3d0.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 495
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/bin/cfg/model/a3u_t3d0/a3u_t3d0.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 826
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/bin/cfg/model/terrain/mujoco/flat.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 27
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/models/bin/run_a3_sim.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 16
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 90
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/common/xmodel_reader.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 141
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/common/xmodel_reader.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 30
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/global.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 12
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/global.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 13
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/mujoco_sim_module.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 470
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/mujoco_sim_module.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 105
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/imu_sensor_publisher.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 171
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/imu_sensor_publisher.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 109
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/joint_sensor_publisher.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 234
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/joint_sensor_publisher.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 130
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/pose_twist_ros2_publisher.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 256
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/pose_twist_ros2_publisher.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 167
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/publisher_base.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 45
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/touch_sensor_publisher.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 220
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/touch_sensor_publisher.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 104
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/utils.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 39
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/publisher/utils_test.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 43
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/joint_actuator_subscriber.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 291
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/joint_actuator_subscriber.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 126
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/sim_reset_ros2_subscriber.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 155
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/sim_reset_ros2_subscriber.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 49
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/module/mujoco_sim_module/subscriber/subscriber_base.h",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 34
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/pkg/mujoco_sim_pkg/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 43
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/pkg/mujoco_sim_pkg/pkg_main.cc",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 12
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 13
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/examples/inverted_pendulum/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 27
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/examples/inverted_pendulum/pid_control.proto",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 36
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/joint_msgs/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 37
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/Command.msg",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/JointCommand.msg",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 3
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/JointState.msg",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 3
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/joint_msgs/msg/State.msg",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 5
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/joint_msgs/package.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 23
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/mujoco_sim_msgs/CMakeLists.txt",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 38
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/mujoco_sim_msgs/msg/SimReset.msg",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 18
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/src/protocols/mujoco_sim_msgs/package.xml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 25
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/test.sh",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 17
+          }
+        ]
+      }
+    },
+    {
+      "new_path": "aimrt_mujoco_sim_a3/tests/test_models.py",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 35
+          }
+        ]
+      }
+    },
+    {
+      "old_path": ".gitignore",
+      "new_path": ".gitignore",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 1
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "docs/a3_training2sim2deploy.md",
+      "new_path": "docs/a3_training2sim2deploy.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 108
+          }
+        ]
+      }
+    }
+  ]
+}
