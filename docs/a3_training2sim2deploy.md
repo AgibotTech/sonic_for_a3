@@ -158,6 +158,114 @@ full-policy RKNN converter.
 
 ## 6. Simulation teleoperation and hardware bring-up
 
+For body-drive MuJoCo simulation with standard A3 or A3U T3D0 models, see
+[the AimRT simulator](../aimrt_mujoco_sim_a3/README.md).
+
+### 6.0 Local MuJoCo simulation and teleoperation
+
+**Before operating the real robot, we strongly recommend practicing the
+startup sequence, mode transitions, teleoperation and recovery controls in
+simulation.**
+
+The local workflow mirrors the hardware workflow: MuJoCo replaces the robot's
+body-drive interface, deploy runs the 089 policy, and XR retargeting sends
+PICO references to deploy. The simulator and deploy use iceoryx for
+`/body_drive/*`; XR retargeting sends `/ta/whole_body_command` over ROS 2.
+
+#### One-time preparation
+
+On an x86-64 Linux workstation, install ROS 2 Humble and the simulator build
+dependencies described in the [simulator README](../aimrt_mujoco_sim_a3/README.md).
+From the repository root, prepare the 089 ONNX models and build both programs:
+
+```bash
+source /opt/ros/humble/setup.bash
+python gear_sonic_deploy/scripts/prepare_a3_089_runtime.py \
+  --source /path/to/089_136k_ckpt_onnx_rknn
+bash gear_sonic_deploy/scripts/build_a3_deploy_pkg.sh --arch x86_64 --jobs 10 \
+  --runtime-cfg gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/config/a3_runtime_config_089.yaml
+
+cd aimrt_mujoco_sim_a3
+JOBS=10 ./build.sh
+cd ..
+```
+
+For live PICO input, prepare a Python 3.10 environment with NumPy, SciPy,
+PyYAML, MuJoCo, mink, DAQP and `protobuf>=6.30`, plus the XRoboToolkit SDK and
+PC service. The service must be installed at
+`/opt/apps/roboticsservice/runService.sh`. From the repository root, after
+activating a compatible environment:
+
+```bash
+python -m pip install numpy scipy pyyaml mujoco mink daqp 'protobuf>=6.30' pybind11 wheel
+export CMAKE_PREFIX_PATH="$(python -m pybind11 --cmakedir)"
+python -m pip install --no-build-isolation -e \
+  external_dependencies/XRoboToolkit-PC-Service-Pybind_X86_and_ARM64
+colcon --log-base "$PWD/.cache/xr_ros2/log" build \
+  --base-paths gear_sonic_deploy/xr_retarget/ros2 \
+  --build-base "$PWD/.cache/xr_ros2/build" \
+  --install-base "$PWD/.cache/xr_ros2/install" \
+  --cmake-args -DPython3_EXECUTABLE=/usr/bin/python3
+```
+
+The SDK and its x86 shared library must be present under `external_dependencies`.
+Do not run the minimal sender at the same time as the retargeting publisher.
+
+#### Start the simulation
+
+Open three terminals. Use the same `ROS_DOMAIN_ID` in the deploy and XR
+publisher terminals; if unset in both, ROS 2 uses its default domain.
+
+**Terminal 1 — simulator:**
+
+```bash
+cd aimrt_mujoco_sim_a3/build/install/bin
+./run_a3_sim.sh a3_t3d0     # use a3u_t3d0 for A3U
+```
+
+The script starts iceoryx RouDi if needed and opens the MuJoCo viewer. It
+requires a graphical display. The A3 and A3U models are serial-joint simulation
+models; they do not reproduce all 089 training dynamics.
+
+**Terminal 2 — deploy:**
+
+```bash
+cd gear_sonic_deploy/dist/a3_deploy_x86_64
+A3_TRANSPORT=iceoryx ./run_a3.sh
+```
+
+Wait for the six body-drive state streams to become ready. As on the real
+robot, deploy starts in idle. Press **S** for PD stand and wait for it to
+settle. For motion playback, press **M**, use **[** / **]** to select a clip,
+and press **R** to play it. For teleoperation, press **T** and then **3** to
+select A3-fast. **D** enters damping and **P** enters passive.
+
+**Terminal 3 — PICO retargeting:**
+
+From the repository root, activate the Python environment prepared above and
+load ROS and the message overlay:
+
+```bash
+source /opt/ros/humble/setup.bash
+source .cache/xr_ros2/install/setup.bash
+export LD_LIBRARY_PATH="$PWD/external_dependencies/XRoboToolkit-PC-Service-Pybind_X86_and_ARM64/lib:${LD_LIBRARY_PATH:-}"
+python gear_sonic_deploy/xr_retarget/scripts/pico_a3_retarget_publisher.py --source xrt
+```
+
+In zsh, use the corresponding `setup.zsh` files instead of `setup.bash`. If
+the PC service is already running, append `--no-start-service` to the Python
+command. Complete the PICO body-tracker app calibration and enable full-body
+tracking and **Send**. Disable **Switch w/ A Button**. Match the robot's
+standing pose, hold **A+B+X+Y** to calibrate retargeting, release the buttons,
+then press **A** to start or pause streaming. Holding left Menu temporarily
+pauses the stream.
+
+In deploy, look for `first whole_body_command received` and
+`active source -> a3_fast`. A publishing topic with an unchanged reference
+can indicate that PICO tracker calibration was missed. Press **P** to enter
+passive, then **Q** to quit deploy; stop the publisher and simulator in their own
+terminals.
+
 PICO body tracking is retargeted on the HDU and sent over ROS 2 to the
 089 A3-fast policy on the MDU. The publisher uses the existing
 `/ta/whole_body_command` interface. Prepare and start it as described in §6.3.

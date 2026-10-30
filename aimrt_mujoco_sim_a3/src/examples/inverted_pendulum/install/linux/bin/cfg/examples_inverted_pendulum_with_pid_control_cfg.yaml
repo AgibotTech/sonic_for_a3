@@ -1,0 +1,85 @@
+# Copyright (c) 2023, AgiBot Inc.
+# All rights reserved.
+
+aimrt:
+  plugin:
+    plugins:
+      - name: net_plugin
+        path: ./libaimrt_net_plugin.so
+        options:
+          thread_num: 4
+          http_options:
+            listen_ip: 127.0.0.1
+            listen_port: 50080
+  log:
+    core_lvl: INFO # Trace/Debug/Info/Warn/Error/Fatal/Off
+    backends:
+      - type: console
+  executor:
+    executors:
+      - name: gui_thread
+        type: simple_thread
+      - name: work_thread_pool
+        type: asio_thread
+        options:
+          thread_num: 4
+  channel:
+    backends:
+      - type: local
+        options:
+          subscriber_use_inline_executor: false
+          subscriber_executor: work_thread_pool
+    sub_topics_options:
+      - topic_name: "(.*)"
+        enable_backends: [local]
+    pub_topics_options:
+      - topic_name: "(.*)"
+        enable_backends: [local]
+  rpc:
+    backends:
+      - type: http
+    servers_options:
+      - func_name: "(.*)"
+        enable_backends: [http]
+        enable_filters: [debug_log]
+  module:
+    pkgs:
+      - path: ./libmujoco_sim_pkg.so
+        enable_modules: [MujocoSimModule]
+      - path: ./libinverted_pendulum_pkg.so
+        enable_modules: [PidControlModule]
+    modules:
+      - name: MujocoSimModule
+        log_lvl: INFO
+      - name: PidControlModule
+        log_lvl: INFO
+
+# Module custom configuration
+MujocoSimModule:
+  simulation_model_path: ./cfg/model/inverted_pendulum_flat.xml
+  sim_executor: work_thread_pool
+  gui_executor: gui_thread
+  subscriber_options:
+    - topic: /inverted_pendulum/joint_command
+      type: joint_actuator
+      options:
+        joints:
+          - name: center_joint
+            bind_joint: hinge1
+  publisher_options:
+    - topic: /inverted_pendulum/joint_state
+      frequency: 1000
+      executor: work_thread_pool
+      type: joint_sensor
+      options:
+        joints:
+          - name: center_joint
+            bind_joint: hinge1
+          - name: edge_joint
+            bind_joint: hinge2
+PidControlModule:
+  topic_name_sub: /inverted_pendulum/joint_state
+  topic_name_pub: /inverted_pendulum/joint_command
+  init_kp: 22000
+  init_ki: 0
+  init_kd: 120

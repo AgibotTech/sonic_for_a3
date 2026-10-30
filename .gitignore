@@ -231,6 +231,7 @@ logs_eval/
 
 # Model checkpoints directory
 models/
+!aimrt_mujoco_sim_a3/src/models/
 
 # Downloaded from HuggingFace (hf download)
 sample_data/

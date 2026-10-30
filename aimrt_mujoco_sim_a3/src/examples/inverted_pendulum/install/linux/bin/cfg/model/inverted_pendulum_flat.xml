@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mujoco model="scene">
+  <include file="inverted_pendulum.xml"/>
+  <include file="flat.xml"/>
+</mujoco>

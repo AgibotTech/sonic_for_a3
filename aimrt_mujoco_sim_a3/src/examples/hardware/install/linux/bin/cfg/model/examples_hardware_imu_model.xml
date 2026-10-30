@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mujoco model="rotating_pole">
+    <compiler eulerseq="XYZ" fitaabb="true" angle="radian" autolimits="true"/>
+    <option timestep="0.001" gravity="0 0 -9.81"/>
+
+    <asset>
+        <texture name="skybox" type="skybox" builtin="gradient" rgb1="0.2 0.3 0.4" rgb2="0 0 0" width="1000" height="1000" mark="random" random="0.001" markrgb="1 1 1"/>
+        <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="1000" height="1000"/>
+        <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+        <texture name="imu_texture" type="2d" file="./resource/imu.png"/>
+        <material name="imu_material" texture="imu_texture" texuniform="false" texrepeat="1 1" reflectance="0.7" emission="0.1"/>
+    </asset>
+
+    <worldbody>
+        <geom name="floor" pos="0 0 -1" size="5 5 0.1" type="plane" material="groundplane"/>
+        <light directional="true" diffuse=".8 .8 .8" specular=".2 .2 .2" pos="0 0 3" dir="0 0 -1"/>
+
+        <body name="hinge_mount" pos="0 0 0.3" mocap="true">
+            <geom name="mount" type="sphere" size="0.04" rgba="0.75 0.75 0.75 1" mass="0.5" />
+
+            <!-- pole and spin -->
+            <body name="pole" pos="0 0 0" gravcomp="1">
+                <inertial pos="0 0 -0.4" mass="0.5" diaginertia="0.1 0.1 0.01"/>
+                <joint name="spin" type="ball" pos="0 0 0" limited="false"/>
+                <geom name="pole_geom" type="cylinder" size="0.02 0.4" pos="0 0 -0.4" rgba="0.8 0.8 0.75 1" mass="0.5" />
+
+                <!-- imu site -->
+                <site name="imu" pos="0 0 -0.7"/>
+                <geom name="imu_visual" type="box" size="0.04 0.04 0.02" pos="0 0 -0.7" material="imu_material" mass="0.05"/>
+            </body>
+        </body>
+
+        <light pos="0 0 2" dir="0 0 -1" diffuse="0.8 0.8 0.8"/>
+    </worldbody>
+
+    <actuator>
+        <velocity name="motor" joint="spin" kv="200" gear="1" ctrlrange="-10 10"/>
+    </actuator>
+
+    <sensor>
+        <gyro name="angular-velocity" site="imu" noise="0"/>
+        <accelerometer name="linear-acceleration" site="imu" noise="0"/>
+        <framequat name="orientation" objtype="site" objname="imu" noise="0"/>
+    </sensor>
+</mujoco>

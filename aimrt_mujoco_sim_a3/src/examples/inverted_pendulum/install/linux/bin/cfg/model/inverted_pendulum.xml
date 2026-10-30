@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mujoco model="inverted_pendulum">
+  <compiler eulerseq="XYZ" fitaabb="true" angle="radian" meshdir="robot/parts/meshes" autolimits="true"/>
+  <option timestep="0.001" gravity="0 0 -9.81"/>
+  <worldbody>
+    <!-- Cylindrical base -->
+    <body name="base" pos="0 0 0">
+      <geom name="base_geom" type="cylinder" size="0.25 0.02" pos="0 0 0.02" rgba="0.5 0.5 0.5 1" density="7850"/>
+      <!-- Connector between base and vertical rod -->
+      <geom name="base_connector" type="cylinder" size="0.035 0.01" pos="0 0 0.04" rgba="0.5 0.5 0.5 1" density="7850"/>
+      <!-- Vertical Rod -->
+      <body name="vertical_rod" pos="0 0 0.0">
+        <geom name="rod" type="cylinder" size="0.025 0.4" pos="0 0 0.4" rgba="0.7 0.7 0.7 1" density="7850"/>
+        <!-- Top connector of vertical rod -->
+        <geom name="top_connector" type="cylinder" size="0.035 0.01" pos="0 0 0.8" rgba="0.7 0.85 1.0 1" density="7850"/>
+        <!-- Horizontal Rod -->
+        <body name="horizontal_rod" pos="0 0 0.8">
+          <joint name="hinge1" type="hinge" axis="0 0 1" damping="0.05" armature="0.1"/>
+          <!-- Rotation joint connector -->
+          <geom name="rotation_joint" type="cylinder" size="0.025 0.015" pos="0 0 0" rgba="0.7 0.85 1.0 1" density="7850"/>
+          <!-- Wooden horizontal beam -->
+          <geom type="box" size="0.2 0.02 0.01" pos="0.1 0 0" rgba="0.82 0.71 0.55 1" density="600"/>
+          <!-- Pendulum -->
+          <body name="metal_strip" pos="0.3 0 0" euler="3.141592625 0 0">
+            <!-- Pendulum axis connector -->
+            <geom name="pendulum_joint" type="cylinder" size="0.015 0.01" pos="0.01 0 0" euler="0 1.5708 0" rgba="0.7 0.85 1.0 1" density="7850"/>
+            <joint name="hinge2" type="hinge" axis="1 0 0" damping="0.01" frictionloss="0.01" ref="3.141592625" range="-0.5 0.5"/>
+            <!-- Pendulum rod -->
+            <geom name="strip" type="cylinder" size="0.006 0.15" pos="0.01 0 0.15" rgba="0.9 0.9 0.9 0.8" density="7850"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="center_motor" joint="hinge1" gear="1" ctrlrange="-10000 10000"/>
+  </actuator>
+  <sensor>
+    <jointpos name="jointpos_hinge1" joint="hinge1" noise="0.01"/>
+    <jointvel name="jointvel_hinge1" joint="hinge1" noise="0.05"/>
+    <jointpos name="jointpos_hinge2" joint="hinge2" noise="0.01"/>
+    <jointvel name="jointvel_hinge2" joint="hinge2" noise="0.05"/>
+  </sensor>
+</mujoco>

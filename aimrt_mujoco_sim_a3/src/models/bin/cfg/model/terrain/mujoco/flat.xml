@@ -1,0 +1,27 @@
+<mujoco model="flat">
+  <statistic center="0 0 0.55" extent="1.1"/>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="150" elevation="-20"/>
+  </visual>
+  <visual>
+    <rgba com="0.502 1.0 0 0.5" contactforce="0.98 0.4 0.4 1" contactpoint="1.0 1.0 0.6 0.4"/>
+    <scale com="1" forcewidth="0.03" contactwidth="0.01" contactheight="0.02" framewidth="0.05" framelength="0.6"/>
+    <map force="0.005"/>
+  </visual>
+  <asset>
+    <texture type="skybox" name="skybox" builtin="gradient" mark="random" rgb1="0.2 0.3 0.4" rgb2="0 0 0" markrgb="1 1 1" random="0.001" width="1000" height="6000"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="1000" height="1000"/>
+    <material name="metalic silver" rgba="0.59 0.59 0.65 1"/>
+    <material name="metalic black" rgba="0.235294 0.235294 0.235294 1"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <geom name="floor" size="300 300 0.125" type="plane" conaffinity="7" friction="1.5 0.005 0.0001" material="groundplane"/>
+    <light pos="0 0 10" dir="0 0 -1" directional="true"/>
+    <light name="spotlight" target="pelvis_link" pos="0 -1 2" dir="0 0 -1" mode="targetbodycom"/>
+  </worldbody>
+</mujoco>
