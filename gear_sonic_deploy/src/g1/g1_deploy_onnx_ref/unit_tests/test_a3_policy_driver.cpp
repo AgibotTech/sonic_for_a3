@@ -277,6 +277,18 @@ TEST(ExpandToBackend, ReusableOutputIsOverwritten) {
   }
 }
 
+TEST(BuildDamping, PreservesKdAndZerosOtherControlTerms) {
+  const Eigen::VectorXd q = Eigen::VectorXd::LinSpaced(31, -1.0, 1.0);
+  const Eigen::VectorXd kd = Eigen::VectorXd::LinSpaced(31, 0.1, 3.1);
+  robot_io::RobotCommand cmd;
+  a3_deploy::BuildDampingCommand(q, kd, cmd);
+  EXPECT_TRUE(cmd.q_des.isApprox(q));
+  EXPECT_TRUE(cmd.kd.isApprox(kd));
+  EXPECT_TRUE(cmd.kp.isZero());
+  EXPECT_TRUE(cmd.dq_des.isZero());
+  EXPECT_TRUE(cmd.tau_ff.isZero());
+}
+
 TEST(BuildSafeHalt, Copies31DofQAndZeroesEverythingElse) {
   Eigen::VectorXd q = Eigen::VectorXd::Zero(31);
   for (int i = 0; i < 31; ++i) q[i] = 0.5 * i;

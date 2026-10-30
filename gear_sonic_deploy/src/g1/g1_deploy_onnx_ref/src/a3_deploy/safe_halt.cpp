@@ -26,4 +26,11 @@ void BuildSafeHaltCommand(const Eigen::VectorXd& q_current,
   out.kd.setZero();
 }
 
+void BuildDampingCommand(const Eigen::VectorXd& q_current,
+                         const Eigen::VectorXd& kd,
+                         robot_io::RobotCommand& out) {
+  BuildSafeHaltCommand(q_current, out);
+  if (kd.size() == robot_io::kA3Dof) out.kd = kd;
+}
+
 }  // namespace a3_deploy

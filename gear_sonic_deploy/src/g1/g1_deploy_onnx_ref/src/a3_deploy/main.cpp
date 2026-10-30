@@ -2633,6 +2633,10 @@ int main(int argc, char** argv) {
 
   std::array<double, 29> pd_start_q{};
   std::array<double, 29> command_q_des{};
+  robot_io::RobotCommand damping_default_command;
+  a3_deploy::ExpandToBackend(command_q_des, *policy_kps, *policy_kds,
+                             damping_default_command);
+  Eigen::VectorXd damping_kd = damping_default_command.kd;
   std::uint64_t mode_entry_tick = 0;
   std::uint64_t observed_epoch =
       manual_control.epoch.load(std::memory_order_acquire);
@@ -3012,6 +3016,13 @@ int main(int argc, char** argv) {
     const DeployMode mode = LoadDeployMode(manual_control);
     prepare_eval_frame(tick_idx, mode);
     if (epoch != observed_epoch || mode != observed_mode) {
+      if (mode == DeployMode::kDamping &&
+          observed_mode != DeployMode::kDamping &&
+          observed_mode != DeployMode::kIdle &&
+          observed_mode != DeployMode::kPassive &&
+          command_out.kd.size() == robot_io::kA3Dof) {
+        damping_kd = command_out.kd;
+      }
       observed_epoch = epoch;
       observed_mode = mode;
       observed_motion_command_epoch =
@@ -3236,6 +3247,11 @@ int main(int argc, char** argv) {
         eval_pending_frame.gain_profile_id = 0;
       }
       a3_deploy::BuildSafeHaltCommand(state.q, command_out);
+      return true;
+    }
+
+    if (mode == DeployMode::kDamping) {
+      a3_deploy::BuildDampingCommand(state.q, damping_kd, command_out);
       return true;
     }
 
@@ -4035,7 +4051,7 @@ int main(int argc, char** argv) {
     std::cout << "✓ auto-start mode: PD warmup=" << configured_warmup_ticks
               << " ticks, then policy inference\n";
   } else {
-    std::cout << "✓ manual state machine: startup IDLE/no-output; p=passive, "
+    std::cout << "✓ manual state machine: startup IDLE/no-output; p=passive, d=damping, "
                  "s=pd_stand, arrows=remote motion, t=teleop, "
                  "1=g1, 2=smpl, q=quit\n";
     keyboard_thread = StartKeyboardControlThread(

@@ -21,6 +21,16 @@ constexpr const char* kAlreadyTeleop = "already in teleop";
 
 constexpr auto kManualTransitionRules = std::to_array<ManualTransitionRule>({
     // Global safety/help.
+    {DeployMode::kIdle, ManualKey::kDamping, TransitionGuard::kAlways, TransitionAction::kEnterDamping, nullptr},
+    {DeployMode::kPassive, ManualKey::kDamping, TransitionGuard::kAlways, TransitionAction::kEnterDamping, nullptr},
+    {DeployMode::kPdStand, ManualKey::kDamping, TransitionGuard::kAlways, TransitionAction::kEnterDamping, nullptr},
+    {DeployMode::kMotion, ManualKey::kDamping, TransitionGuard::kAlways, TransitionAction::kEnterDamping, nullptr},
+    {DeployMode::kTeleop, ManualKey::kDamping, TransitionGuard::kAlways, TransitionAction::kEnterDamping, nullptr},
+    {DeployMode::kDamping, ManualKey::kDamping, TransitionGuard::kAlways, TransitionAction::kEnterDamping, nullptr},
+    {DeployMode::kDamping, ManualKey::kPassive, TransitionGuard::kAlways, TransitionAction::kEnterPassive, nullptr},
+    {DeployMode::kDamping, ManualKey::kPdStand, TransitionGuard::kAlways, TransitionAction::kEnterPdStand, nullptr},
+    {DeployMode::kDamping, ManualKey::kHelp, TransitionGuard::kAlways, TransitionAction::kPrintHelp, nullptr},
+    {DeployMode::kDamping, ManualKey::kQuit, TransitionGuard::kAlways, TransitionAction::kQuit, nullptr},
     {DeployMode::kIdle, ManualKey::kPassive, TransitionGuard::kAlways,
      TransitionAction::kEnterPassive, nullptr},
     {DeployMode::kPassive, ManualKey::kPassive, TransitionGuard::kAlways,
@@ -266,6 +276,7 @@ const char* DeployModeName(DeployMode mode) noexcept {
   switch (mode) {
     case DeployMode::kIdle: return "idle";
     case DeployMode::kPassive: return "passive";
+    case DeployMode::kDamping: return "damping";
     case DeployMode::kPdStand: return "pd_stand";
     case DeployMode::kMotion: return "motion";
     case DeployMode::kTeleop: return "teleop";
@@ -276,6 +287,7 @@ const char* DeployModeName(DeployMode mode) noexcept {
 const char* ManualKeyName(ManualKey key) noexcept {
   switch (key) {
     case ManualKey::kPassive: return "p";
+    case ManualKey::kDamping: return "d";
     case ManualKey::kPdStand: return "s";
     case ManualKey::kMotion: return "m";
     case ManualKey::kTeleop: return "t";
@@ -306,6 +318,8 @@ ManualKey ParseManualKey(char ch) noexcept {
   switch (ch) {
     case 'p':
     case 'P': return ManualKey::kPassive;
+    case 'd':
+    case 'D': return ManualKey::kDamping;
     case 's':
     case 'S': return ManualKey::kPdStand;
     case 'm':
@@ -421,7 +435,7 @@ void PrintMotionHelp(const ManualControlState& control,
   const int selected = control.selected_motion_index.load(
       std::memory_order_acquire);
   log << "[mode] current=" << DeployModeName(mode)
-      << " keys: p=passive, s=pd_stand, m=motion, t=teleop, "
+      << " keys: p=passive, d=damping, s=pd_stand, m=motion, t=teleop, "
          "arrows=remote clip, space=mode action, h=help, q=quit\n"
       << "[mode] guards: motion/teleop entry from idle/passive requires "
          "pd_stand ready; r/x/[ ] only work in motion; space in teleop "
@@ -498,6 +512,9 @@ ManualKeyOutcome HandleManualKey(
   switch (rule->action) {
     case TransitionAction::kEnterPassive:
       RequestDeployMode(control, DeployMode::kPassive, log);
+      return ManualKeyOutcome::kHandled;
+    case TransitionAction::kEnterDamping:
+      RequestDeployMode(control, DeployMode::kDamping, log);
       return ManualKeyOutcome::kHandled;
     case TransitionAction::kEnterPdStand:
       RequestDeployMode(control, DeployMode::kPdStand, log);

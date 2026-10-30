@@ -285,9 +285,12 @@ protective support:
    With no motion command, the deploy program selects its built-in standing
    motion by default. Use **`[`** and **`]`** to switch the selected motion,
    then press **`R`** to play the selected action.
-4. At any time, press **`P`** to enter `passive`. The whole body then relaxes
-   into the passive state. Use this key whenever the robot becomes unstable or
-   behaves abnormally.
+4. **If the robot becomes dangerous or loses control, prefer pressing `D` to
+   enter damping mode.** Position stiffness is zero and the previous
+   command's damping gains are retained. Damping resists joint velocity but
+   does not support the robot's weight. Press **`P`** for passive, which sets
+   both stiffness and damping to zero. Use the protective support and physical
+   emergency stop when the robot becomes unstable.
 
 Keep the robot on a safety gantry or equivalent protective setup during
 debugging as far as practical. Emergency-stop coverage and on-site supervision remain required;
@@ -360,6 +363,6 @@ terminal to switch modes before teleoperation:
 2. Press **3** to select the **A3-fast** teleoperation source.
 
 The logs should show `first whole_body_command received` and
-`active source -> a3_fast`. Press **P** to return to passive. If the topic is
+`active source -> a3_fast`. Press **D** for damping or **P** for passive. If the topic is
 publishing but the reference does not move, check the PICO tracker app
 calibration.

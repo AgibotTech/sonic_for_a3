@@ -136,6 +136,22 @@ TEST(A3ManualControl, GlobalSafetyKeysWorkFromActiveModes) {
   EXPECT_FALSE(control.teleop_input_paused.load(std::memory_order_acquire));
 }
 
+TEST(A3ManualControl, DampingIsGlobalAndRequiresStandBeforeTeleop) {
+  ManualControlState control;
+  std::ostringstream log;
+  EXPECT_EQ(a3_deploy::ParseManualKey('d'), ManualKey::kDamping);
+  EXPECT_EQ(a3_deploy::ParseManualKey('D'), ManualKey::kDamping);
+  for (auto mode : {DeployMode::kIdle, DeployMode::kPassive,
+                    DeployMode::kPdStand, DeployMode::kMotion,
+                    DeployMode::kTeleop, DeployMode::kDamping}) {
+    SetMode(control, mode, log);
+    EXPECT_EQ(Press(control, ManualKey::kDamping, log), ManualKeyOutcome::kHandled);
+    EXPECT_EQ(LoadDeployMode(control), DeployMode::kDamping);
+    EXPECT_EQ(Press(control, ManualKey::kTeleop, log), ManualKeyOutcome::kBlocked);
+    EXPECT_EQ(Press(control, ManualKey::kPdStand, log), ManualKeyOutcome::kHandled);
+  }
+}
+
 TEST(A3ManualControl, MotionControlsOnlyAffectMotionMode) {
   ManualControlState control;
   std::ostringstream log;

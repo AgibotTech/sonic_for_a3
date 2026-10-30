@@ -17,4 +17,8 @@ namespace a3_deploy {
 void BuildSafeHaltCommand(const Eigen::VectorXd& q_current,
                           robot_io::RobotCommand& out);
 
+void BuildDampingCommand(const Eigen::VectorXd& q_current,
+                         const Eigen::VectorXd& kd,
+                         robot_io::RobotCommand& out);
+
 }  // namespace a3_deploy

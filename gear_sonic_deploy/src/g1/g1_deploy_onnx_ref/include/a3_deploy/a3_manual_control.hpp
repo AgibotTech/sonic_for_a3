@@ -18,11 +18,13 @@ enum class DeployMode : int {
   kPdStand = 2,
   kMotion = 3,
   kTeleop = 4,
+  kDamping = 5,
 };
 
 enum class ManualKey {
   kUnknown,
   kPassive,
+  kDamping,
   kPdStand,
   kMotion,
   kTeleop,
@@ -51,6 +53,7 @@ enum class TransitionGuard {
 
 enum class TransitionAction {
   kEnterPassive,
+  kEnterDamping,
   kEnterPdStand,
   kEnterMotionPaused,
   kEnterTeleop,
