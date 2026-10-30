@@ -32,7 +32,7 @@ TWO_SEGMENT_CURVES = {
 }
 CONFIG_DIR = Path(__file__).resolve().parents[1] / "gear_sonic" / "config"
 TRAIN_LAUNCHER = (
-    Path(__file__).resolve().parents[1] / "train_a3_035_fromscratch.sh"
+    Path(__file__).resolve().parents[1] / "train_a3_035.sh"
 )
 
 

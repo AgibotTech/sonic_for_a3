@@ -14,6 +14,9 @@ and [deployment installation](https://nvlabs.github.io/GR00T-WholeBodyControl/ge
 
 ## 1. Training contract
 
+For the complete 089 configuration and reward contract, see the
+[A3 089 training contract](a3_089_training_contract.md).
+
 The launch configuration is
 [`sonic_a3_089.yaml`](../gear_sonic/config/exp/manager/universal_token/all_modes/sonic_a3_089.yaml).
 Its robot asset is the **later**

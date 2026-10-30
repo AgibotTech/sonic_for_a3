@@ -26,7 +26,7 @@ binary cannot be executed in the x86 training environment, so the tests below
 check the packaged tables against the x86 mirror used for training and
 deployment validation. The human-readable CSV source grids and a portable
 CSV-to-NPZ builder are in
-[`docs/a3_024_sim2real_materials/01_serial_parallel_torque_coupling/jacobian_tables/`](../../../docs/a3_024_sim2real_materials/01_serial_parallel_torque_coupling/jacobian_tables/).
+[`docs/a3_035_sim2real_materials/01_serial_parallel_torque_coupling/jacobian_tables/`](../../../docs/a3_035_sim2real_materials/01_serial_parallel_torque_coupling/jacobian_tables/).
 The runtime keeps the checked NPZ tables in this directory.
 
 Table SHA-256 values:

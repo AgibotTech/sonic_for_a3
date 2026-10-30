@@ -1,4 +1,4 @@
-# A3 Sim2Real Materials
+# A3 035 Sim2Real Materials
 
 This directory is the reviewable evidence package for the A3 sim-to-real modeling workflow. Each numbered folder is one technical question; its README is the index for the raw inputs, derived tables, code snapshot, figures, validation, and generated robot assets. Paths in this package are relative to this directory.
 
@@ -14,6 +14,6 @@ This directory is the reviewable evidence package for the A3 sim-to-real modelin
 
 ## Authority and provenance
 
-The files here are a frozen evidence and release package. Files under `code_snapshot/` are for review and provenance; the authoritative runtime implementations remain under `gear_sonic/`. Generated files are labelled as such in the topic READMEs. The package does not turn bench measurements into a claim of dynamic sim2real accuracy.
+The files here are a frozen evidence and release package for 035. Historical 024 filenames, profiles and code snapshots retain their original provenance. Files under `code_snapshot/` are for review and provenance; the authoritative runtime implementations remain under `gear_sonic/`. Generated files are labelled as such in the topic READMEs. The package does not turn bench measurements into a claim of dynamic sim2real accuracy.
 
 Use the SHA-256 values in `03_passive_foot/raw/raw_manifest.csv` to verify that the five raw CSV exports were not changed. The original GB18030 encoding, units, and source labels are preserved.

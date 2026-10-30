@@ -52,7 +52,7 @@ Reward implementation is in
 `gear_sonic/envs/manager_env/mdp/rewards.py`; motor curves and the three
 parallel Jacobian tables are in `gear_sonic/utils/a3_motor_model.py` and
 `gear_sonic/data/a3_motor_model/`. The rationale and the limits of the
-approximation are documented in [T–N constraints and passive foot](a3_024_sim2real_materials/README.md).
+approximation are documented in [T–N constraints and passive foot](a3_035_sim2real_materials/README.md).
 
 ## Included selected20 data
 
@@ -67,7 +67,7 @@ the source snapshot and derived motion-library files are not included.
 
 ## Training modes
 
-`train_a3_035_fromscratch.sh` takes an explicit `MOTION_FILE` motion-lib input.
+`train_a3_035.sh` takes an explicit `MOTION_FILE` motion-lib input.
 
 - With no `CHECKPOINT`, it runs 035 from random initialization:
   `checkpoint=null`, `resume=false`.

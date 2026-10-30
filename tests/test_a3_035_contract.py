@@ -13,7 +13,7 @@ A3_ROBOT = REPO_ROOT / "gear_sonic/envs/manager_env/robots/a3.py"
 CONFIG_DIR = REPO_ROOT / "gear_sonic/config"
 LAUNCHER = (
     REPO_ROOT
-    / "train_a3_035_fromscratch.sh"
+    / "train_a3_035.sh"
 )
 EXP_CONFIG = (
     "manager/universal_token/all_modes/"

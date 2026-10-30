@@ -60,7 +60,7 @@ derivative release.
 ## Passive-foot raw compression CSVs — distribution authorized for this release
 
 The five original quasi-static force/displacement CSVs under
-`docs/a3_024_sim2real_materials/03_passive_foot/raw/` are a compact, byte-identical subset
+`docs/a3_035_sim2real_materials/03_passive_foot/raw/` are a compact, byte-identical subset
 of the A3 metal-shoe toe-cantilever source archive. The archive did not contain
 a separate data license. The repository [LICENSE](../LICENSE) is a source-code
 license/notice and must not be treated as a grant for these measurements.

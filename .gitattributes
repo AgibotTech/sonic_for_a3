@@ -26,9 +26,9 @@
 docs/source/_static/** filter= diff= merge=
 # The technical materials are read directly as a handout; keep their figures
 # ordinary Git blobs so Markdown/image previews do not depend on LFS.
-docs/a3_024_sim2real_materials/**/figures/*.png filter= diff= merge= -text
-docs/a3_024_sim2real_materials/**/figures/**/*.png filter= diff= merge= -text
+docs/a3_035_sim2real_materials/**/figures/*.png filter= diff= merge= -text
+docs/a3_035_sim2real_materials/**/figures/**/*.png filter= diff= merge= -text
 # Instrument-exported GB18030/CRLF curves: preserve exact source bytes and
 # treat them as binary so source line endings are never rewritten or linted.
-docs/a3_024_sim2real_materials/03_passive_foot/raw/a3_toe_cantilever_compression_*.csv -text -diff
+docs/a3_035_sim2real_materials/03_passive_foot/raw/a3_toe_cantilever_compression_*.csv -text -diff
 gear_sonic_deploy/thirdparty/thor_sysroot/*.tar.gz filter=lfs diff=lfs merge=lfs -text

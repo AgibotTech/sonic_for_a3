@@ -39,8 +39,8 @@ The authoritative Python implementations are `gear_sonic/envs/manager_env/robots
 To regenerate NPZ tables without overwriting this package:
 
 ```bash
-python docs/a3_024_sim2real_materials/tools/build_jacobi_tables.py \
-  --input-dir docs/a3_024_sim2real_materials/01_serial_parallel_torque_coupling/jacobian_tables \
+python docs/a3_035_sim2real_materials/tools/build_jacobi_tables.py \
+  --input-dir docs/a3_035_sim2real_materials/01_serial_parallel_torque_coupling/jacobian_tables \
   --output-dir /tmp/a3_jacobian_tables --plots
 ```
 
