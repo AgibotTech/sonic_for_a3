@@ -1,0 +1,48 @@
+README.md
+  s_1071e05eefc772::t_7d7ace80dd3380 95-101
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "1c39f2a14e6474b6e1af259e9f13884b7d40da21",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.output_tokens": "1443275",
+        "tlab.token_usage.cache_read_tokens": "743120512",
+        "tlab.token_usage.input_tokens": "12490429",
+        "tlab.session_started_at": "2026-10-30T07:44:59Z",
+        "tlab.token_usage.cache_creation_tokens": "0"
+      }
+    }
+  },
+  "changes": [
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 7
+          }
+        ]
+      }
+    }
+  ]
+}
