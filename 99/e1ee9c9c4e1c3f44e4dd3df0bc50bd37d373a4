@@ -1,0 +1,106 @@
+docs/THIRD_PARTY_NOTICES.md
+  s_1071e05eefc772::t_72db15d4580bdf 97,103
+.github/workflows/pages.yml
+  s_1071e05eefc772::t_72db15d4580bdf 33-34
+site/index.html
+  s_1071e05eefc772::t_72db15d4580bdf 6,31-37,43-44
+README.md
+  s_1071e05eefc772::t_72db15d4580bdf 3,5-7
+---
+{
+  "schema_version": "authorship/3.1.0",
+  "tlab_version": "0.14.2",
+  "base_commit_sha": "99e1ee9c9c4e1c3f44e4dd3df0bc50bd37d373a4",
+  "prompts": {},
+  "sessions": {
+    "s_1071e05eefc772": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c7b8-f7bc-7560-9add-3f12351a0da6",
+        "model": "gpt-6.1-terra"
+      },
+      "human_author": "zhangyi <zhangyi_1357@sjtu.edu.cn>",
+      "custom_attributes": {
+        "tlab.token_usage.cache_creation_tokens": "0",
+        "tlab.token_usage.input_tokens": "12658827",
+        "tlab.token_usage.output_tokens": "1453760",
+        "tlab.token_usage.cache_read_tokens": "748586880",
+        "tlab.session_started_at": "2026-11-02T05:22:09Z"
+      }
+    }
+  },
+  "changes": [
+    {
+      "old_path": ".github/workflows/pages.yml",
+      "new_path": ".github/workflows/pages.yml",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "docs/THIRD_PARTY_NOTICES.md",
+      "new_path": "docs/THIRD_PARTY_NOTICES.md",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 2
+          }
+        ]
+      }
+    },
+    {
+      "old_path": "site/index.html",
+      "new_path": "site/index.html",
+      "additions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 10
+          }
+        ]
+      },
+      "deletions": {
+        "ai": [
+          {
+            "session_id": "s_1071e05eefc772",
+            "lines": 4
+          }
+        ]
+      }
+    }
+  ]
+}
