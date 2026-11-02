@@ -67,9 +67,9 @@ rigid-foot collision model, self-contact rewards and dynamic ankle model. See
 the [089 checkpoint directory](checkpoints/089_step136000/README.md) for its
 artifact and availability details.
 
-Although the 035 checkpoint was trained using the A3 URDF, its domain randomization
-was specifically tuned to support both **A3 and A3 Ultra (A3U)**. The corresponding
-models can therefore also run on A3 Ultra.
+Although the 035 and 089 checkpoints were trained using the A3 URDF, their domain
+randomization was specifically tuned to support both **A3 and A3 Ultra (A3U)**.
+The corresponding models can therefore also run on A3 Ultra.
 
 ### 2. MuJoCo sim2sim
 
