@@ -94,12 +94,12 @@ the five listed release files.
 
 ## Excluded material
 
-The edited real-robot demonstration video and its cover under `media/a3/`
+The edited 035 and 089 real-robot demonstration videos and their covers under `media/a3/`
 are included with the project owner's authorization. Other raw real-robot
 recordings, raw robot telemetry, incident logs, private source motion datasets, and the full
 passive-foot bench archive (including its photos and Word reports) are excluded. The compact
 T–N tables, selected20 CSVs, the five raw passive-foot CSVs, the five
 deploy-only reference clips, the passive-foot parameter summary, and the
-edited demonstration video and cover are the
+edited demonstration videos and covers are the
 only listed data assets authorized for distribution here; the boundaries above
 continue to apply.

@@ -1,8 +1,10 @@
 # SONIC adaption for A3
 
-[![A3 real-robot teleoperation with the 035 / 200k A3-fast RKNN policy](media/a3/035_200k_a3_fast_rknn_teleop.jpg)](https://agibottech.github.io/sonic_for_a3/)
+[![A3 real-robot teleoperation with the 089 / 136k A3-fast RKNN policy](media/a3/089_136k_a3_fast_demo.jpg)](https://agibottech.github.io/sonic_for_a3/)
 
-**035 / 200k · A3-fast RKNN · Real-robot teleoperation** — [Watch the video (3:32)](https://agibottech.github.io/sonic_for_a3/).
+**089 / 136k · A3-fast RKNN · Real-robot teleoperation** — [Watch the video (5:13)](https://agibottech.github.io/sonic_for_a3/).
+
+[Watch the 035 / 200k demo (3:32)](https://agibottech.github.io/sonic_for_a3/#demo-035).
 
 [Explore the 024 / 035 training curves](https://agibottech.github.io/sonic_for_a3/training/) — searchable, interactive TensorBoard scalar snapshots.
 
